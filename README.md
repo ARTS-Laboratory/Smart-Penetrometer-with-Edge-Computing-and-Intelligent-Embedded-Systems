@@ -1,2 +1,2 @@
 # Smart Penetrometer
-Design and development of a mart penetrometer
+Design and development of a smart penetrometer
