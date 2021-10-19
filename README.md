@@ -2,7 +2,7 @@
 Design and development of a smart penetrometer
 
 <p align="center">
-<img src="image.png" alt="drawing" width="700"/>
+<img src="image.PNG" alt="drawing" width="700"/>
 </p>
 <p align="center">
 </p>
