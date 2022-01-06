@@ -19,7 +19,12 @@ Design and development of a smart penetrometer
 1. Includes CAD Files
 1. Includes PCB Files
 
-
+## V0.0.3
+1. This has geophone, total dissolved solids, conductivity, accelerometer, environmental sensor
+1. Op Amp removed
+1. Redesigned PCB
+1. Includes PCB Files
+1. Needs to include CAD Files
 
 
 
