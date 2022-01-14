@@ -24,7 +24,7 @@ Design and development of a smart penetrometer
 1. Op Amp removed
 1. Redesigned PCB
 1. Includes PCB Files
-1. Needs to include CAD Files
+1. Includes CAD Files
 
 
 
