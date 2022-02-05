@@ -86,7 +86,7 @@ NoConn ~ 4850 4250
 NoConn ~ 4850 4350
 NoConn ~ 4850 4450
 $Comp
-L kitest-rescue:Battery_Input-kitest U3
+L smart-penetrometer-rescue:Battery_Input-kitest-kitest-rescue U3
 U 1 1 60A6877D
 P 3900 3200
 F 0 "U3" H 4158 3234 50  0000 L CNN
@@ -270,7 +270,7 @@ F 3 "" H 5350 3150 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L kitest-rescue:Arduino_Nano_v3.x-MCU_Module A2
+L smart-penetrometer-rescue:Arduino_Nano_v3.x-MCU_Module-kitest-rescue A2
 U 1 1 60A40C30
 P 5350 4150
 F 0 "A2" H 5350 2800 50  0000 C CNN
@@ -281,7 +281,7 @@ F 3 "http://www.mouser.com/pdfdocs/Gravitech_Arduino_Nano3_0.pdf" H 5350 3150 50
 	1    0    0    -1  
 $EndComp
 $Comp
-L kitest-rescue:SD_Card_Module-Charleslabs_Parts A1
+L smart-penetrometer-rescue:SD_Card_Module-Charleslabs_Parts-kitest-rescue A1
 U 1 1 60A4A816
 P 5350 2750
 F 0 "A1" H 5680 2796 50  0000 L CNN

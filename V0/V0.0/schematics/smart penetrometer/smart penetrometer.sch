@@ -503,4 +503,15 @@ F 3 "http://www.intersil.com/content/dam/Intersil/documents/cd40/cd4000bms-01bms
 	1    8800 2550
 	1    0    0    -1  
 $EndComp
+$Comp
+L Regulator_Linear:BD33GA5WEFJ U?
+U 1 1 61FDF517
+P 2700 2050
+F 0 "U?" H 2700 2292 50  0000 C CNN
+F 1 "BD33GA5WEFJ" H 2700 2201 50  0000 C CNN
+F 2 "Package_SO:HTSOP-8-1EP_3.9x4.9mm_P1.27mm_EP2.4x3.2mm" H 2700 1950 50  0001 C CNN
+F 3 "http://rohmfs.rohm.com/en/products/databook/datasheet/ic/power/linear_regulator/bdxxga5wefj-e.pdf" H 2700 1950 50  0001 C CNN
+	1    2700 2050
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC
