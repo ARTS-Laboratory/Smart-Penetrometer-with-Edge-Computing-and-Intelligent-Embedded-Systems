@@ -43,10 +43,6 @@ Wire Wire Line
 	4800 2900 4800 4750
 Wire Wire Line
 	4650 4550 4850 4550
-Wire Wire Line
-	5450 3150 5450 3100
-Wire Wire Line
-	5450 3100 6050 3100
 $Comp
 L power:GND #PWR04
 U 1 1 60A6136F
@@ -77,7 +73,6 @@ NoConn ~ 5850 3650
 NoConn ~ 5850 3550
 NoConn ~ 4850 3550
 NoConn ~ 4850 3650
-NoConn ~ 4850 3750
 NoConn ~ 4850 3850
 NoConn ~ 4850 3950
 NoConn ~ 4850 4050
@@ -88,40 +83,25 @@ NoConn ~ 4850 4450
 $Comp
 L smart-penetrometer-rescue:Battery_Input-kitest-kitest-rescue U3
 U 1 1 60A6877D
-P 3900 3200
-F 0 "U3" H 4158 3234 50  0000 L CNN
-F 1 "Battery_Input" H 3700 3400 50  0000 L CNN
-F 2 "kitest:Battery_Input" H 3900 3200 50  0001 C CNN
-F 3 "" H 3900 3200 50  0001 C CNN
-	1    3900 3200
+P 4250 1950
+F 0 "U3" H 4508 1984 50  0000 L CNN
+F 1 "Battery_Input" H 4050 2150 50  0000 L CNN
+F 2 "kitest:Battery_Input" H 4250 1950 50  0001 C CNN
+F 3 "" H 4250 1950 50  0001 C CNN
+	1    4250 1950
 	1    0    0    -1  
 $EndComp
 $Comp
 L power:GND #PWR06
 U 1 1 60A69074
-P 3750 3350
-F 0 "#PWR06" H 3750 3100 50  0001 C CNN
-F 1 "GND" H 3755 3177 50  0000 C CNN
-F 2 "" H 3750 3350 50  0001 C CNN
-F 3 "" H 3750 3350 50  0001 C CNN
-	1    3750 3350
+P 4100 2100
+F 0 "#PWR06" H 4100 1850 50  0001 C CNN
+F 1 "GND" H 4105 1927 50  0000 C CNN
+F 2 "" H 4100 2100 50  0001 C CNN
+F 3 "" H 4100 2100 50  0001 C CNN
+	1    4100 2100
 	1    0    0    -1  
 $EndComp
-$Comp
-L power:VCC #PWR0101
-U 1 1 60A6AB09
-P 4100 3350
-F 0 "#PWR0101" H 4100 3200 50  0001 C CNN
-F 1 "VCC" H 4100 3200 50  0000 C CNN
-F 2 "" H 4100 3350 50  0001 C CNN
-F 3 "" H 4100 3350 50  0001 C CNN
-	1    4100 3350
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	5250 3150 4850 3150
-Wire Wire Line
-	4850 3150 4850 3350
 $Comp
 L Timer_RTC:DS3231M U2
 U 1 1 60DCDB50
@@ -174,42 +154,7 @@ Wire Wire Line
 	4100 3350 4250 3350
 Wire Wire Line
 	4250 3350 4250 4050
-Connection ~ 4100 3350
-Wire Wire Line
-	4550 4350 3950 4350
-Wire Wire Line
-	4550 3350 4550 4350
 NoConn ~ 3650 4050
-$Comp
-L Connector:Conn_01x03_Female J2
-U 1 1 60E1E395
-P 6400 5100
-F 0 "J2" H 6428 5126 50  0000 L CNN
-F 1 "Conn_01x03_Female" H 6428 5035 50  0000 L CNN
-F 2 "Connector_PinSocket_2.54mm:PinSocket_1x03_P2.54mm_Horizontal" H 6400 5100 50  0001 C CNN
-F 3 "~" H 6400 5100 50  0001 C CNN
-	1    6400 5100
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	6100 5400 6100 5100
-Wire Wire Line
-	6100 5100 6200 5100
-$Comp
-L power:GND #PWR0103
-U 1 1 60E27F4F
-P 6200 5000
-F 0 "#PWR0103" H 6200 4750 50  0001 C CNN
-F 1 "GND" H 6205 4827 50  0000 C CNN
-F 2 "" H 6200 5000 50  0001 C CNN
-F 3 "" H 6200 5000 50  0001 C CNN
-	1    6200 5000
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	6050 5200 6200 5200
-Wire Wire Line
-	6050 4150 6050 5200
 $Comp
 L 4xxx:4023 U4
 U 3 1 615601EA
@@ -236,28 +181,8 @@ F 3 "" H 8250 4750 50  0001 C CNN
 	1    8250 4750
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	7650 4650 5950 4650
 Connection ~ 5950 4650
-Wire Wire Line
-	7650 4750 5900 4750
-Wire Wire Line
-	5900 4750 5900 4550
 Connection ~ 5900 4550
-Wire Wire Line
-	5450 3100 3500 3100
-Connection ~ 5450 3100
-$Comp
-L Connector:Conn_01x02_Female J3
-U 1 1 6159743F
-P 2550 5100
-F 0 "J3" H 2442 4775 50  0000 C CNN
-F 1 "Conn_01x02_Female" H 2442 4866 50  0000 C CNN
-F 2 "Connector_PinSocket_2.54mm:PinSocket_1x02_P2.54mm_Horizontal" H 2550 5100 50  0001 C CNN
-F 3 "~" H 2550 5100 50  0001 C CNN
-	1    2550 5100
-	-1   0    0    1   
-$EndComp
 $Comp
 L power:GND #PWR01
 U 1 1 60A59E22
@@ -306,9 +231,6 @@ Wire Wire Line
 	5550 6300 5950 6300
 Wire Wire Line
 	5550 6400 5900 6400
-Wire Wire Line
-	5900 6400 5900 5500
-Connection ~ 5900 4750
 $Comp
 L power:GNDS #PWR0104
 U 1 1 615CA2F2
@@ -418,78 +340,12 @@ Wire Wire Line
 	6750 3350 6750 3550
 NoConn ~ 5550 3150
 Wire Wire Line
-	7550 3100 7550 4850
-Wire Wire Line
-	7550 4850 7650 4850
-Wire Wire Line
-	7550 5400 7550 4850
-Connection ~ 7550 4850
-Wire Wire Line
-	6100 5400 7550 5400
-Wire Wire Line
-	6450 3100 7550 3100
-$Comp
-L Connector:Conn_01x04_Female J4
-U 1 1 619C4A57
-P 8950 5400
-F 0 "J4" H 8978 5376 50  0000 L CNN
-F 1 "Conn_01x04_Female" H 8978 5285 50  0000 L CNN
-F 2 "Connector_PinSocket_2.54mm:PinSocket_1x04_P2.54mm_Horizontal" H 8950 5400 50  0001 C CNN
-F 3 "~" H 8950 5400 50  0001 C CNN
-	1    8950 5400
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	8600 3100 7550 3100
-Connection ~ 7550 3100
-Wire Wire Line
-	8600 3100 8600 5400
-Wire Wire Line
-	8600 5400 8750 5400
-$Comp
-L power:GNDS #PWR0105
-U 1 1 619D3FBB
-P 8750 5300
-F 0 "#PWR0105" H 8750 5050 50  0001 C CNN
-F 1 "GNDS" V 8755 5172 50  0000 R CNN
-F 2 "" H 8750 5300 50  0001 C CNN
-F 3 "" H 8750 5300 50  0001 C CNN
-	1    8750 5300
-	0    1    1    0   
-$EndComp
-Wire Wire Line
-	8750 5500 5900 5500
-Connection ~ 5900 5500
-Wire Wire Line
-	5900 5500 5900 4750
-Wire Wire Line
-	8750 5600 5950 5600
-Wire Wire Line
-	5950 4650 5950 5600
-Connection ~ 5950 5600
-Wire Wire Line
-	5950 5600 5950 6300
-Wire Wire Line
 	4650 2600 4650 4550
-Wire Wire Line
-	4550 3350 4850 3350
 Wire Wire Line
 	3500 3100 3500 5800
 Wire Wire Line
 	3500 5800 5150 5800
 NoConn ~ 5850 4250
-Wire Wire Line
-	2750 5000 3350 5000
-Wire Wire Line
-	3350 5000 3350 6200
-Wire Wire Line
-	3350 6200 4750 6200
-Wire Wire Line
-	2750 5100 3250 5100
-Wire Wire Line
-	3250 5100 3250 6300
-Wire Wire Line
-	3250 6300 4750 6300
 Wire Wire Line
 	6300 3100 6300 3550
 $Comp
@@ -504,14 +360,303 @@ F 3 "http://www.intersil.com/content/dam/Intersil/documents/cd40/cd4000bms-01bms
 	1    0    0    -1  
 $EndComp
 $Comp
-L Regulator_Linear:BD33GA5WEFJ U?
-U 1 1 61FDF517
-P 2700 2050
-F 0 "U?" H 2700 2292 50  0000 C CNN
-F 1 "BD33GA5WEFJ" H 2700 2201 50  0000 C CNN
-F 2 "Package_SO:HTSOP-8-1EP_3.9x4.9mm_P1.27mm_EP2.4x3.2mm" H 2700 1950 50  0001 C CNN
-F 3 "http://rohmfs.rohm.com/en/products/databook/datasheet/ic/power/linear_regulator/bdxxga5wefj-e.pdf" H 2700 1950 50  0001 C CNN
-	1    2700 2050
+L smart-penetrometer-rescue:3v3_Voltage_Regulator U6
+U 1 1 61FF42DE
+P 2650 2600
+F 0 "U6" H 2600 2950 50  0000 L CNN
+F 1 "3v3_Voltage_Regulator" H 2250 2850 50  0000 L CNN
+F 2 "smart penetrometer footprints:BD433M2FP3_CE2" H 2650 2600 50  0001 C CNN
+F 3 "" H 2650 2600 50  0001 C CNN
+	1    2650 2600
 	1    0    0    -1  
 $EndComp
+Wire Wire Line
+	3950 4350 2500 4350
+Wire Wire Line
+	2500 4350 2500 3100
+$Comp
+L power:GNDREF #PWR08
+U 1 1 61FF764F
+P 2650 2850
+F 0 "#PWR08" H 2650 2600 50  0001 C CNN
+F 1 "GNDREF" H 2655 2677 50  0000 C CNN
+F 2 "" H 2650 2850 50  0001 C CNN
+F 3 "" H 2650 2850 50  0001 C CNN
+	1    2650 2850
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GNDREF #PWR02
+U 1 1 61FF8208
+P 2300 2500
+F 0 "#PWR02" H 2300 2250 50  0001 C CNN
+F 1 "GNDREF" V 2305 2372 50  0000 R CNN
+F 2 "" H 2300 2500 50  0001 C CNN
+F 3 "" H 2300 2500 50  0001 C CNN
+	1    2300 2500
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	2800 2850 2800 3100
+Wire Wire Line
+	2800 3100 3500 3100
+Connection ~ 3500 3100
+Wire Wire Line
+	3500 3100 5250 3100
+$Comp
+L Device:C_Small C2
+U 1 1 61FFB484
+P 2900 2850
+F 0 "C2" V 2992 2896 50  0000 L CNN
+F 1 "C_10uF" V 3100 2800 50  0000 L CNN
+F 2 "Capacitor_SMD:C_1206_3216Metric" H 2900 2850 50  0001 C CNN
+F 3 "~" H 2900 2850 50  0001 C CNN
+	1    2900 2850
+	0    1    1    0   
+$EndComp
+$Comp
+L power:GNDREF #PWR010
+U 1 1 61FFB798
+P 3000 2850
+F 0 "#PWR010" H 3000 2600 50  0001 C CNN
+F 1 "GNDREF" V 3005 2722 50  0000 R CNN
+F 2 "" H 3000 2850 50  0001 C CNN
+F 3 "" H 3000 2850 50  0001 C CNN
+	1    3000 2850
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:C_Small C1
+U 1 1 61FFC277
+P 2400 2850
+F 0 "C1" V 2300 2600 50  0000 C CNN
+F 1 "C_0.1uF" V 2400 2600 50  0000 C CNN
+F 2 "Capacitor_SMD:C_1206_3216Metric" H 2400 2850 50  0001 C CNN
+F 3 "~" H 2400 2850 50  0001 C CNN
+	1    2400 2850
+	0    1    1    0   
+$EndComp
+Connection ~ 2500 3100
+Wire Wire Line
+	2500 3100 2500 2850
+$Comp
+L power:GNDREF #PWR05
+U 1 1 61FFCC13
+P 2300 2850
+F 0 "#PWR05" H 2300 2600 50  0001 C CNN
+F 1 "GNDREF" H 2305 2677 50  0000 C CNN
+F 2 "" H 2300 2850 50  0001 C CNN
+F 3 "" H 2300 2850 50  0001 C CNN
+	1    2300 2850
+	1    0    0    -1  
+$EndComp
+Connection ~ 2800 2850
+Connection ~ 2500 2850
+$Comp
+L Device:D_Zener_Small D1
+U 1 1 62002596
+P 2400 3100
+F 0 "D1" H 2450 3200 50  0000 C CNN
+F 1 "D_Zener_Small" H 2400 3300 50  0000 C CNN
+F 2 "Diode_SMD:D_SMC" V 2400 3100 50  0001 C CNN
+F 3 "~" V 2400 3100 50  0001 C CNN
+	1    2400 3100
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:GNDREF #PWR07
+U 1 1 620037A9
+P 2300 3100
+F 0 "#PWR07" H 2300 2850 50  0001 C CNN
+F 1 "GNDREF" V 2305 2972 50  0000 R CNN
+F 2 "" H 2300 3100 50  0001 C CNN
+F 3 "" H 2300 3100 50  0001 C CNN
+	1    2300 3100
+	0    1    1    0   
+$EndComp
+$Comp
+L Connector:Conn_01x11_Female J2
+U 1 1 62004E69
+P 7000 6200
+F 0 "J2" V 7073 6180 50  0000 C CNN
+F 1 "Conn_01x11_Female" V 7164 6180 50  0000 C CNN
+F 2 "Connector_PinSocket_2.54mm:PinSocket_1x11_P2.54mm_Horizontal" H 7000 6200 50  0001 C CNN
+F 3 "~" H 7000 6200 50  0001 C CNN
+	1    7000 6200
+	0    -1   1    0   
+$EndComp
+Wire Wire Line
+	4700 6300 4700 6950
+Wire Wire Line
+	4700 6950 6400 6950
+Wire Wire Line
+	6400 6950 6400 6000
+Wire Wire Line
+	6400 6000 6500 6000
+Wire Wire Line
+	4700 6300 4750 6300
+Wire Wire Line
+	4650 6200 4650 7000
+Wire Wire Line
+	4650 7000 6350 7000
+Wire Wire Line
+	6350 7000 6350 5950
+Wire Wire Line
+	6350 5950 6600 5950
+Wire Wire Line
+	6600 5950 6600 6000
+Wire Wire Line
+	4650 6200 4750 6200
+$Comp
+L power:GNDREF #PWR015
+U 1 1 62013562
+P 7250 6000
+F 0 "#PWR015" H 7250 5750 50  0001 C CNN
+F 1 "GNDREF" H 7255 5827 50  0000 C CNN
+F 2 "" H 7250 6000 50  0001 C CNN
+F 3 "" H 7250 6000 50  0001 C CNN
+	1    7250 6000
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	7400 4850 7400 6000
+Wire Wire Line
+	6050 5700 7500 5700
+Wire Wire Line
+	7500 5700 7500 6000
+Wire Wire Line
+	6050 4150 6050 5700
+Wire Wire Line
+	6700 6000 6700 4650
+Wire Wire Line
+	5950 4650 6700 4650
+Connection ~ 6700 4650
+Wire Wire Line
+	6700 4650 7650 4650
+Wire Wire Line
+	6800 6000 6800 4750
+Wire Wire Line
+	6800 4750 7650 4750
+Wire Wire Line
+	4850 3750 4450 3750
+Wire Wire Line
+	4450 3750 4450 5750
+Wire Wire Line
+	4450 5750 6900 5750
+Wire Wire Line
+	6900 5750 6900 6000
+Wire Wire Line
+	7050 4850 7400 4850
+Connection ~ 7400 4850
+Wire Wire Line
+	7400 4850 7400 3100
+Wire Wire Line
+	6450 3100 7400 3100
+Wire Wire Line
+	7400 4850 7650 4850
+Wire Wire Line
+	5950 4650 5950 6300
+Wire Wire Line
+	5900 4550 5900 6400
+Wire Wire Line
+	5900 4550 6800 4550
+Wire Wire Line
+	6800 4550 6800 4750
+Connection ~ 6800 4750
+Wire Wire Line
+	7100 6000 7050 6000
+Wire Wire Line
+	7050 4850 7050 6000
+Connection ~ 7050 6000
+Wire Wire Line
+	7050 6000 7000 6000
+Wire Wire Line
+	7250 6000 7200 6000
+Wire Wire Line
+	7250 6000 7300 6000
+Connection ~ 7250 6000
+$Comp
+L Diode:B350 D3
+U 1 1 620504C6
+P 4450 2250
+F 0 "D3" V 4496 2170 50  0000 R CNN
+F 1 "B350" V 4405 2170 50  0000 R CNN
+F 2 "Diode_SMD:D_SMC" H 4450 2075 50  0001 C CNN
+F 3 "http://www.jameco.com/Jameco/Products/ProdDS/1538777.pdf" H 4450 2250 50  0001 C CNN
+	1    4450 2250
+	0    -1   -1   0   
+$EndComp
+$Comp
+L smart-penetrometer-rescue:Battery_Input-kitest-kitest-rescue U7
+U 1 1 62051BA4
+P 3400 1950
+F 0 "U7" H 3658 1984 50  0000 L CNN
+F 1 "Solar_Input" H 3250 2150 50  0000 L CNN
+F 2 "kitest:Battery_Input" H 3400 1950 50  0001 C CNN
+F 3 "" H 3400 1950 50  0001 C CNN
+	1    3400 1950
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GNDREF #PWR013
+U 1 1 6205315E
+P 3250 2100
+F 0 "#PWR013" H 3250 1850 50  0001 C CNN
+F 1 "GNDREF" H 3255 1927 50  0000 C CNN
+F 2 "" H 3250 2100 50  0001 C CNN
+F 3 "" H 3250 2100 50  0001 C CNN
+	1    3250 2100
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:VCC #PWR014
+U 1 1 62053C3C
+P 3600 2100
+F 0 "#PWR014" H 3600 1950 50  0001 C CNN
+F 1 "VCC" V 3615 2228 50  0000 L CNN
+F 2 "" H 3600 2100 50  0001 C CNN
+F 3 "" H 3600 2100 50  0001 C CNN
+	1    3600 2100
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	4100 3350 4100 2400
+Wire Wire Line
+	4100 2400 3600 2400
+NoConn ~ 8500 2450
+NoConn ~ 8500 2650
+NoConn ~ 9100 2550
+NoConn ~ 5450 3150
+$Comp
+L power:VCC #PWR0101
+U 1 1 60A6AB09
+P 4450 2100
+F 0 "#PWR0101" H 4450 1950 50  0001 C CNN
+F 1 "VCC" H 4450 1950 50  0000 C CNN
+F 2 "" H 4450 2100 50  0001 C CNN
+F 3 "" H 4450 2100 50  0001 C CNN
+	1    4450 2100
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	5250 3150 5250 3100
+Connection ~ 5250 3100
+Wire Wire Line
+	5250 3100 6050 3100
+$Comp
+L Diode:B320 D2
+U 1 1 62054A28
+P 3600 2250
+F 0 "D2" V 3646 2170 50  0000 R CNN
+F 1 "B320" V 3555 2170 50  0000 R CNN
+F 2 "Diode_SMD:D_SMC" H 3600 2075 50  0001 C CNN
+F 3 "http://www.jameco.com/Jameco/Products/ProdDS/1538777.pdf" H 3600 2250 50  0001 C CNN
+	1    3600 2250
+	0    -1   -1   0   
+$EndComp
+Connection ~ 3600 2100
+Connection ~ 4450 2100
+Wire Wire Line
+	4450 2400 4100 2400
+Connection ~ 4100 2400
 $EndSCHEMATC
