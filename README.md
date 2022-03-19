@@ -7,6 +7,8 @@ Design and development of a smart penetrometer
 <p align="center">
 </p>
 
+## [Hardware Design](hardware_design)
+
 ## V0.0.1
 1. This has a geophone, total dissolved solids, conductivity, 
 1. Designed a PCB
