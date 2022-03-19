@@ -13,6 +13,6 @@
 1. Increased diameter of cap by 0.10mm.
 2. Designed 2 holes for solar cell power wires to go through.
 ## PCB
-### 1. added solar cell and power management
+1. added solar cell and power management
 
   
