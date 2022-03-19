@@ -10,8 +10,8 @@ Design and development of a smart penetrometer
 ## [Hardware Design](hardware_design)
 Hardware design.
 
-## [relevent_literature](relevent_literature)
-Literature relevent to the project.
+## [Relevant Literature](relevant_literature)
+Literature relevant to the project.
 
 
 
