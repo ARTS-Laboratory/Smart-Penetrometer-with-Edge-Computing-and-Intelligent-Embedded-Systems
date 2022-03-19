@@ -17,6 +17,8 @@
 1. Enviormental Sensor (BME 280)
 1. Accelerometer on hardware. 
 
+## V0.4
+1. Added solar cells and power management systems
 
 
 
