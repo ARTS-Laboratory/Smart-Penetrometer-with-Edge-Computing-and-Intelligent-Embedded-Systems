@@ -146,23 +146,21 @@ void loop() {
     Serial.print(" ");
     Serial.println(condValue);
 
-    dataFile.print(now.hour(), DEC);
-    dataFile.print(':');
-    dataFile.print(now.minute(), DEC);
-    dataFile.print(':');
-    dataFile.print(now.second(), DEC);
-    dataFile.print(" ");
-    dataFile.print(time);
+//    dataFile.print(now.hour(), DEC, 2);
+//    dataFile.print(now.minute(), DEC, 2);
+//    dataFile.print(now.second(), DEC, 2);
+//    dataFile.print(" ");
+    dataFile.print(time, 8);
     dataFile.print(" ");
     dataFile.print(gVelocity, 7);
     dataFile.print(" ");
-    dataFile.print(bme.readTemperature());
+    dataFile.print(bme.readTemperature(), 5);
     dataFile.print(" ");
-    dataFile.print(bme.readHumidity());
+    dataFile.print(bme.readHumidity(), 5);
     dataFile.print(" ");
-    dataFile.print(bme.readPressure() / 100.0F);
+    dataFile.print(bme.readPressure() / 100.0F, 7);
     dataFile.print(" ");
-    dataFile.println(condValue);
+    dataFile.println(condValue), 7;
     dataFile.close();
   }
   // if the file isn't open, pop up an error:
