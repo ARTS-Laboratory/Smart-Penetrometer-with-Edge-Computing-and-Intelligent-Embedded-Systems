@@ -17,6 +17,13 @@ RTC_DS3231 rtc;
 
 Adafruit_BME280 bme;
 
+  const float VREF = 5.0;      // analog reference voltage(Volt) of the ADC
+  const int SCOUNT  = 30;           // sum of sample point
+  int analogBuffer[SCOUNT];    // store the analog value in the array, read from ADC
+  int analogBufferTemp[SCOUNT];
+  int analogBufferIndex = 0, copyIndex = 0;
+  float averageVoltage = 0, temperature = 25;
+  
 void setup() {
   // Open serial communications and wait for port to open:
   Serial.begin(9600);
@@ -64,18 +71,13 @@ void setup() {
   Serial.println(") ");
   Serial.println("Getting differential reading from AIN0 (P) and AIN1 (N)");
   Serial.println("ADC Range: +/- 0.256V (1 bit = 0.125mV/ADS1115)");
-  Serial.println("time(hr, min, sec), count(ms), ground velocity(m/s), temperature(*C), humidity(%), pressure(hPa), conductivity(uohm)");
+  Serial.println("time(hr, min, sec), count(Ms), ground velocity(m/s), temperature(*C), humidity(%), pressure(hPa), conductivity(mS/cm)");
   Serial.println("Opening datalog.txt...");
 }
 
 void tdsFunc(float & condValue)
 {
-  const float VREF = 3.3;      // analog reference voltage(Volt) of the ADC
-  const int SCOUNT  = 30;           // sum of sample point
-  int analogBuffer[SCOUNT];    // store the analog value in the array, read from ADC
-  int analogBufferTemp[SCOUNT];
-  int analogBufferIndex = 0, copyIndex = 0;
-  float averageVoltage = 0, temperature = 25;
+
   float tdsValue;
 
   static unsigned long analogSampleTimepoint = millis();
@@ -97,7 +99,7 @@ void tdsFunc(float & condValue)
     float compensationCoefficient = 1.0 + 0.02 * (temperature - 25.0); //temperature compensation formula: fFinalResult(25^C) = fFinalResult(current)/(1.0+0.02*(fTP-25.0));
     float compensationVoltage = averageVoltage / compensationCoefficient; //temperature compensation
     tdsValue = (133.42 * compensationVoltage * compensationVoltage * compensationVoltage - 255.86 * compensationVoltage * compensationVoltage + 857.39 * compensationVoltage) * 0.5; //convert voltage value to tds value
-    condValue = tdsValue / 0.5;
+    condValue = tdsValue / 640;//conversion from TDS ppm to EC (electrical conductivity) which is the unit used on some conducivity meters and corresponds to milliSiemens per cm.
 
   }
 }
@@ -115,7 +117,7 @@ void loop() {
   //  Serial.print(results); Serial.print("(");
   //  Serial.print(trueResults); Serial.print(" ");
   //  Serial.println("mV)");
-  float gVelocity = trueResults / 2.750;
+  float gVelocity = trueResults / 27.50;
 
   float condValue;
   tdsFunc(condValue);
@@ -127,16 +129,21 @@ void loop() {
 
   if (dataFile) {
     DateTime now = rtc.now();
-    unsigned long time = millis();
+    float time = millis();
     Serial.print(now.hour(), DEC);
     Serial.print(':');
     Serial.print(now.minute(), DEC);
     Serial.print(':');
     Serial.print(now.second(), DEC);
     Serial.print(" ");
-    Serial.print(time);
+    Serial.print(time/1000000000, 9);
     Serial.print(" ");
-    Serial.print(gVelocity, 7);
+    if (gVelocity < 0) {
+      Serial.print(gVelocity, 6);
+    }
+    else{
+      Serial.print(gVelocity, 7);
+    }
     Serial.print(" ");
     Serial.print(bme.readTemperature());
     Serial.print(" ");
@@ -144,15 +151,20 @@ void loop() {
     Serial.print(" ");
     Serial.print(bme.readPressure() / 100.0F);
     Serial.print(" ");
-    Serial.println(condValue);
+    Serial.println(condValue,3);
 
 //    dataFile.print(now.hour(), DEC, 2);
 //    dataFile.print(now.minute(), DEC, 2);
 //    dataFile.print(now.second(), DEC, 2);
 //    dataFile.print(" ");
-    dataFile.print(time, 8);
+    dataFile.print(time/1000000000,9);
     dataFile.print(" ");
-    dataFile.print(gVelocity, 7);
+    if (gVelocity < 0) {
+      dataFile.print(gVelocity, 6);
+    }
+    else{
+      dataFile.print(gVelocity, 7);
+    }
     dataFile.print(" ");
     dataFile.print(bme.readTemperature(), 5);
     dataFile.print(" ");
@@ -160,7 +172,7 @@ void loop() {
     dataFile.print(" ");
     dataFile.print(bme.readPressure() / 100.0F, 7);
     dataFile.print(" ");
-    dataFile.println(condValue), 7;
+    dataFile.println(condValue, 3);
     dataFile.close();
   }
   // if the file isn't open, pop up an error:
