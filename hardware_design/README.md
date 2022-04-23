@@ -24,6 +24,8 @@
 1. Geophone and accelerometer working on on the the same code. 
 1. Code can detect when its in free-fall using the accelerometer, and sends an interrupt signal to the microcontroller. 
 1. Enviromental senor works. This is inside the case, but will be for atmospheric testing once the case is re-designed. 
+1. Conductivity sensor is working. 
+1. Temperature probe in the spike not installed yet. 
 
 
 # Long term goals
