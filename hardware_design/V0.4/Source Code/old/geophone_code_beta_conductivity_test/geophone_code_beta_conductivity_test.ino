@@ -16,11 +16,7 @@ Adafruit_ADS1115 ads;  /* Use this for the 16-bit version */
 RTC_DS3231 rtc;
 
 Adafruit_BME280 bme;
-
-  const float VREF = 5.0;      // analog reference voltage(Volt) of the ADC
-  const int SCOUNT  = 30;           // sum of sample point
-  int analogBuffer[SCOUNT];    // store the analog value in the array, read from ADC
-  int analogBufferTemp[SCOUNT];
+ 
   int analogBufferIndex = 0, copyIndex = 0;
   float averageVoltage = 0, temperature = 25;
   
@@ -79,6 +75,11 @@ void setup() {
 void tdsFunc(float & compensationCoefficient, float & compensationVoltage, float & tdsValue, float & condValue, float & getMedianNum2)
 {
 
+
+  const float VREF = 5.0;      // analog reference voltage(Volt) of the ADC
+  const int SCOUNT  = 30;           // sum of sample point
+  int analogBuffer[SCOUNT];    // store the analog value in the array, read from ADC
+  int analogBufferTemp[SCOUNT];
   //float tdsValue;
 
   static unsigned long analogSampleTimepoint = millis();

@@ -22,6 +22,9 @@ RTC_DS3231 rtc;
 
 Adafruit_BME280 bme;
 
+int analogBufferIndex = 0, copyIndex = 0;
+float averageVoltage = 0, temperature = 25;
+
 void setup() {
   Wire.begin();
   // Open serial communications and wait for port to open:
@@ -73,7 +76,7 @@ void setup() {
   bme.begin(0x76);
 
 
-  char daysOfTheWeek[7][12] = {"Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"};
+ /* char daysOfTheWeek[7][12] = {"Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"};
   DateTime now = rtc.now();
   Serial.print(now.year(), DEC);
   Serial.print('/');
@@ -85,19 +88,18 @@ void setup() {
   Serial.println(") ");
   Serial.println("Getting differential reading from AIN0 (P) and AIN1 (N)");
   Serial.println("ADC Range: +/- 0.256V (1 bit = 0.125mV/ADS1115)");
-  Serial.println("time(hr, min, sec), count(ms), ground velocity(m/s), temperature(*C), humidity(%), pressure(hPa), conductivity(uohm)");
+  Serial.println("time(hr, min, sec), count(ms), ground velocity(m/s), temperature(*C), humidity(%), pressure(hPa), conductivity(uohm)");*/
   Serial.println("Opening datalog.txt...");
 }
 
-void tdsFunc(float & tdsValue, float & condValue)
+void tdsFunc(float & condValue)
 {
-  const float VREF = 3.3;      // analog reference voltage(Volt) of the ADC
+  const float VREF = 5;      // analog reference voltage(Volt) of the ADC
   const int SCOUNT  = 30;           // sum of sample point
   int analogBuffer[SCOUNT];    // store the analog value in the array, read from ADC
   int analogBufferTemp[SCOUNT];
-  int analogBufferIndex = 0, copyIndex = 0;
-  float averageVoltage = 0, temperature = 25;
-
+  float tdsValue; 
+  
   static unsigned long analogSampleTimepoint = millis();
   if (millis() - analogSampleTimepoint > 40U)  //every 40 milliseconds,read the analog value from the ADC
   {
@@ -115,9 +117,9 @@ void tdsFunc(float & tdsValue, float & condValue)
       analogBufferTemp[copyIndex] = analogBuffer[copyIndex];
     averageVoltage = getMedianNum(analogBufferTemp, SCOUNT) * (float)VREF / 1024.0; // read the analog value more stable by the median filtering algorithm, and convert to voltage value
     float compensationCoefficient = 1.0 + 0.02 * (temperature - 25.0); //temperature compensation formula: fFinalResult(25^C) = fFinalResult(current)/(1.0+0.02*(fTP-25.0));
-    float compensationVoltage = averageVoltage / compensationCoefficient; //temperature compensation
+    float compensationVoltage = 1.4 * averageVoltage / compensationCoefficient; //temperature compensation
     tdsValue = (133.42 * compensationVoltage * compensationVoltage * compensationVoltage - 255.86 * compensationVoltage * compensationVoltage + 857.39 * compensationVoltage) * 0.5; //convert voltage value to tds value
-    condValue = tdsValue / 0.5;
+    condValue = tdsValue / 640;
   }
 }
 void freefall() {
@@ -127,14 +129,20 @@ void freefall() {
   if (dataFile) {
     xyzFloat raw = myAcc.getRawValues();
     xyzFloat g = myAcc.getGValues();
-    
+
+    Serial.print(millis());
+    Serial.print(" ");
     Serial.print(raw.z);
+    Serial.print(" ");
     Serial.println(g.z);
-    
+
+    dataFile.print(millis());
+    dataFile.print(" ");
     dataFile.print(raw.z);
+    dataFile.print(" ");
     dataFile.println(g.z);
     dataFile.close();
-    delay(100);
+    
     freeFall = false;
     myAcc.readAndClearInterrupts();
   }
@@ -157,10 +165,10 @@ void logData() {
   //  Serial.print(results); Serial.print("(");
   //  Serial.print(trueResults); Serial.print(" ");
   //  Serial.println("mV)");
-  float gVelocity = trueResults / 2.750;
+  float gVelocity = trueResults / 27.50;
 
-  float tdsValue, condValue;
-  //tdsFunc (tdsValue, condValue);
+  float condValue;
+  tdsFunc (condValue);
  
   float SEALEVELPRESSURE_HPA = 1014.9;
 
@@ -178,10 +186,14 @@ void logData() {
     Serial.print(now.minute(), DEC);
     Serial.print(':');
     Serial.print(now.second(), DEC);
+    Serial.print(time/1000000000, 9);
     Serial.print(" ");
-    Serial.print(time);
-    Serial.print(" ");
-    Serial.print(gVelocity, 7);
+    if (gVelocity < 0) {
+      Serial.print(gVelocity, 6);
+    }
+    else{
+      Serial.print(gVelocity, 7);
+    }
     Serial.print(" ");
     Serial.print(bme.readTemperature());
     Serial.print(" ");
@@ -189,25 +201,30 @@ void logData() {
     Serial.print(" ");
     Serial.print(bme.readPressure() / 100.0F);
     Serial.print(" ");
-    Serial.println(condValue);
+    Serial.println(condValue,3);
 
-    dataFile.print(now.hour(), DEC);
+    /*dataFile.print(now.hour(), DEC);
     dataFile.print(':');
     dataFile.print(now.minute(), DEC);
     dataFile.print(':');
     dataFile.print(now.second(), DEC);
+    dataFile.print(" ");*/
+    dataFile.print(time/1000000000,9);
     dataFile.print(" ");
-    dataFile.print(time);
+    if (gVelocity < 0) {
+      dataFile.print(gVelocity, 6);
+    }
+    else{
+      dataFile.print(gVelocity, 7);
+    }
     dataFile.print(" ");
-    dataFile.print(gVelocity, 7);
+    dataFile.print(bme.readTemperature(), 5);
     dataFile.print(" ");
-    dataFile.print(bme.readTemperature());
+    dataFile.print(bme.readHumidity(), 5);
     dataFile.print(" ");
-    dataFile.print(bme.readHumidity());
+    dataFile.print(bme.readPressure() / 100.0F, 7);
     dataFile.print(" ");
-    dataFile.print(bme.readPressure() / 100.0F);
-    dataFile.print(" ");
-    dataFile.println(condValue);
+    dataFile.println(condValue, 3);
     dataFile.close();
   }
   // if the file isn't open, pop up an error:
