@@ -1,5 +1,5 @@
 # Smart Penetrometer
-Design and development of a smart penetrometer
+### Design and development of a smart penetrometer
 
 <p align="center">
 <img src="image.PNG" alt="drawing" width="700"/>
