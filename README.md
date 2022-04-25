@@ -1,4 +1,4 @@
-# Smart Penetrometer
+# Solar-Charged UAV-deployable Penetrometer System (SCUPS) "pronounced [sko͞ops]"
 ### Design and development of a smart penetrometer
 
 <p align="center">
