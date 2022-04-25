@@ -24,3 +24,5 @@
 ### 6. Enviromental senor works. This is inside the case, but will be for atmospheric testing once the case is re-designed. 
 ### 7. Conductivity sensor is working. 
 ### 8. Temperature probe in the spike not installed yet. 
+
+## [Return to Hardware Readme](https://github.com/ARTS-Laboratory/Solar-Charged-UAV-deployable-Penetrometer-System-for-Fault-Detection-of-Geological-Structures/tree/main/hardware_design#readme)
