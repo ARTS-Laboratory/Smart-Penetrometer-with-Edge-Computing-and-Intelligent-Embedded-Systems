@@ -14,6 +14,7 @@
 ### 3. Data logging.
 ### 4. Environmental Sensor (BME 280).
 ### 4. Accelerometer on hardware. 
+![20220201_191758](https://user-images.githubusercontent.com/87868879/165031159-57193b81-9ee9-4f73-8fd5-7069a65881ba.jpg)
 
 ## [V0.4](V0.4)
 ### 1. Added solar cells and power management systems. Currently only power sharing. 
