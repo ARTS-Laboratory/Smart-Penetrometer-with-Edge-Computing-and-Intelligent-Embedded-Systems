@@ -1,6 +1,6 @@
 # Hardware Designs
 
-## V0.0 Prototype
+## [V0.0 Prototype](V0.0)
 ### 1. Development of working sensor node.
 
 # Long term goals
@@ -18,4 +18,4 @@
 ### 1. Has edge-computing capabilities. 
 ### 2. Can do Soil classification, fault detection, etc.
 
-
+## [Return to Main Readme](https://github.com/ARTS-Laboratory/Solar-Charged-UAV-deployable-Penetrometer-System-for-Fault-Detection-of-Geological-Structures#readme)
