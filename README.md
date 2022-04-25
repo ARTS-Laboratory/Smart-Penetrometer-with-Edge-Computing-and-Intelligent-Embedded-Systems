@@ -8,10 +8,10 @@
 </p>
 
 ## [Hardware Design](hardware_design)
-Hardware design.
+### Hardware design.
 
 ## [Relevant Literature](relevant_literature)
-Literature relevant to the project.
+### Literature relevant to the project.
 
 
 
