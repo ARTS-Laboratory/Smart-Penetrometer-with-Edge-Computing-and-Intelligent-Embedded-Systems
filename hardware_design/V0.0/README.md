@@ -25,7 +25,7 @@
 ### 3. Has a real-time clock in hardware, but not always needed in software. 
 ### 4. Geophone and accelerometer working on on the the same code. 
 ### 5. Code can detect when its in free-fall using the accelerometer, and sends an interrupt signal to the microcontroller. 
-### 6. Enviromental senor works. This is inside the case, but will be for atmospheric testing once the case is re-designed. 
+### 6. Enviromental sensor works. This is inside the case, but will be for atmospheric testing once the case is re-designed. 
 ### 7. Conductivity sensor is working. 
 ### 8. Temperature probe in the spike not installed yet. 
 
