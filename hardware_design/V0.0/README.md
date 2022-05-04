@@ -14,7 +14,10 @@
 ### 3. Data logging.
 ### 4. Environmental Sensor (BME 280).
 ### 4. Accelerometer on hardware. 
-![20220201_191758](https://user-images.githubusercontent.com/87868879/165031159-57193b81-9ee9-4f73-8fd5-7069a65881ba.jpg)
+
+<p align="center">
+<img src="https://user-images.githubusercontent.com/87868879/165031159-57193b81-9ee9-4f73-8fd5-7069a65881ba.jpg" alt="drawing" width="500"/>
+</p>
 
 ## [V0.4](V0.4)
 ### 1. Added solar cells and power management systems. Currently only power sharing. 
@@ -25,5 +28,9 @@
 ### 6. Enviromental senor works. This is inside the case, but will be for atmospheric testing once the case is re-designed. 
 ### 7. Conductivity sensor is working. 
 ### 8. Temperature probe in the spike not installed yet. 
+
+<p align="center">
+<img src="https://user-images.githubusercontent.com/87868879/166612679-dd4c9aa5-846a-4b32-8205-793bf78a7fb0.jpg" alt="drawing" width="500"/>
+</p>
 
 ## [Return to Hardware Readme](https://github.com/ARTS-Laboratory/Solar-Charged-UAV-deployable-Penetrometer-System-for-Fault-Detection-of-Geological-Structures/tree/main/hardware_design#readme)
