@@ -8,5 +8,7 @@
 7. [Arduino Nano](https://docs.arduino.cc/resources/datasheets/ABX00028-datasheet.pdf)
 8. [Accelerometer](https://www.analog.com/media/en/technical-documentation/data-sheets/ADXL362.pdf)
 9. [MicroSD Reader Module](https://electropeak.com/learn/sd-card-module-read-write-arduino-tutorial/)
+10. [Schottky Diode](https://www.diodes.com/assets/Datasheets/ds30923.pdf/)
+11. [Zener Diode](https://my.centralsemi.com/datasheets/CMZ5342B.PDF)
 
 ## [Return to Literature Readme](https://github.com/ARTS-Laboratory/Solar-Charged-UAV-deployable-Penetrometer-System-for-Fault-Detection-of-Geological-Structures/tree/main/relevant_literature)
