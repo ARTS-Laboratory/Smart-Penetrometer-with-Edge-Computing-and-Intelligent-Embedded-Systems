@@ -5,5 +5,8 @@
 4. [Humidity and Pressure Sensor](https://www.bosch-sensortec.com/media/boschsensortec/downloads/datasheets/bst-bme280-ds002.pdf)
 5. [Analog TDS Sensor](https://media.digikey.com/pdf/Data%20Sheets/DFRobot%20PDFs/SEN0244_Web.pdf)
 6. [Geophone](https://rtclark.com/wp-content/uploads/2015/10/RTC-10hz-395-Spec-Curve-Email.pdf)
+7. [Arduino Nano](https://docs.arduino.cc/resources/datasheets/ABX00028-datasheet.pdf)
+8. [Accelerometer](https://www.analog.com/media/en/technical-documentation/data-sheets/ADXL362.pdf)
+9. [MicroSD Reader Module](https://electropeak.com/learn/sd-card-module-read-write-arduino-tutorial/)
 
 ## [Return to Literature Readme](https://github.com/ARTS-Laboratory/Solar-Charged-UAV-deployable-Penetrometer-System-for-Fault-Detection-of-Geological-Structures/tree/main/relevant_literature)
