@@ -9,3 +9,5 @@
 [3. Kandanuru S, Sudarshan V. AUTOMATING A SEISMIC SURVEY USING HETEROGENOUS SENSOR TEAMS AND UNMANNED AERIAL VEHICLES. University of Houston. 2016 Dec.](https://swarmcontrol.ece.uh.edu/wp-content/papercite-data/pdf/2016-sudarshan-msthesis.pdf)
 
 [4. Santos J, Catapang AN, Reyta ED. Understanding the Fundamentals of Earthquake Signal Sensing Networks. Analog Dialogue. 2019 Dec;53(3).](https://www.analog.com/en/analog-dialogue/articles/understanding-the-fundamentals-of-earthquake-signal-sensing-networks.html)
+
+[5. Baez VM, Shah A, Akinwande S, Jafari NH, Becker AT. Assessment of Soil Strength using a Robotically Deployed and Retrieved Penetrometer. IEEE. 2020 Oct;doi: 10.1109/IROS45743.2020.9341424:7324-29.](https://ieeexplore.ieee.org/document/9341424)
