@@ -7,8 +7,12 @@
 
 ### 2. Housing part 2
 
+### 3. Hinge and pins
+<p align="center">
+<img src="https://user-images.githubusercontent.com/87868879/167021817-147ca9b9-292e-45fb-a1e0-cf047cd3febb.jpg" alt="drawing" width="400"/>
+</p>
 
-### 3. Cap
+### 4. Cap
 <p align="center">
 <img src="https://user-images.githubusercontent.com/87868879/166604487-b1d19e6a-9153-49f3-b765-6ddcd2150b6c.jpg" alt="drawing" width="400"/>
 </p>
