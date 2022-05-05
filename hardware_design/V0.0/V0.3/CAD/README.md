@@ -13,6 +13,10 @@
 
 ### 3. Housing part 2
 
+<p align="center">
+<img src="https://user-images.githubusercontent.com/87868879/167042062-f1eb2072-17b1-4695-9b5e-bc40d8999c06.jpg" alt="drawing" width="400"/>
+</p>
+
 ### 4. Solar cell attachment with fin hinges
 
 <p align="center">
