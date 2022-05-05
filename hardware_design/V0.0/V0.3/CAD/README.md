@@ -15,15 +15,15 @@
 
 ### 4. Solar cell attachment with fin hinges
 
-
+<p align="center">
+<img src="https://user-images.githubusercontent.com/87868879/167041844-3545f37f-32d5-4578-ae2d-0ce6354dd844.jpg" alt="drawing" width="400"/>
+</p>
 
 ### 5. Hinge and pins
 
 <p align="center">
 <img src="https://user-images.githubusercontent.com/87868879/167021817-147ca9b9-292e-45fb-a1e0-cf047cd3febb.jpg" alt="drawing" width="400"/>
 </p>
-
-
 
 ## [Return to V0.3 Readme](https://github.com/ARTS-Laboratory/Solar-Charged-UAV-deployable-Penetrometer-System-for-Fault-Detection-of-Geological-Structures/tree/main/hardware_design/V0.0/V0.3)
 
