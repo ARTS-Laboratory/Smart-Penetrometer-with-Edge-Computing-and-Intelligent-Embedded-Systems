@@ -23,7 +23,7 @@
 
 ### 4. Solar cell attachment with fletching
 <p align="center">
-<img src="https://user-images.githubusercontent.com/87868879/167037050-c722c09d-1397-497c-aa07-957cd55efcfd.jpg" alt="drawing" width="400"/>
+<img src="https://user-images.githubusercontent.com/87868879/167037050-c722c09d-1397-497c-aa07-957cd55efcfd.jpg" alt="drawing" width="300"/>
 </p>
 
 
