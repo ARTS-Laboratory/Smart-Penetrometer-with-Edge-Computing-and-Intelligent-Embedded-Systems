@@ -33,4 +33,7 @@
 <img src="https://user-images.githubusercontent.com/87868879/166612679-dd4c9aa5-846a-4b32-8205-793bf78a7fb0.jpg" alt="drawing" width="500"/>
 </p>
 
+## [V0.5](V0.5)
+### 1. Added battery protection ciruit for power system.
+
 ## [Return to Hardware Readme](https://github.com/ARTS-Laboratory/Solar-Charged-UAV-deployable-Penetrometer-System-for-Fault-Detection-of-Geological-Structures/tree/main/hardware_design#readme)
