@@ -1,4 +1,4 @@
-# Solar-Charged UAV-deployable Penetrometer System (SCUPS) "pronounced [sko͞ops]"
+# Smart Penetrometer with Edge Computing (SPEC) 
 ### Design and develop a UAV-deployabe smart sensor node in a network with edge computing and solar-charging capabilities for soil classification and fault detection
 
 ## Repository Structure
