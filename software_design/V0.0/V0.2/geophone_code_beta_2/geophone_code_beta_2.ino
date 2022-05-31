@@ -8,7 +8,6 @@
 #include <Adafruit_ADS1X15.h>
 #include <Adafruit_Sensor.h>
 #include <Adafruit_BME280.h>
-#include<Wire.h>
 #include<ADXL345_WE.h>
 #define ADXL345_I2CADDR 0x53
 SdFat SD;
@@ -43,8 +42,8 @@ void setup() {
 /* Insert your data from ADXL345_calibration.ino and uncomment for more precise results */
   myAcc.setCorrFactors(-256.0, 266.0, -285.0, 239.0, -243.0, 287.0);
 
-  myAcc.setDataRate(ADXL345_DATA_RATE_25);
-  myAcc.setRange(ADXL345_RANGE_2G);
+  myAcc.setDataRate(ADXL345_DATA_RATE_3200);
+  myAcc.setRange(ADXL345_RANGE_16G);
   myAcc.setFreeFallThresholds(0.4, 100);
   myAcc.setInterrupt(ADXL345_FREEFALL, INT_PIN_2);
   
