@@ -67,14 +67,14 @@ This work is licensed under a
 
 Cite as:
 
-@Misc{Flemming2022SolarChargedUAV,  
-  author       = {Malichi Flemming and Austin Downey},  
-  howpublished = {GitHub},  
-  month        = apr,   
-  title        = {Solar Charged {UAV} deployable Penetrometer System for Fault Detection of Geological Structures}, 
-  year         = {2022},    
-  groups       = {{ARTS-L}ab},  
-  url          = {https://github.com/ARTS-Laboratory/Solar-Charged-UAV-deployable-Penetrometer-System-for-Fault-Detection-of-Geological-Structures},    
+@Misc{Flemming2022SPECIES,
+author       = {Malichi Flemming and Austin Downey},  
+howpublished = {GitHub},  
+month        = apr,   
+title        = {Smart Penetrometer with Edge Computing and Intelligent Embedded Systems}, 
+year         = {2022},    
+groups       = {ARTS-Lab},  
+url          = {https://github.com/ARTS-Laboratory/Smart-Penetrometers-with-Edge-Computing-and-Intelligent-Embedded-Systems},    
 }
 
 
