@@ -1,5 +1,5 @@
-# Smart Penetrometer with Edge Computing (SPEC) 
-### Design and develop a UAV-deployabe smart sensor node in a network with edge computing and solar-charging capabilities for soil classification and fault detection
+# Smart Penetrometers with Edge Computing and Intelligent Embedded Systems (SPECIES) 
+### Design and develop UAV-deployabe smart sensor nodes in a network with edge computing and solar-charging capabilities for soil classification and fault detection capabilities.
 
 ## Repository Structure
 ```angular2html
