@@ -43,7 +43,7 @@
  <img src="https://user-images.githubusercontent.com/87868879/166610946-1d7f9edc-2c42-431b-8995-1c52ac2c5b0f.png"/>
 </p>
 
-## [Hardware Design for SCUPS](hardware_design)
+## [Hardware Design for SPECIES](hardware_design)
 ### Hardware-specific files
 
 ## [Software Design](software_design)
