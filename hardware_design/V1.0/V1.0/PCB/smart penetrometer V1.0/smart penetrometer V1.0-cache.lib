@@ -1,79 +1,6 @@
 EESchema-LIBRARY Version 2.4
 #encoding utf-8
 #
-# 4xxx_4001
-#
-DEF 4xxx_4001 U 0 40 Y Y 5 L N
-F0 "U" 0 50 50 H V C CNN
-F1 "4xxx_4001" 0 -50 50 H V C CNN
-F2 "" 0 0 50 H I C CNN
-F3 "" 0 0 50 H I C CNN
-$FPLIST
- DIP?14*
-$ENDFPLIST
-DRAW
-A -360 0 258 354 -354 1 1 10 N -150 150 -150 -150
-A -47 -52 204 150 837 1 1 10 f 150 0 -24 150
-A -47 52 204 -150 -837 1 1 10 f 150 0 -24 -150
-A -360 0 258 354 -354 2 1 10 N -150 150 -150 -150
-A -47 -52 204 150 837 2 1 10 f 150 0 -24 150
-A -47 52 204 -150 -837 2 1 10 f 150 0 -24 -150
-A -360 0 258 354 -354 3 1 10 N -150 150 -150 -150
-A -47 -52 204 150 837 3 1 10 f 150 0 -24 150
-A -47 52 204 -150 -837 3 1 10 f 150 0 -24 -150
-A -360 0 258 354 -354 4 1 10 N -150 150 -150 -150
-A -47 -52 204 150 837 4 1 10 f 150 0 -24 150
-A -47 52 204 -150 -837 4 1 10 f 150 0 -24 -150
-A 0 0 150 -899 899 1 2 10 f 0 -150 0 150
-A 0 0 150 -899 899 2 2 10 f 0 -150 0 150
-A 0 0 150 -899 899 3 2 10 f 0 -150 0 150
-A 0 0 150 -899 899 4 2 10 f 0 -150 0 150
-S -200 300 200 -300 5 1 10 f
-P 2 1 1 10 -150 -150 -25 -150 f
-P 2 1 1 10 -150 150 -25 150 f
-P 12 1 1 -1000 -25 150 -150 150 -150 150 -140 134 -119 89 -106 41 -103 -10 -109 -59 -125 -107 -150 -150 -150 -150 -25 -150 f
-P 2 2 1 10 -150 -150 -25 -150 f
-P 2 2 1 10 -150 150 -25 150 f
-P 12 2 1 -1000 -25 150 -150 150 -150 150 -140 134 -119 89 -106 41 -103 -10 -109 -59 -125 -107 -150 -150 -150 -150 -25 -150 f
-P 2 3 1 10 -150 -150 -25 -150 f
-P 2 3 1 10 -150 150 -25 150 f
-P 12 3 1 -1000 -25 150 -150 150 -150 150 -140 134 -119 89 -106 41 -103 -10 -109 -59 -125 -107 -150 -150 -150 -150 -25 -150 f
-P 2 4 1 10 -150 -150 -25 -150 f
-P 2 4 1 10 -150 150 -25 150 f
-P 12 4 1 -1000 -25 150 -150 150 -150 150 -140 134 -119 89 -106 41 -103 -10 -109 -59 -125 -107 -150 -150 -150 -150 -25 -150 f
-P 4 1 2 10 0 150 -150 150 -150 -150 0 -150 f
-P 4 2 2 10 0 150 -150 150 -150 -150 0 -150 f
-P 4 3 2 10 0 150 -150 150 -150 -150 0 -150 f
-P 4 4 2 10 0 150 -150 150 -150 -150 0 -150 f
-X VDD 14 0 500 200 D 50 50 5 0 W
-X VSS 7 0 -500 200 U 50 50 5 0 W
-X ~ 1 -300 100 170 R 50 50 1 1 I
-X ~ 2 -300 -100 170 R 50 50 1 1 I
-X ~ 3 300 0 150 L 50 50 1 1 O I
-X ~ 4 300 0 150 L 50 50 2 1 O I
-X ~ 5 -300 100 170 R 50 50 2 1 I
-X ~ 6 -300 -100 170 R 50 50 2 1 I
-X ~ 10 300 0 150 L 50 50 3 1 O I
-X ~ 8 -300 100 170 R 50 50 3 1 I
-X ~ 9 -300 -100 170 R 50 50 3 1 I
-X ~ 11 300 0 150 L 50 50 4 1 O I
-X ~ 12 -300 100 170 R 50 50 4 1 I
-X ~ 13 -300 -100 170 R 50 50 4 1 I
-X ~ 1 -300 100 150 R 50 50 1 2 I I
-X ~ 2 -300 -100 150 R 50 50 1 2 I I
-X ~ 3 300 0 150 L 50 50 1 2 O
-X ~ 4 300 0 150 L 50 50 2 2 O
-X ~ 5 -300 100 150 R 50 50 2 2 I I
-X ~ 6 -300 -100 150 R 50 50 2 2 I I
-X ~ 10 300 0 150 L 50 50 3 2 O
-X ~ 8 -300 100 150 R 50 50 3 2 I I
-X ~ 9 -300 -100 150 R 50 50 3 2 I I
-X ~ 11 300 0 150 L 50 50 4 2 O
-X ~ 12 -300 100 150 R 50 50 4 2 I I
-X ~ 13 -300 -100 150 R 50 50 4 2 I I
-ENDDRAW
-ENDDEF
-#
 # 4xxx_4023
 #
 DEF 4xxx_4023 U 0 40 Y Y 4 L N
@@ -474,11 +401,11 @@ X VCC 1 0 0 0 U 50 50 1 1 W N
 ENDDRAW
 ENDDEF
 #
-# smart-penetrometer-rescue_3v3_Voltage_Regulator
+# smart-penetrometer-V1.0-rescue_3v3_Voltage_Regulator-smart-penetrometer-rescue
 #
-DEF smart-penetrometer-rescue_3v3_Voltage_Regulator U 0 40 Y Y 1 F N
+DEF smart-penetrometer-V1.0-rescue_3v3_Voltage_Regulator-smart-penetrometer-rescue U 0 40 Y Y 1 F N
 F0 "U" 0 250 50 H V C CNN
-F1 "smart-penetrometer-rescue_3v3_Voltage_Regulator" 50 -500 50 H V C CNN
+F1 "smart-penetrometer-V1.0-rescue_3v3_Voltage_Regulator-smart-penetrometer-rescue" 50 -500 50 H V C CNN
 F2 "" 0 0 50 H I C CNN
 F3 "" 0 0 50 H I C CNN
 DRAW
@@ -490,11 +417,11 @@ X GND 4 -350 100 100 R 50 50 1 1 O
 ENDDRAW
 ENDDEF
 #
-# smart-penetrometer-rescue_Arduino_Nano_v3.x-MCU_Module-kitest-rescue
+# smart-penetrometer-V1.0-rescue_Arduino_Nano_v3.x-MCU_Module-kitest-rescue-smart-penetrometer-rescue
 #
-DEF smart-penetrometer-rescue_Arduino_Nano_v3.x-MCU_Module-kitest-rescue A 0 40 Y Y 1 F N
+DEF smart-penetrometer-V1.0-rescue_Arduino_Nano_v3.x-MCU_Module-kitest-rescue-smart-penetrometer-rescue A 0 40 Y Y 1 F N
 F0 "A" -200 1025 50 H V R CNN
-F1 "smart-penetrometer-rescue_Arduino_Nano_v3.x-MCU_Module-kitest-rescue" -200 950 50 H V R CNN
+F1 "smart-penetrometer-V1.0-rescue_Arduino_Nano_v3.x-MCU_Module-kitest-rescue-smart-penetrometer-rescue" -200 950 50 H V R CNN
 F2 "Module:Arduino_Nano" 150 -950 50 H I L CNN
 F3 "" 0 -1000 50 H I C CNN
 $FPLIST
@@ -535,11 +462,11 @@ X D6 9 -500 0 100 R 50 50 1 1 B
 ENDDRAW
 ENDDEF
 #
-# smart-penetrometer-rescue_Battery_Input-kitest-kitest-rescue
+# smart-penetrometer-V1.0-rescue_Battery_Input-kitest-kitest-rescue-smart-penetrometer-rescue
 #
-DEF smart-penetrometer-rescue_Battery_Input-kitest-kitest-rescue U 0 40 Y Y 1 F N
+DEF smart-penetrometer-V1.0-rescue_Battery_Input-kitest-kitest-rescue-smart-penetrometer-rescue U 0 40 Y Y 1 F N
 F0 "U" 0 0 50 H V C CNN
-F1 "smart-penetrometer-rescue_Battery_Input-kitest-kitest-rescue" 0 200 50 H V C CNN
+F1 "smart-penetrometer-V1.0-rescue_Battery_Input-kitest-kitest-rescue-smart-penetrometer-rescue" 0 200 50 H V C CNN
 F2 "" 0 0 50 H I C CNN
 F3 "" 0 0 50 H I C CNN
 DRAW
@@ -548,11 +475,11 @@ X Neg 2 -150 -150 100 U 50 50 1 1 I
 ENDDRAW
 ENDDEF
 #
-# smart-penetrometer-rescue_DW01
+# smart-penetrometer-V1.0-rescue_DW01-smart-penetrometer-rescue
 #
-DEF smart-penetrometer-rescue_DW01 U 0 40 Y Y 1 F N
+DEF smart-penetrometer-V1.0-rescue_DW01-smart-penetrometer-rescue U 0 40 Y Y 1 F N
 F0 "U" 0 -450 50 H V C CNN
-F1 "smart-penetrometer-rescue_DW01" 0 450 50 H V C CNN
+F1 "smart-penetrometer-V1.0-rescue_DW01-smart-penetrometer-rescue" 0 450 50 H V C CNN
 F2 "" 0 0 50 H I C CNN
 F3 "" 0 0 50 H I C CNN
 DRAW
@@ -566,11 +493,11 @@ X GND 6 -100 250 100 D 30 30 1 1 O
 ENDDRAW
 ENDDEF
 #
-# smart-penetrometer-rescue_FS8205A
+# smart-penetrometer-V1.0-rescue_FS8205A-smart-penetrometer-rescue
 #
-DEF smart-penetrometer-rescue_FS8205A U 0 40 Y Y 1 F N
+DEF smart-penetrometer-V1.0-rescue_FS8205A-smart-penetrometer-rescue U 0 40 Y Y 1 F N
 F0 "U" 0 -450 50 H V C CNN
-F1 "smart-penetrometer-rescue_FS8205A" 0 500 50 H V C CNN
+F1 "smart-penetrometer-V1.0-rescue_FS8205A-smart-penetrometer-rescue" 0 500 50 H V C CNN
 F2 "" 0 0 50 H I C CNN
 F3 "" 0 0 50 H I C CNN
 DRAW
@@ -586,11 +513,11 @@ X D12 8 500 300 100 L 30 30 1 1 B
 ENDDRAW
 ENDDEF
 #
-# smart-penetrometer-rescue_SD_Card_Module-Charleslabs_Parts-kitest-rescue
+# smart-penetrometer-V1.0-rescue_SD_Card_Module-Charleslabs_Parts-kitest-rescue-smart-penetrometer-rescue
 #
-DEF smart-penetrometer-rescue_SD_Card_Module-Charleslabs_Parts-kitest-rescue A 0 40 Y Y 1 F N
+DEF smart-penetrometer-V1.0-rescue_SD_Card_Module-Charleslabs_Parts-kitest-rescue-smart-penetrometer-rescue A 0 40 Y Y 1 F N
 F0 "A" -300 400 50 H V C CNN
-F1 "smart-penetrometer-rescue_SD_Card_Module-Charleslabs_Parts-kitest-rescue" 400 400 50 H V C CNN
+F1 "smart-penetrometer-V1.0-rescue_SD_Card_Module-Charleslabs_Parts-kitest-rescue-smart-penetrometer-rescue" 400 400 50 H V C CNN
 F2 "Charleslabs_Parts:SD_Card_Module" 950 50 50 H I C CNN
 F3 "" -300 350 50 H I C CNN
 DRAW
