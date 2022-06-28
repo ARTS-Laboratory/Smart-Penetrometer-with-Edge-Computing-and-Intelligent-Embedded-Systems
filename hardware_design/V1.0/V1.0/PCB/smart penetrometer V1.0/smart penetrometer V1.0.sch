@@ -41,8 +41,6 @@ Wire Wire Line
 	4800 4750 4850 4750
 Wire Wire Line
 	4800 2900 4800 4750
-Wire Wire Line
-	4650 4550 4850 4550
 $Comp
 L power:GND #PWR04
 U 1 1 60A6136F
@@ -79,7 +77,6 @@ NoConn ~ 4850 4050
 NoConn ~ 4850 4150
 NoConn ~ 4850 4250
 NoConn ~ 4850 4350
-NoConn ~ 4850 4450
 $Comp
 L smart-penetrometer-V1.0-rescue:Battery_Input-kitest-kitest-rescue-smart-penetrometer-rescue U3
 U 1 1 60A6877D
@@ -340,8 +337,6 @@ Wire Wire Line
 	6750 3350 6750 3550
 NoConn ~ 5550 3150
 Wire Wire Line
-	4650 2600 4650 4550
-Wire Wire Line
 	3500 3100 3500 5800
 Wire Wire Line
 	3500 5800 5150 5800
@@ -360,16 +355,12 @@ F 3 "" H 2650 2600 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	3950 4350 2500 4350
-Wire Wire Line
 	2500 4350 2500 3100
 Wire Wire Line
 	2800 2850 2800 3100
 Wire Wire Line
 	2800 3100 3500 3100
 Connection ~ 3500 3100
-Wire Wire Line
-	3500 3100 5250 3100
 $Comp
 L Device:C_Small C2
 U 1 1 61FFB484
@@ -546,7 +537,6 @@ Wire Wire Line
 	4100 3350 4100 2400
 Wire Wire Line
 	4100 2400 3600 2400
-NoConn ~ 5450 3150
 $Comp
 L power:VCC #PWR0101
 U 1 1 60A6AB09
@@ -558,11 +548,6 @@ F 3 "" H 4450 2100 50  0001 C CNN
 	1    4450 2100
 	0    1    1    0   
 $EndComp
-Wire Wire Line
-	5250 3150 5250 3100
-Connection ~ 5250 3100
-Wire Wire Line
-	5250 3100 6050 3100
 $Comp
 L Diode:B320 D2
 U 1 1 62054A28
@@ -777,4 +762,67 @@ Wire Wire Line
 Wire Wire Line
 	2050 1350 2050 1150
 Connection ~ 2050 1150
+Wire Wire Line
+	5450 3150 5450 3100
+Connection ~ 5450 3100
+Wire Wire Line
+	5450 3100 6050 3100
+Wire Wire Line
+	3500 3100 5450 3100
+Wire Wire Line
+	5250 3150 4300 3150
+Wire Wire Line
+	4300 3150 4300 4350
+Wire Wire Line
+	2500 4350 3950 4350
+Connection ~ 3950 4350
+Wire Wire Line
+	3950 4350 4300 4350
+$Comp
+L smart-penetrometer-V1.0-rescue:23k256SRAM U?
+U 1 1 62BD39C8
+P 2850 5150
+F 0 "U?" H 2850 5665 50  0000 C CNN
+F 1 "23k256SRAM" H 2850 5574 50  0000 C CNN
+F 2 "" H 2850 5150 50  0001 C CNN
+F 3 "" H 2850 5150 50  0001 C CNN
+	1    2850 5150
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4850 4450 4650 4450
+Wire Wire Line
+	4650 2600 4650 4450
+Wire Wire Line
+	2500 4550 2500 4900
+Wire Wire Line
+	2500 4550 4850 4550
+Wire Wire Line
+	4700 4650 3400 4650
+Wire Wire Line
+	3400 4650 3400 5400
+Wire Wire Line
+	3400 5400 3200 5400
+Connection ~ 4700 4650
+Wire Wire Line
+	4800 4750 2450 4750
+Wire Wire Line
+	2450 4750 2450 5050
+Wire Wire Line
+	2450 5050 2500 5050
+Connection ~ 4800 4750
+Wire Wire Line
+	4750 4850 3600 4850
+Wire Wire Line
+	3600 4850 3600 5250
+Wire Wire Line
+	3600 5250 3200 5250
+Connection ~ 4750 4850
+Wire Wire Line
+	2500 5400 2500 5800
+Wire Wire Line
+	2500 5800 3500 5800
+Connection ~ 3500 5800
+NoConn ~ 3200 5050
+NoConn ~ 2500 5250
 $EndSCHEMATC
