@@ -2,36 +2,57 @@
 ### Design and develop UAV-deployabe smart sensor nodes in a network with edge computing and solar-charging capabilities for soil classification and fault detection.
 
 ## Repository Structure
-```angular2html
-📁 hardware_design
-    📁 V0.0
-        📁 V0.1
+```angular2html   
+📁 V0
+    📁 V0.1.0
+        📁 hardware_design
+            📁 CAD
+            📁 PCB        
+        📁 software_design
+    📁 V0.1.1
+        📁 hardware_design
+            📁 CAD
+            📁 PCB    
+            📄 README.md
+        📁 software_design  
+            📄 README.md
+    📁 V0.2.0
+        📁 hardware_design
+            📁 CAD
+            📁 PCB  
+            📄 README.md
+        📁 software_design  
+            📄 README.md
+    📁 V0.3.0
+        📁 hardware_design
             📁 CAD
             📁 PCB
             📄 README.md
-        📁 V0.2
+        📁 software_design    
+            📄 README.md   
+            
+📁 V1
+    📁 V1.0.0
+        📁 hardware_design
             📁 CAD
             📁 PCB
             📄 README.md
-        📁 V0.3
-            📁 CAD
-            📁 PCB
-            📄 README.md        
-        📁 V0.4                                           # Current CAD and PCB design
-            📁 CAD
-            📁 PCB
-            📄 README.md        
-        📄 README.md
-    📄 README.md
+        📁 software_design   
+            📄 README.md
+            
+📁 V2
+    📁 currently empty    
+    
+📁 V3                                          
+    📁 currently empty
+    
 📁 relevant_literature
     📁 datasheets
     📁 research_papers
-    📄 README.md
-📁 software_design
-    📁 V0.0
-        📁 V0.1
-        📁 V0.2                                           # Current code for data collection
+    📄 README.md              
+    
 📄 README.md
+
 📄 image.PNG
 ```
 <p align="center">
