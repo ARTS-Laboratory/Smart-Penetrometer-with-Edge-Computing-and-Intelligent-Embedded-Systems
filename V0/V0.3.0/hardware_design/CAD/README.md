@@ -31,4 +31,4 @@
 </p>
 
 
-## [Return to V0.4](https://github.com/ARTS-Laboratory/Solar-Charged-UAV-deployable-Penetrometer-System-for-Fault-Detection-of-Geological-Structures/tree/main/hardware_design/V0.0/V0.4)
+## [Return to V0.3.0](https://github.com/ARTS-Laboratory/Smart-Penetrometers-with-Edge-Computing-and-Intelligent-Embedded-Systems/blob/main/V0/V0.3.0/hardware_design/README.md)
