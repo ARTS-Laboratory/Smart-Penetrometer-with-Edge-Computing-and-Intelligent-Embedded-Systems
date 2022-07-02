@@ -45,7 +45,7 @@
 
 ## [V0](V0)
 ### Sensor node beta version (complete)
-#### 1. Development of  seosor node prototype.
+#### 1. Development of sensor node prototype.
 
 ## [V1](V1)
 ### Sensor node official verison (work in progress)
