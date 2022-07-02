@@ -5,4 +5,4 @@
 
 ### 3. Cap
 
-## [Return to V0.1 Readme](https://github.com/ARTS-Laboratory/Solar-Charged-UAV-deployable-Penetrometer-System-for-Fault-Detection-of-Geological-Structures/tree/main/hardware_design/V0.0/V0.1)
+## [Return to V0 Readme]https://github.com/ARTS-Laboratory/Smart-Penetrometers-with-Edge-Computing-and-Intelligent-Embedded-Systems/tree/main/V0#readme)
