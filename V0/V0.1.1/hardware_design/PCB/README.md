@@ -1,3 +1,3 @@
 ## PCB
 
-## [Return to V0.2 Readme](https://github.com/ARTS-Laboratory/Solar-Charged-UAV-deployable-Penetrometer-System-for-Fault-Detection-of-Geological-Structures/tree/main/hardware_design/V0.0/V0.2)
+## [Return to V0.1.1 Readme](https://github.com/ARTS-Laboratory/Smart-Penetrometers-with-Edge-Computing-and-Intelligent-Embedded-Systems/tree/main/V0/V0.1.1/hardware_design#readme)
