@@ -116,9 +116,9 @@ void tdsFunc(float & condValue)
       analogBufferTemp[copyIndex] = analogBuffer[copyIndex];
     averageVoltage = getMedianNum(analogBufferTemp, SCOUNT) * (float)VREF / 1024.0; // read the analog value more stable by the median filtering algorithm, and convert to voltage value
     float compensationCoefficient = 1.0 + 0.02 * (temperature - 25.0); //temperature compensation formula: fFinalResult(25^C) = fFinalResult(current)/(1.0+0.02*(fTP-25.0));
-    float compensationVoltage = 1.4 * averageVoltage / compensationCoefficient; //temperature compensation
+    float compensationVoltage = averageVoltage / compensationCoefficient; //temperature compensation
     tdsValue = (133.42 * compensationVoltage * compensationVoltage * compensationVoltage - 255.86 * compensationVoltage * compensationVoltage + 857.39 * compensationVoltage) * 0.5; //convert voltage value to tds value
-    condValue = tdsValue / 640;
+    condValue = .893 * tdsValue / 640;
   }
 }
 void freefall() {
@@ -180,12 +180,12 @@ void logData() {
   if (dataFile) {
     DateTime now = rtc.now();
     unsigned long time = millis();
-    Serial.print(now.hour(), DEC);
+    /*Serial.print(now.hour(), DEC);
     Serial.print(':');
     Serial.print(now.minute(), DEC);
     Serial.print(':');
-    Serial.print(now.second(), DEC);
-    Serial.print(time/1000000000, 9);
+    Serial.print(now.second(), DEC);*/
+    Serial.print(float(time)/1000000000, 9);
     Serial.print(" ");
     if (gVelocity < 0) {
       Serial.print(gVelocity, 6);
@@ -208,7 +208,7 @@ void logData() {
     dataFile.print(':');
     dataFile.print(now.second(), DEC);
     dataFile.print(" ");*/
-    dataFile.print(time/1000000000,9);
+    dataFile.print(float(time)/1000000000,9);
     dataFile.print(" ");
     if (gVelocity < 0) {
       dataFile.print(gVelocity, 6);
@@ -217,11 +217,11 @@ void logData() {
       dataFile.print(gVelocity, 7);
     }
     dataFile.print(" ");
-    dataFile.print(bme.readTemperature(), 5);
+    dataFile.print(bme.readTemperature(), 2);
     dataFile.print(" ");
-    dataFile.print(bme.readHumidity(), 5);
+    dataFile.print(bme.readHumidity(), 2);
     dataFile.print(" ");
-    dataFile.print(bme.readPressure() / 100.0F, 7);
+    dataFile.print(bme.readPressure() / 100.0F, 2);
     dataFile.print(" ");
     dataFile.println(condValue, 3);
     dataFile.close();

@@ -83,12 +83,12 @@ NoConn ~ 4850 4450
 $Comp
 L smart-penetrometer-rescue:Battery_Input-kitest-kitest-rescue U3
 U 1 1 60A6877D
-P 4250 1950
-F 0 "U3" H 4508 1984 50  0000 L CNN
-F 1 "Battery_Input" H 4050 2150 50  0000 L CNN
-F 2 "kitest:Battery_Input" H 4250 1950 50  0001 C CNN
-F 3 "" H 4250 1950 50  0001 C CNN
-	1    4250 1950
+P 4200 750
+F 0 "U3" H 4458 784 50  0000 L CNN
+F 1 "Battery_Input" H 4000 950 50  0000 L CNN
+F 2 "kitest:Battery_Input" H 4200 750 50  0001 C CNN
+F 3 "" H 4200 750 50  0001 C CNN
+	1    4200 750 
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -566,7 +566,7 @@ L power:VCC #PWR0101
 U 1 1 60A6AB09
 P 4450 2100
 F 0 "#PWR0101" H 4450 1950 50  0001 C CNN
-F 1 "VCC" H 4450 1950 50  0000 C CNN
+F 1 "VCC" H 4500 2000 50  0000 C CNN
 F 2 "" H 4450 2100 50  0001 C CNN
 F 3 "" H 4450 2100 50  0001 C CNN
 	1    4450 2100
@@ -589,7 +589,6 @@ F 3 "http://www.jameco.com/Jameco/Products/ProdDS/1538777.pdf" H 3600 2250 50  0
 	0    -1   -1   0   
 $EndComp
 Connection ~ 3600 2100
-Connection ~ 4450 2100
 Wire Wire Line
 	4450 2400 4100 2400
 Connection ~ 4100 2400
@@ -659,4 +658,137 @@ F 3 "" H 3000 2850 50  0001 C CNN
 	1    3000 2850
 	1    0    0    -1  
 $EndComp
+$Comp
+L smart-penetrometer-rescue:DW01 U?
+U 1 1 62805E03
+P 4300 1450
+F 0 "U?" H 4528 1496 50  0000 L CNN
+F 1 "DW01" H 4528 1405 50  0000 L CNN
+F 2 "" H 4300 1450 50  0001 C CNN
+F 3 "" H 4300 1450 50  0001 C CNN
+	1    4300 1450
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R_Small_US R?
+U 1 1 6280EF6A
+P 4300 1800
+F 0 "R?" H 4368 1846 50  0000 L CNN
+F 1 "R_Small_US" H 4368 1755 50  0000 L CNN
+F 2 "" H 4300 1800 50  0001 C CNN
+F 3 "~" H 4300 1800 50  0001 C CNN
+	1    4300 1800
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R_Small_US R?
+U 1 1 6280FAAE
+P 4350 1100
+F 0 "R?" H 4418 1146 50  0000 L CNN
+F 1 "R_Small_US" H 4418 1055 50  0000 L CNN
+F 2 "" H 4350 1100 50  0001 C CNN
+F 3 "~" H 4350 1100 50  0001 C CNN
+	1    4350 1100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4050 900  4050 1200
+$Comp
+L smart-penetrometer-rescue:FS8205A U?
+U 1 1 62819888
+P 2600 1250
+F 0 "U?" H 2600 1815 50  0000 C CNN
+F 1 "FS8205A" H 2600 1724 50  0000 C CNN
+F 2 "" H 2600 1250 50  0001 C CNN
+F 3 "" H 2600 1250 50  0001 C CNN
+	1    2600 1250
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:CP1_Small C?
+U 1 1 62819F8F
+P 4200 1000
+F 0 "C?" V 4428 1000 50  0000 C CNN
+F 1 "CP1_Small" V 4337 1000 50  0000 C CNN
+F 2 "" H 4200 1000 50  0001 C CNN
+F 3 "~" H 4200 1000 50  0001 C CNN
+	1    4200 1000
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	4050 1200 4100 1200
+Wire Wire Line
+	4350 1200 4300 1200
+Wire Wire Line
+	4350 1000 4350 900 
+Wire Wire Line
+	4350 900  4400 900 
+Connection ~ 4300 1200
+Wire Wire Line
+	4300 1200 4300 1000
+Wire Wire Line
+	4100 1000 4100 1200
+Connection ~ 4100 1200
+Wire Wire Line
+	4100 1200 4200 1200
+Wire Wire Line
+	4300 1900 4300 1950
+Wire Wire Line
+	4100 2100 4300 2100
+Wire Wire Line
+	4400 900  4900 900 
+Wire Wire Line
+	4900 900  4900 2050
+Wire Wire Line
+	4900 2050 4450 2050
+Wire Wire Line
+	4450 2050 4450 2100
+Connection ~ 4400 900 
+Connection ~ 4450 2100
+Wire Wire Line
+	2100 1550 2100 1700
+Wire Wire Line
+	2100 1700 4200 1700
+Wire Wire Line
+	3100 1550 3100 1750
+Wire Wire Line
+	3100 1750 4400 1750
+Wire Wire Line
+	4400 1750 4400 1700
+Wire Wire Line
+	3800 600  3800 900 
+Wire Wire Line
+	3800 900  4050 900 
+Connection ~ 4050 900 
+Wire Wire Line
+	2100 1150 2050 1150
+Wire Wire Line
+	2050 1150 2050 600 
+Wire Wire Line
+	2050 600  3800 600 
+Wire Wire Line
+	3100 1150 4000 1150
+Wire Wire Line
+	4000 1950 4300 1950
+Connection ~ 4300 1950
+Wire Wire Line
+	4300 1950 4300 2100
+Wire Wire Line
+	2100 950  2100 650 
+Wire Wire Line
+	2100 650  3100 650 
+Wire Wire Line
+	3100 650  3100 950 
+Wire Wire Line
+	3100 1350 4000 1350
+Wire Wire Line
+	4000 1150 4000 1350
+Connection ~ 4000 1350
+Wire Wire Line
+	4000 1350 4000 1950
+Wire Wire Line
+	2100 1350 2050 1350
+Wire Wire Line
+	2050 1350 2050 1150
+Connection ~ 2050 1150
 $EndSCHEMATC

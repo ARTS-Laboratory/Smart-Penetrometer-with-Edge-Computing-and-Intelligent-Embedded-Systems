@@ -81,7 +81,7 @@ NoConn ~ 4850 4250
 NoConn ~ 4850 4350
 NoConn ~ 4850 4450
 $Comp
-L smart-penetrometer-rescue:Battery_Input-kitest-kitest-rescue U3
+L smart-penetrometer-update-rescue:Battery_Input-kitest-kitest-rescue-smart-penetrometer-rescue U3
 U 1 1 60A6877D
 P 4200 750
 F 0 "U3" H 4458 784 50  0000 L CNN
@@ -195,7 +195,7 @@ F 3 "" H 5350 3150 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L smart-penetrometer-rescue:Arduino_Nano_v3.x-MCU_Module-kitest-rescue A2
+L smart-penetrometer-update-rescue:Arduino_Nano_v3.x-MCU_Module-kitest-rescue-smart-penetrometer-rescue A2
 U 1 1 60A40C30
 P 5350 4150
 F 0 "A2" H 5350 2800 50  0000 C CNN
@@ -206,7 +206,7 @@ F 3 "http://www.mouser.com/pdfdocs/Gravitech_Arduino_Nano3_0.pdf" H 5350 3150 50
 	1    0    0    -1  
 $EndComp
 $Comp
-L smart-penetrometer-rescue:SD_Card_Module-Charleslabs_Parts-kitest-rescue A1
+L smart-penetrometer-update-rescue:SD_Card_Module-Charleslabs_Parts-kitest-rescue-smart-penetrometer-rescue A1
 U 1 1 60A4A816
 P 5350 2750
 F 0 "A1" H 5680 2796 50  0000 L CNN
@@ -360,7 +360,7 @@ F 3 "http://www.intersil.com/content/dam/Intersil/documents/cd40/cd4000bms-01bms
 	1    0    0    -1  
 $EndComp
 $Comp
-L smart-penetrometer-rescue:3v3_Voltage_Regulator U6
+L smart-penetrometer-update-rescue:3v3_Voltage_Regulator-smart-penetrometer-rescue U6
 U 1 1 61FF42DE
 P 2650 2600
 F 0 "U6" H 2600 2950 50  0000 L CNN
@@ -532,7 +532,7 @@ F 3 "http://www.jameco.com/Jameco/Products/ProdDS/1538777.pdf" H 4450 2250 50  0
 	0    -1   -1   0   
 $EndComp
 $Comp
-L smart-penetrometer-rescue:Battery_Input-kitest-kitest-rescue U7
+L smart-penetrometer-update-rescue:Battery_Input-kitest-kitest-rescue-smart-penetrometer-rescue U7
 U 1 1 62051BA4
 P 3400 1950
 F 0 "U7" H 3658 1984 50  0000 L CNN
@@ -659,7 +659,7 @@ F 3 "" H 3000 2850 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L smart-penetrometer-rescue:DW01 U?
+L smart-penetrometer-update-rescue:DW01-smart-penetrometer-rescue U?
 U 1 1 62805E03
 P 4300 1450
 F 0 "U?" H 4528 1496 50  0000 L CNN
@@ -694,7 +694,7 @@ $EndComp
 Wire Wire Line
 	4050 900  4050 1200
 $Comp
-L smart-penetrometer-rescue:FS8205A U?
+L smart-penetrometer-update-rescue:FS8205A-smart-penetrometer-rescue U?
 U 1 1 62819888
 P 2600 1250
 F 0 "U?" H 2600 1815 50  0000 C CNN
