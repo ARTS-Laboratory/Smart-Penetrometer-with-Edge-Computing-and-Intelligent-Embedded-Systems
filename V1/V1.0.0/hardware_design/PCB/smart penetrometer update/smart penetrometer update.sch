@@ -1113,4 +1113,25 @@ Wire Wire Line
 	4500 5900 4500 4250
 Wire Wire Line
 	4500 4250 4850 4250
+Wire Wire Line
+	950  5150 850  5150
+Wire Wire Line
+	850  5150 850  5650
+Connection ~ 950  5150
+$Comp
+L Connector:Conn_01x02_Female J?
+U 1 1 63030D60
+P 850 5850
+F 0 "J?" V 696 5898 50  0000 L CNN
+F 1 "Conn_01x02_Female" V 787 5898 50  0000 L CNN
+F 2 "" H 850 5850 50  0001 C CNN
+F 3 "~" H 850 5850 50  0001 C CNN
+	1    850  5850
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	950  4950 750  4950
+Wire Wire Line
+	750  4950 750  5650
+Connection ~ 950  4950
 $EndSCHEMATC
