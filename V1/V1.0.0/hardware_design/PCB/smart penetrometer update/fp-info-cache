@@ -1,4 +1,4 @@
-19235681189018972
+19237369902071774
 Battery
 BatteryHolder_Bulgin_BX0036_1xC
 Bulgin Battery Holder, BX0036, Battery Type C (https://www.bulgin.com/products/pub/media/bulgin/data/Battery_holders.pdf)
@@ -50714,6 +50714,13 @@ One digit LED 7 segment SA39-11 SC39-11 SA39-12 SC39-12
 0
 10
 10
+FS8205A
+23K256T-E&slash_SN
+
+
+0
+8
+8
 Ferrite_THT
 LairdTech_28C0236-0JW-10
 Ferrite, vertical, LairdTech 28C0236-0JW-10, https://assets.lairdtech.com/home/brandworld/files/28C0236-0JW-10.pdf, JW Miller core https://www.bourns.com/products/magnetic-products/j.w.-miller-through-hole-ferrite-beads-emi-filters
@@ -83104,21 +83111,21 @@ uofsc_logo_1in
 0
 0
 smart penetrometer footprints
-BD433M2FP3_CE2
-3v3 Voltage Regulator
+23K256T-E&slash_SN
+
 
 0
-4
-4
+8
+8
 smart penetrometer footprints
-DW01
+BATTERY_PROTECTION_IC(DW01A)
 
 
 0
 6
-5
+6
 smart penetrometer footprints
-FS8205A
+DUAL_MOSFET(FS8205A)
 
 
 0

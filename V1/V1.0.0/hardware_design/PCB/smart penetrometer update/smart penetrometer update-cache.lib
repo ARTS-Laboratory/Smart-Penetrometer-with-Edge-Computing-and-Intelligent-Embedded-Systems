@@ -308,6 +308,29 @@ X A 2 100 0 70 L 50 50 1 1 P
 ENDDRAW
 ENDDEF
 #
+# Device_L
+#
+DEF Device_L L 0 40 N N 1 F N
+F0 "L" -50 0 50 V V C CNN
+F1 "Device_L" 75 0 50 V V C CNN
+F2 "" 0 0 50 H I C CNN
+F3 "" 0 0 50 H I C CNN
+$FPLIST
+ Choke_*
+ *Coil*
+ Inductor_*
+ L_*
+$ENDFPLIST
+DRAW
+A 0 -75 25 -899 899 0 1 0 N 0 -100 0 -50
+A 0 -25 25 -899 899 0 1 0 N 0 -50 0 0
+A 0 25 25 -899 899 0 1 0 N 0 0 0 50
+A 0 75 25 -899 899 0 1 0 N 0 50 0 100
+X 1 1 0 150 50 D 50 50 1 1 P
+X 2 2 0 -150 50 U 50 50 1 1 P
+ENDDRAW
+ENDDEF
+#
 # Device_R_Small_US
 #
 DEF Device_R_Small_US R 0 10 N N 1 F N
@@ -365,6 +388,51 @@ X A 2 150 0 100 L 50 50 1 1 P
 ENDDRAW
 ENDDEF
 #
+# Diode_PMEG6045ETP
+#
+DEF Diode_PMEG6045ETP D 0 20 N N 1 F N
+F0 "D" 0 100 50 H V C CNN
+F1 "Diode_PMEG6045ETP" 0 -100 50 H V C CNN
+F2 "Diode_SMD:D_SOD-128" 0 -175 50 H I C CNN
+F3 "" 0 0 50 H I C CNN
+ALIAS PMEG6030EP PMEG6045ETP
+$FPLIST
+ D*SOD?128*
+$ENDFPLIST
+DRAW
+P 2 0 1 0 50 0 -50 0 N
+P 4 0 1 10 50 50 50 -50 -50 0 50 50 N
+P 6 0 1 10 -75 25 -75 50 -50 50 -50 -50 -25 -50 -25 -25 N
+X K 1 -150 0 100 R 50 50 1 1 P
+X A 2 150 0 100 L 50 50 1 1 P
+ENDDRAW
+ENDDEF
+#
+# Regulator_Switching_LM22676MR-5
+#
+DEF Regulator_Switching_LM22676MR-5 U 0 20 Y Y 1 F N
+F0 "U" -250 350 50 H V C CNN
+F1 "Regulator_Switching_LM22676MR-5" 200 350 50 H V C CNN
+F2 "Package_SO:TI_SO-PowerPAD-8" 0 450 50 H I C CNN
+F3 "" 50 0 50 H I C CNN
+ALIAS LM22676MR-5
+$FPLIST
+ TI*SO*PowerPAD*
+$ENDFPLIST
+DRAW
+S -300 300 300 -300 0 1 10 f
+X BOOT 1 400 0 100 L 50 50 1 1 I
+X NC 2 -300 100 100 R 50 50 1 1 N N
+X NC 3 -300 0 100 R 50 50 1 1 N N
+X FB 4 400 -200 100 L 50 50 1 1 I
+X EN 5 -400 -100 100 R 50 50 1 1 I
+X GND 6 100 -400 100 U 50 50 1 1 W
+X VIN 7 -400 200 100 R 50 50 1 1 W
+X SW 8 400 200 100 L 50 50 1 1 w
+X EP 9 -100 -400 100 U 50 50 1 1 W
+ENDDRAW
+ENDDEF
+#
 # Timer_RTC_DS3231M
 #
 DEF Timer_RTC_DS3231M U 0 20 Y Y 1 F N
@@ -393,6 +461,35 @@ X GND 6 0 -400 100 U 50 50 1 1 P N
 X GND 7 0 -400 100 U 50 50 1 1 P N
 X GND 8 0 -400 100 U 50 50 1 1 P N
 X GND 9 0 -400 100 U 50 50 1 1 P N
+ENDDRAW
+ENDDEF
+#
+# power_+BATT
+#
+DEF power_+BATT #PWR 0 0 Y Y 1 F P
+F0 "#PWR" 0 -150 50 H I C CNN
+F1 "power_+BATT" 0 140 50 H V C CNN
+F2 "" 0 0 50 H I C CNN
+F3 "" 0 0 50 H I C CNN
+DRAW
+P 2 0 1 0 -30 50 0 100 N
+P 2 0 1 0 0 0 0 100 N
+P 2 0 1 0 0 100 30 50 N
+X +BATT 1 0 0 0 U 50 50 1 1 W N
+ENDDRAW
+ENDDEF
+#
+# power_-BATT
+#
+DEF power_-BATT #PWR 0 0 Y Y 1 F P
+F0 "#PWR" 0 -150 50 H I C CNN
+F1 "power_-BATT" 0 140 50 H V C CNN
+F2 "" 0 0 50 H I C CNN
+F3 "" 0 0 50 H I C CNN
+DRAW
+P 2 0 1 0 0 0 0 100 N
+P 4 0 1 0 30 50 -30 50 0 100 30 50 F
+X -BATT 1 0 0 0 U 50 50 1 1 W N
 ENDDRAW
 ENDDEF
 #
@@ -478,10 +575,10 @@ F2 "" 0 0 50 H I C CNN
 F3 "" 0 0 50 H I C CNN
 DRAW
 S 250 -150 -250 150 0 1 0 f
-X VIN 1 -150 -250 100 U 50 50 1 1 I
+X VIN 1 -150 -250 100 U 50 50 1 1 W
 X CTR 2 0 -250 100 U 50 50 1 1 O
-X VOUT 3 150 -250 100 U 50 50 1 1 O
-X GND 4 -350 100 100 R 50 50 1 1 O
+X VOUT 3 150 -250 100 U 50 50 1 1 w
+X GND 4 -350 100 100 R 50 50 1 1 W
 ENDDRAW
 ENDDEF
 #
@@ -530,16 +627,16 @@ X D6 9 -500 0 100 R 50 50 1 1 B
 ENDDRAW
 ENDDEF
 #
-# smart-penetrometer-update-rescue_Battery_Input-kitest-kitest-rescue-smart-penetrometer-rescue
+# smart-penetrometer-update-rescue_Battery_Input-kitest-kitest-rescue-smart-penetrometer-rescue-smart-penetrometer-update-rescue
 #
-DEF smart-penetrometer-update-rescue_Battery_Input-kitest-kitest-rescue-smart-penetrometer-rescue U 0 40 Y Y 1 F N
+DEF smart-penetrometer-update-rescue_Battery_Input-kitest-kitest-rescue-smart-penetrometer-rescue-smart-penetrometer-update-rescue U 0 40 Y Y 1 F N
 F0 "U" 0 0 50 H V C CNN
-F1 "smart-penetrometer-update-rescue_Battery_Input-kitest-kitest-rescue-smart-penetrometer-rescue" 0 200 50 H V C CNN
+F1 "smart-penetrometer-update-rescue_Battery_Input-kitest-kitest-rescue-smart-penetrometer-rescue-smart-penetrometer-update-rescue" 0 200 50 H V C CNN
 F2 "" 0 0 50 H I C CNN
 F3 "" 0 0 50 H I C CNN
 DRAW
-X Pos 1 200 -150 100 U 50 50 1 1 I
-X Neg 2 -150 -150 100 U 50 50 1 1 I
+X Pos 1 200 -150 100 U 50 50 1 1 W
+X Neg 2 -150 -150 100 U 50 50 1 1 W
 ENDDRAW
 ENDDEF
 #
@@ -556,8 +653,8 @@ X OD 1 -100 -250 100 U 30 30 1 1 O
 X CS 2 0 -250 100 U 30 30 1 1 I
 X OC 3 100 -250 100 U 30 30 1 1 O
 X TD 4 100 250 100 D 30 30 1 1 I
-X VCC 5 0 250 100 D 30 30 1 1 I
-X GND 6 -100 250 100 D 30 30 1 1 O
+X VCC 5 0 250 100 D 30 30 1 1 W
+X GND 6 -100 250 100 D 30 30 1 1 W
 ENDDRAW
 ENDDEF
 #
@@ -594,7 +691,7 @@ X 3V3 1 0 400 100 D 50 50 1 1 W
 X CS 2 -400 150 100 R 50 50 1 1 I
 X MOSI 3 -400 50 100 R 50 50 1 1 I
 X CLK 4 -400 -50 100 R 50 50 1 1 I
-X MISO 5 -400 -150 100 R 50 50 1 1 O
+X MISO 5 -400 -150 100 R 50 50 1 1 T
 X GND 6 0 -400 100 U 50 50 1 1 W
 ENDDRAW
 ENDDEF
@@ -609,13 +706,13 @@ F3 "" 0 0 50 H I C CNN
 DRAW
 S -200 400 200 -400 0 1 0 f
 X CS 1 -300 300 100 R 50 50 1 1 I
-X SO 2 -300 100 100 R 50 50 1 1 O
+X SO 2 -300 100 100 R 50 50 1 1 T
 X NC 3 -300 -100 100 R 50 50 1 1 N
-X VSS 4 -300 -300 100 R 50 50 1 1 O
+X VSS 4 -300 -300 100 R 50 50 1 1 W
 X SI 5 300 -300 100 L 50 50 1 1 I
 X SCK 6 300 -100 100 L 50 50 1 1 I
 X HOLD 7 300 100 100 L 50 50 1 1 I
-X VCC 8 300 300 100 L 50 50 1 1 I
+X VCC 8 300 300 100 L 50 50 1 1 W
 ENDDRAW
 ENDDEF
 #

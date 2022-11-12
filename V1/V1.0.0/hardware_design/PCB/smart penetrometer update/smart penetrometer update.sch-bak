@@ -78,7 +78,7 @@ NoConn ~ 4850 3950
 NoConn ~ 4850 4050
 NoConn ~ 4850 4150
 $Comp
-L smart-penetrometer-update-rescue:Battery_Input-kitest-kitest-rescue-smart-penetrometer-rescue U3
+L smart-penetrometer-update-rescue:Battery_Input-kitest-kitest-rescue-smart-penetrometer-rescue-smart-penetrometer-update-rescue U3
 U 1 1 60A6877D
 P 4200 750
 F 0 "U3" H 4458 784 50  0000 L CNN
@@ -123,7 +123,7 @@ L power:GND #PWR0102
 U 1 1 60DD225C
 P 6750 4350
 F 0 "#PWR0102" H 6750 4100 50  0001 C CNN
-F 1 "GND" H 6755 4177 50  0000 C CNN
+F 1 "GND" H 6750 4200 50  0000 C CNN
 F 2 "" H 6750 4350 50  0001 C CNN
 F 3 "" H 6750 4350 50  0001 C CNN
 	1    6750 4350
@@ -337,59 +337,52 @@ Wire Wire Line
 $Comp
 L smart-penetrometer-update-rescue:3v3_Voltage_Regulator-smart-penetrometer-rescue U6
 U 1 1 61FF42DE
-P 2650 2600
-F 0 "U6" H 2600 2950 50  0000 L CNN
-F 1 "3v3_Voltage_Regulator" H 2250 2850 50  0000 L CNN
-F 2 "smart penetrometer footprints:BD433M2FP3_CE2" H 2650 2600 50  0001 C CNN
-F 3 "" H 2650 2600 50  0001 C CNN
-	1    2650 2600
+P 3100 2600
+F 0 "U6" H 3050 2950 50  0000 L CNN
+F 1 "3v3_Voltage_Regulator" H 2700 2850 50  0000 L CNN
+F 2 "smart penetrometer footprints:BD433M2FP3_CE2" H 3100 2600 50  0001 C CNN
+F 3 "" H 3100 2600 50  0001 C CNN
+	1    3100 2600
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	3950 4350 2500 4350
-Wire Wire Line
-	2500 4350 2500 3100
-Wire Wire Line
-	2800 2850 2800 3100
+	3250 2850 3250 3100
 Connection ~ 3500 3100
-Wire Wire Line
-	3500 3100 5250 3100
 $Comp
 L Device:C_Small C2
 U 1 1 61FFB484
-P 2900 2850
-F 0 "C2" V 2850 3100 50  0000 L CNN
-F 1 "C_10uF" V 2950 3050 50  0000 L CNN
-F 2 "Capacitor_SMD:C_1206_3216Metric" H 2900 2850 50  0001 C CNN
-F 3 "~" H 2900 2850 50  0001 C CNN
-	1    2900 2850
+P 3350 2850
+F 0 "C2" V 3300 3100 50  0000 L CNN
+F 1 "C_10uF" V 3400 3050 50  0000 L CNN
+F 2 "Capacitor_SMD:C_1206_3216Metric" H 3350 2850 50  0001 C CNN
+F 3 "~" H 3350 2850 50  0001 C CNN
+	1    3350 2850
 	0    1    1    0   
 $EndComp
 $Comp
 L Device:C_Small C1
 U 1 1 61FFC277
-P 2400 2850
-F 0 "C1" V 2300 2600 50  0000 C CNN
-F 1 "C_0.1uF" V 2400 2600 50  0000 C CNN
-F 2 "Capacitor_SMD:C_1206_3216Metric" H 2400 2850 50  0001 C CNN
-F 3 "~" H 2400 2850 50  0001 C CNN
-	1    2400 2850
+P 2850 2850
+F 0 "C1" V 2750 2700 50  0000 C CNN
+F 1 "C_0.1uF" V 2850 2600 50  0000 C CNN
+F 2 "Capacitor_SMD:C_1206_3216Metric" H 2850 2850 50  0001 C CNN
+F 3 "~" H 2850 2850 50  0001 C CNN
+	1    2850 2850
 	0    1    1    0   
 $EndComp
-Connection ~ 2500 3100
 Wire Wire Line
-	2500 3100 2500 2850
-Connection ~ 2800 2850
-Connection ~ 2500 2850
+	2950 3100 2950 2850
+Connection ~ 3250 2850
+Connection ~ 2950 2850
 $Comp
 L Device:D_Zener_Small D1
 U 1 1 62002596
-P 2400 3100
-F 0 "D1" H 2800 3050 50  0000 C CNN
-F 1 "D_Zener_Small" H 2800 3100 50  0000 C CNN
-F 2 "Diode_SMD:D_SMC" V 2400 3100 50  0001 C CNN
-F 3 "~" V 2400 3100 50  0001 C CNN
-	1    2400 3100
+P 2850 3100
+F 0 "D1" H 2700 3150 50  0000 C CNN
+F 1 "D_Zener_Small" H 2750 3250 50  0000 C CNN
+F 2 "Diode_SMD:D_SMC" V 2850 3100 50  0001 C CNN
+F 3 "~" V 2850 3100 50  0001 C CNN
+	1    2850 3100
 	-1   0    0    1   
 $EndComp
 $Comp
@@ -501,7 +494,7 @@ F 3 "http://www.jameco.com/Jameco/Products/ProdDS/1538777.pdf" H 4450 2250 50  0
 	0    -1   -1   0   
 $EndComp
 $Comp
-L smart-penetrometer-update-rescue:Battery_Input-kitest-kitest-rescue-smart-penetrometer-rescue U7
+L smart-penetrometer-update-rescue:Battery_Input-kitest-kitest-rescue-smart-penetrometer-rescue-smart-penetrometer-update-rescue U7
 U 1 1 62051BA4
 P 3400 1950
 F 0 "U7" H 3658 1984 50  0000 L CNN
@@ -561,12 +554,12 @@ Connection ~ 4100 2400
 $Comp
 L power:GND #PWR0103
 U 1 1 6206C9B7
-P 2300 2500
-F 0 "#PWR0103" H 2300 2250 50  0001 C CNN
-F 1 "GND" V 2305 2372 50  0000 R CNN
-F 2 "" H 2300 2500 50  0001 C CNN
-F 3 "" H 2300 2500 50  0001 C CNN
-	1    2300 2500
+P 2750 2500
+F 0 "#PWR0103" H 2750 2250 50  0001 C CNN
+F 1 "GND" V 2850 2500 50  0000 R CNN
+F 2 "" H 2750 2500 50  0001 C CNN
+F 3 "" H 2750 2500 50  0001 C CNN
+	1    2750 2500
 	0    1    1    0   
 $EndComp
 $Comp
@@ -583,76 +576,76 @@ $EndComp
 $Comp
 L power:GND #PWR0106
 U 1 1 62071F32
-P 2300 3100
-F 0 "#PWR0106" H 2300 2850 50  0001 C CNN
-F 1 "GND" H 2300 2950 50  0000 C CNN
-F 2 "" H 2300 3100 50  0001 C CNN
-F 3 "" H 2300 3100 50  0001 C CNN
-	1    2300 3100
+P 2750 3100
+F 0 "#PWR0106" H 2750 2850 50  0001 C CNN
+F 1 "GND" H 2600 3050 50  0000 C CNN
+F 2 "" H 2750 3100 50  0001 C CNN
+F 3 "" H 2750 3100 50  0001 C CNN
+	1    2750 3100
 	1    0    0    -1  
 $EndComp
 $Comp
 L power:GND #PWR0107
 U 1 1 62074C30
-P 2300 2850
-F 0 "#PWR0107" H 2300 2600 50  0001 C CNN
-F 1 "GND" H 2300 2700 50  0000 C CNN
-F 2 "" H 2300 2850 50  0001 C CNN
-F 3 "" H 2300 2850 50  0001 C CNN
-	1    2300 2850
+P 2750 2850
+F 0 "#PWR0107" H 2750 2600 50  0001 C CNN
+F 1 "GND" H 2750 2700 50  0000 C CNN
+F 2 "" H 2750 2850 50  0001 C CNN
+F 3 "" H 2750 2850 50  0001 C CNN
+	1    2750 2850
 	1    0    0    -1  
 $EndComp
 $Comp
 L power:GND #PWR0108
 U 1 1 620772C4
-P 2650 2850
-F 0 "#PWR0108" H 2650 2600 50  0001 C CNN
-F 1 "GND" H 2655 2677 50  0000 C CNN
-F 2 "" H 2650 2850 50  0001 C CNN
-F 3 "" H 2650 2850 50  0001 C CNN
-	1    2650 2850
+P 3100 2850
+F 0 "#PWR0108" H 3100 2600 50  0001 C CNN
+F 1 "GND" H 3105 2677 50  0000 C CNN
+F 2 "" H 3100 2850 50  0001 C CNN
+F 3 "" H 3100 2850 50  0001 C CNN
+	1    3100 2850
 	1    0    0    -1  
 $EndComp
 $Comp
 L power:GND #PWR0109
 U 1 1 62079E29
-P 3000 2850
-F 0 "#PWR0109" H 3000 2600 50  0001 C CNN
-F 1 "GND" H 3005 2677 50  0000 C CNN
-F 2 "" H 3000 2850 50  0001 C CNN
-F 3 "" H 3000 2850 50  0001 C CNN
-	1    3000 2850
+P 3450 2850
+F 0 "#PWR0109" H 3450 2600 50  0001 C CNN
+F 1 "GND" H 3455 2677 50  0000 C CNN
+F 2 "" H 3450 2850 50  0001 C CNN
+F 3 "" H 3450 2850 50  0001 C CNN
+	1    3450 2850
 	1    0    0    -1  
 $EndComp
 $Comp
-L smart-penetrometer-update-rescue:DW01-smart-penetrometer-rescue U?
+L smart-penetrometer-update-rescue:DW01-smart-penetrometer-rescue U11
 U 1 1 62805E03
 P 4300 1450
-F 0 "U?" H 4528 1496 50  0000 L CNN
+F 0 "U11" H 4528 1496 50  0000 L CNN
 F 1 "DW01" H 4528 1405 50  0000 L CNN
-F 2 "" H 4300 1450 50  0001 C CNN
+F 2 "smart penetrometer footprints:BATTERY_PROTECTION_IC(DW01A)" H 4300 1450 50  0001 C CNN
 F 3 "" H 4300 1450 50  0001 C CNN
 	1    4300 1450
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:R_Small_US R?
+L Device:R_Small_US R9
 U 1 1 6280EF6A
 P 4300 1800
-F 0 "R?" H 4500 1800 50  0000 L CNN
+F 0 "R9" H 4500 1800 50  0000 L CNN
 F 1 "R_Small_US" H 4368 1755 50  0000 L CNN
-F 2 "" H 4300 1800 50  0001 C CNN
+F 2 "Resistor_SMD:R_1206_3216Metric" H 4300 1800 50  0001 C CNN
 F 3 "~" H 4300 1800 50  0001 C CNN
 	1    4300 1800
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:R_Small_US R?
+L Device:R_Small_US R10
 U 1 1 6280FAAE
 P 4350 1100
-F 0 "R?" H 4550 1100 50  0000 L CNN
+F 0 "R10" H 4550 1100 50  0000 L CNN
 F 1 "R_Small_US" H 4418 1055 50  0000 L CNN
-F 2 "" H 4350 1100 50  0001 C CNN
+F 2 "Resistor_SMD:R_1206_3216Metric" H 4350 1100 50  0001 C CNN
 F 3 "~" H 4350 1100 50  0001 C CNN
 	1    4350 1100
 	1    0    0    -1  
@@ -660,23 +653,23 @@ $EndComp
 Wire Wire Line
 	4050 900  4050 1200
 $Comp
-L smart-penetrometer-update-rescue:FS8205A-smart-penetrometer-rescue U?
+L smart-penetrometer-update-rescue:FS8205A-smart-penetrometer-rescue U10
 U 1 1 62819888
 P 2600 1250
-F 0 "U?" H 2600 1815 50  0000 C CNN
+F 0 "U10" H 2600 1815 50  0000 C CNN
 F 1 "FS8205A" H 2600 1724 50  0000 C CNN
-F 2 "" H 2600 1250 50  0001 C CNN
+F 2 "smart penetrometer footprints:DUAL_MOSFET(FS8205A)" H 2600 1250 50  0001 C CNN
 F 3 "" H 2600 1250 50  0001 C CNN
 	1    2600 1250
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:CP1_Small C?
+L Device:CP1_Small C12
 U 1 1 62819F8F
 P 4200 1000
-F 0 "C?" V 4300 1000 50  0000 C CNN
+F 0 "C12" V 4300 950 50  0000 C CNN
 F 1 "CP1_Small" V 4250 1400 50  0000 C CNN
-F 2 "" H 4200 1000 50  0001 C CNN
+F 2 "Capacitor_SMD:C_1206_3216Metric" H 4200 1000 50  0001 C CNN
 F 3 "~" H 4200 1000 50  0001 C CNN
 	1    4200 1000
 	0    -1   -1   0   
@@ -758,10 +751,10 @@ Wire Wire Line
 	2050 1350 2050 1150
 Connection ~ 2050 1150
 $Comp
-L Analog_ADC:ADS1120-PW U?
+L Analog_ADC:ADS1120-PW U8
 U 1 1 62E12AD9
 P 2250 5200
-F 0 "U?" H 2200 5250 50  0000 C CNN
+F 0 "U8" H 2200 5250 50  0000 C CNN
 F 1 "ADS1120-PW" H 2200 5150 50  0000 C CNN
 F 2 "Package_SO:TSSOP-16_4.4x5mm_P0.65mm" H 2500 5750 50  0001 L CNN
 F 3 "http://www.ti.com/lit/ds/symlink/ads1120.pdf" H 1750 5600 50  0001 C CNN
@@ -775,10 +768,10 @@ Wire Wire Line
 Wire Wire Line
 	2350 4450 2450 4450
 $Comp
-L power:GND #PWR?
+L power:GND #PWR07
 U 1 1 62E2ABD1
 P 1300 4650
-F 0 "#PWR?" H 1300 4400 50  0001 C CNN
+F 0 "#PWR07" H 1300 4400 50  0001 C CNN
 F 1 "GND" H 1450 4550 50  0000 C CNN
 F 2 "" H 1300 4650 50  0001 C CNN
 F 3 "" H 1300 4650 50  0001 C CNN
@@ -786,10 +779,10 @@ F 3 "" H 1300 4650 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:GND #PWR?
+L power:GND #PWR02
 U 1 1 62E2BEE3
 P 950 5350
-F 0 "#PWR?" H 950 5100 50  0001 C CNN
+F 0 "#PWR02" H 950 5100 50  0001 C CNN
 F 1 "GND" H 955 5177 50  0000 C CNN
 F 2 "" H 950 5350 50  0001 C CNN
 F 3 "" H 950 5350 50  0001 C CNN
@@ -797,10 +790,10 @@ F 3 "" H 950 5350 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:GND #PWR?
+L power:GND #PWR08
 U 1 1 62E2CD3D
 P 2150 4650
-F 0 "#PWR?" H 2150 4400 50  0001 C CNN
+F 0 "#PWR08" H 2150 4400 50  0001 C CNN
 F 1 "GND" H 2000 4600 50  0000 C CNN
 F 2 "" H 2150 4650 50  0001 C CNN
 F 3 "" H 2150 4650 50  0001 C CNN
@@ -808,10 +801,10 @@ F 3 "" H 2150 4650 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:GND #PWR?
+L power:GND #PWR05
 U 1 1 62E2D707
 P 1150 5350
-F 0 "#PWR?" H 1150 5100 50  0001 C CNN
+F 0 "#PWR05" H 1150 5100 50  0001 C CNN
 F 1 "GND" H 1155 5177 50  0000 C CNN
 F 2 "" H 1150 5350 50  0001 C CNN
 F 3 "" H 1150 5350 50  0001 C CNN
@@ -819,10 +812,10 @@ F 3 "" H 1150 5350 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:GND #PWR?
+L power:GND #PWR017
 U 1 1 62E2DB5C
 P 2350 5700
-F 0 "#PWR?" H 2350 5450 50  0001 C CNN
+F 0 "#PWR017" H 2350 5450 50  0001 C CNN
 F 1 "GND" H 2355 5527 50  0000 C CNN
 F 2 "" H 2350 5700 50  0001 C CNN
 F 3 "" H 2350 5700 50  0001 C CNN
@@ -830,10 +823,10 @@ F 3 "" H 2350 5700 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:GND #PWR?
+L power:GND #PWR018
 U 1 1 62E2E3A9
 P 2450 4650
-F 0 "#PWR?" H 2450 4400 50  0001 C CNN
+F 0 "#PWR018" H 2450 4400 50  0001 C CNN
 F 1 "GND" H 2600 4600 50  0000 C CNN
 F 2 "" H 2450 4650 50  0001 C CNN
 F 3 "" H 2450 4650 50  0001 C CNN
@@ -841,10 +834,10 @@ F 3 "" H 2450 4650 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:GND #PWR?
+L power:GND #PWR019
 U 1 1 62E2EAF7
 P 2950 5500
-F 0 "#PWR?" H 2950 5250 50  0001 C CNN
+F 0 "#PWR019" H 2950 5250 50  0001 C CNN
 F 1 "GND" V 2955 5372 50  0000 R CNN
 F 2 "" H 2950 5500 50  0001 C CNN
 F 3 "" H 2950 5500 50  0001 C CNN
@@ -852,10 +845,10 @@ F 3 "" H 2950 5500 50  0001 C CNN
 	0    -1   -1   0   
 $EndComp
 $Comp
-L power:Earth #PWR?
+L power:Earth #PWR013
 U 1 1 62E2F963
 P 2250 5700
-F 0 "#PWR?" H 2250 5450 50  0001 C CNN
+F 0 "#PWR013" H 2250 5450 50  0001 C CNN
 F 1 "Earth" H 2250 5550 50  0001 C CNN
 F 2 "" H 2250 5700 50  0001 C CNN
 F 3 "~" H 2250 5700 50  0001 C CNN
@@ -863,100 +856,100 @@ F 3 "~" H 2250 5700 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:C_Small C?
+L Device:C_Small C7
 U 1 1 62E301D9
 P 1150 5250
-F 0 "C?" H 1350 5250 50  0000 L CNN
+F 0 "C7" H 1350 5250 50  0000 L CNN
 F 1 "C_0.047uF" H 1150 5200 50  0000 L CNN
-F 2 "" H 1150 5250 50  0001 C CNN
+F 2 "Capacitor_SMD:C_1206_3216Metric" H 1150 5250 50  0001 C CNN
 F 3 "~" H 1150 5250 50  0001 C CNN
 	1    1150 5250
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:C_Small C?
+L Device:C_Small C6
 U 1 1 62E30F57
 P 1150 5050
-F 0 "C?" H 1350 5050 50  0000 L CNN
+F 0 "C6" H 1350 5050 50  0000 L CNN
 F 1 "C_0.47uF" H 1200 5000 50  0000 L CNN
-F 2 "" H 1150 5050 50  0001 C CNN
+F 2 "Capacitor_SMD:C_1206_3216Metric" H 1150 5050 50  0001 C CNN
 F 3 "~" H 1150 5050 50  0001 C CNN
 	1    1150 5050
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:C_Small C?
+L Device:C_Small C9
 U 1 1 62E32164
 P 2150 4550
-F 0 "C?" H 1900 4650 50  0000 L CNN
+F 0 "C9" H 1900 4650 50  0000 L CNN
 F 1 "C_0.1uF" H 1750 4550 50  0000 L CNN
-F 2 "" H 2150 4550 50  0001 C CNN
+F 2 "Capacitor_SMD:C_1206_3216Metric" H 2150 4550 50  0001 C CNN
 F 3 "~" H 2150 4550 50  0001 C CNN
 	1    2150 4550
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:C_Small C?
+L Device:C_Small C5
 U 1 1 62E32AEE
 P 1150 4850
-F 0 "C?" H 1350 4850 50  0000 L CNN
+F 0 "C5" H 1350 4850 50  0000 L CNN
 F 1 "C_0.047uF" H 1150 4800 50  0000 L CNN
-F 2 "" H 1150 4850 50  0001 C CNN
+F 2 "Capacitor_SMD:C_1206_3216Metric" H 1150 4850 50  0001 C CNN
 F 3 "~" H 1150 4850 50  0001 C CNN
 	1    1150 4850
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:C_Small C?
+L Device:C_Small C11
 U 1 1 62E33434
 P 2450 4550
-F 0 "C?" H 2650 4650 50  0000 L CNN
+F 0 "C11" H 2650 4650 50  0000 L CNN
 F 1 "C_0.1uF" H 2550 4550 50  0000 L CNN
-F 2 "" H 2450 4550 50  0001 C CNN
+F 2 "Capacitor_SMD:C_1206_3216Metric" H 2450 4550 50  0001 C CNN
 F 3 "~" H 2450 4550 50  0001 C CNN
 	1    2450 4550
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:R_Small_US R?
+L Device:R_Small_US R3
 U 1 1 62E33ECC
 P 1050 4950
-F 0 "R?" V 950 4650 50  0000 C CNN
+F 0 "R3" V 950 4650 50  0000 C CNN
 F 1 "R_800Ohm" V 1050 4600 50  0000 C CNN
-F 2 "" H 1050 4950 50  0001 C CNN
+F 2 "Resistor_SMD:R_1206_3216Metric" H 1050 4950 50  0001 C CNN
 F 3 "~" H 1050 4950 50  0001 C CNN
 	1    1050 4950
 	0    1    1    0   
 $EndComp
 $Comp
-L Device:R_Small_US R?
+L Device:R_Small_US R1
 U 1 1 62E34881
 P 950 4850
-F 0 "R?" H 700 5050 50  0000 L CNN
+F 0 "R1" H 700 5050 50  0000 L CNN
 F 1 "R_1MOhm" H 500 4950 50  0000 L CNN
-F 2 "" H 950 4850 50  0001 C CNN
+F 2 "Resistor_SMD:R_1206_3216Metric" H 950 4850 50  0001 C CNN
 F 3 "~" H 950 4850 50  0001 C CNN
 	1    950  4850
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:R_Small_US R?
+L Device:R_Small_US R4
 U 1 1 62E34B20
 P 1050 5150
-F 0 "R?" V 950 4850 50  0000 C CNN
+F 0 "R4" V 950 4850 50  0000 C CNN
 F 1 "R_800Ohm" V 1050 4800 50  0000 C CNN
-F 2 "" H 1050 5150 50  0001 C CNN
+F 2 "Resistor_SMD:R_1206_3216Metric" H 1050 5150 50  0001 C CNN
 F 3 "~" H 1050 5150 50  0001 C CNN
 	1    1050 5150
 	0    1    1    0   
 $EndComp
 $Comp
-L Device:R_Small_US R?
+L Device:R_Small_US R2
 U 1 1 62E357E2
 P 950 5250
-F 0 "R?" H 700 5250 50  0000 L CNN
+F 0 "R2" H 700 5250 50  0000 L CNN
 F 1 "R_1MOhm" H 500 5150 50  0000 L CNN
-F 2 "" H 950 5250 50  0001 C CNN
+F 2 "Resistor_SMD:R_1206_3216Metric" H 950 5250 50  0001 C CNN
 F 3 "~" H 950 5250 50  0001 C CNN
 	1    950  5250
 	1    0    0    -1  
@@ -1004,19 +997,17 @@ Wire Wire Line
 Wire Wire Line
 	1550 4950 1550 5000
 Wire Wire Line
-	2800 3100 2800 4250
-Wire Wire Line
-	2800 4250 2350 4250
+	3250 3100 3250 4250
 Wire Wire Line
 	2350 4250 2350 4450
-Connection ~ 2800 3100
+Connection ~ 3250 3100
 Connection ~ 2350 4450
 Wire Wire Line
 	2350 4250 2250 4250
 Wire Wire Line
 	2250 4250 2250 4450
 Wire Wire Line
-	2800 3100 3450 3100
+	3250 3100 3450 3100
 Connection ~ 2350 4250
 Connection ~ 2250 4450
 Wire Wire Line
@@ -1025,12 +1016,12 @@ Wire Wire Line
 	950  4250 950  4750
 Connection ~ 2250 4250
 $Comp
-L smart-penetrometer-update-rescue:SRAM(23K256) U?
+L smart-penetrometer-update-rescue:SRAM(23K256) U9
 U 1 1 62EB656F
 P 2500 6900
-F 0 "U?" H 2500 7465 50  0000 C CNN
+F 0 "U9" H 2500 7465 50  0000 C CNN
 F 1 "SRAM(23K256)" H 2500 7374 50  0000 C CNN
-F 2 "" H 2500 6900 50  0001 C CNN
+F 2 "smart penetrometer footprints:23K256T-E&slash_SN" H 2500 6900 50  0001 C CNN
 F 3 "" H 2500 6900 50  0001 C CNN
 	1    2500 6900
 	1    0    0    -1  
@@ -1043,10 +1034,10 @@ Connection ~ 3450 3100
 Wire Wire Line
 	3450 3100 3500 3100
 $Comp
-L power:GND #PWR?
+L power:GND #PWR010
 U 1 1 62FCEB65
 P 2200 7200
-F 0 "#PWR?" H 2200 6950 50  0001 C CNN
+F 0 "#PWR010" H 2200 6950 50  0001 C CNN
 F 1 "GND" H 2205 7027 50  0000 C CNN
 F 2 "" H 2200 7200 50  0001 C CNN
 F 3 "" H 2200 7200 50  0001 C CNN
@@ -1113,4 +1104,226 @@ Wire Wire Line
 	4500 5900 4500 4250
 Wire Wire Line
 	4500 4250 4850 4250
+Wire Wire Line
+	950  5150 850  5150
+Wire Wire Line
+	850  5150 850  5650
+Connection ~ 950  5150
+$Comp
+L Connector:Conn_01x02_Female J3
+U 1 1 63030D60
+P 850 5850
+F 0 "J3" V 696 5898 50  0000 L CNN
+F 1 "Conn_01x02_Female" V 787 5898 50  0000 L CNN
+F 2 "Connector_PinSocket_2.54mm:PinSocket_1x02_P2.54mm_Horizontal" H 850 5850 50  0001 C CNN
+F 3 "~" H 850 5850 50  0001 C CNN
+	1    850  5850
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	950  4950 750  4950
+Wire Wire Line
+	750  4950 750  5650
+Connection ~ 950  4950
+$Comp
+L Regulator_Switching:LM22676MR-5 U1
+U 1 1 62E6787B
+P 1150 2550
+F 0 "U1" H 1150 3017 50  0000 C CNN
+F 1 "LM22676MR-5" H 1150 2926 50  0000 C CNN
+F 2 "Package_SO:TI_SO-PowerPAD-8" H 1150 3000 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/lm22676.pdf" H 1200 2550 50  0001 C CNN
+	1    1150 2550
+	1    0    0    -1  
+$EndComp
+NoConn ~ 1050 2950
+NoConn ~ 750  2650
+Wire Wire Line
+	650  2350 650  2700
+Wire Wire Line
+	650  3050 750  3050
+Wire Wire Line
+	1250 2950 1250 3050
+Connection ~ 1250 3050
+$Comp
+L Device:C_Small C8
+U 1 1 62EB3BBB
+P 1650 2550
+F 0 "C8" V 1600 2800 50  0000 L CNN
+F 1 "C_10uF" V 1700 2700 50  0000 L CNN
+F 2 "Capacitor_SMD:C_1206_3216Metric" H 1650 2550 50  0001 C CNN
+F 3 "~" H 1650 2550 50  0001 C CNN
+	1    1650 2550
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	1750 2550 1750 2350
+Connection ~ 1750 2350
+Wire Wire Line
+	1750 2350 1800 2350
+$Comp
+L Diode:PMEG6045ETP D4
+U 1 1 62EE0F54
+P 1800 2850
+F 0 "D4" V 1754 2930 50  0000 L CNN
+F 1 "PMEG6045ETP" V 1900 2300 50  0000 L CNN
+F 2 "Diode_SMD:D_SOD-128" H 1800 2675 50  0001 C CNN
+F 3 "https://assets.nexperia.com/documents/data-sheet/PMEG6045ETP.pdf" H 1800 2850 50  0001 C CNN
+	1    1800 2850
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	1250 3050 1800 3050
+Wire Wire Line
+	1550 2350 1750 2350
+Wire Wire Line
+	750  2350 650  2350
+Connection ~ 650  2350
+Wire Wire Line
+	500  2350 500  4350
+Wire Wire Line
+	500  2350 650  2350
+Wire Wire Line
+	500  4350 3950 4350
+$Comp
+L Device:C_Small C3
+U 1 1 62F40264
+P 650 2800
+F 0 "C3" V 600 2850 50  0000 L CNN
+F 1 "C_10uF" V 500 2750 50  0000 L CNN
+F 2 "Capacitor_SMD:C_1206_3216Metric" H 650 2800 50  0001 C CNN
+F 3 "~" H 650 2800 50  0001 C CNN
+	1    650  2800
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	650  2900 650  3050
+Wire Wire Line
+	3500 3100 5250 3100
+Wire Wire Line
+	2350 4250 3250 4250
+$Comp
+L Device:L L1
+U 1 1 62F67002
+P 1950 2350
+F 0 "L1" V 1769 2350 50  0000 C CNN
+F 1 "L" V 1860 2350 50  0000 C CNN
+F 2 "Inductor_SMD:L_1206_3216Metric" H 1950 2350 50  0001 C CNN
+F 3 "~" H 1950 2350 50  0001 C CNN
+	1    1950 2350
+	0    1    1    0   
+$EndComp
+Connection ~ 1800 2350
+Wire Wire Line
+	2100 2350 2100 2450
+$Comp
+L Device:R_Small_US R7
+U 1 1 62F7433F
+P 2100 2550
+F 0 "R7" V 2200 2500 50  0000 L CNN
+F 1 "R_Small_US" V 2250 2400 50  0000 L CNN
+F 2 "Resistor_SMD:R_1206_3216Metric" H 2100 2550 50  0001 C CNN
+F 3 "~" H 2100 2550 50  0001 C CNN
+	1    2100 2550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2100 2650 2100 2750
+Wire Wire Line
+	1800 2700 1800 2350
+Wire Wire Line
+	1800 3000 1800 3050
+Wire Wire Line
+	1550 2750 2100 2750
+$Comp
+L Device:R_Small_US R8
+U 1 1 62F84CC6
+P 2200 2750
+F 0 "R8" V 2300 2700 50  0000 L CNN
+F 1 "R_Small_US" V 2350 2500 50  0000 L CNN
+F 2 "Resistor_SMD:R_1206_3216Metric" H 2200 2750 50  0001 C CNN
+F 3 "~" H 2200 2750 50  0001 C CNN
+	1    2200 2750
+	0    1    1    0   
+$EndComp
+Connection ~ 2100 2750
+$Comp
+L power:GND #PWR016
+U 1 1 62F85215
+P 2300 2750
+F 0 "#PWR016" H 2300 2500 50  0001 C CNN
+F 1 "GND" V 2300 2550 50  0000 C CNN
+F 2 "" H 2300 2750 50  0001 C CNN
+F 3 "" H 2300 2750 50  0001 C CNN
+	1    2300 2750
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	1800 3050 2400 3050
+Wire Wire Line
+	2400 3050 2400 2650
+Connection ~ 1800 3050
+Connection ~ 2100 2350
+$Comp
+L Device:C_Small C10
+U 1 1 62F927F6
+P 2400 2550
+F 0 "C10" H 2350 2200 50  0000 C CNN
+F 1 "C_0.1uF" H 2300 2300 50  0000 C CNN
+F 2 "Capacitor_SMD:C_1206_3216Metric" H 2400 2550 50  0001 C CNN
+F 3 "~" H 2400 2550 50  0001 C CNN
+	1    2400 2550
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	2400 2450 2400 2350
+Wire Wire Line
+	2500 2350 2500 3300
+Wire Wire Line
+	2500 3300 2950 3300
+Wire Wire Line
+	2950 3300 2950 3100
+Wire Wire Line
+	2100 2350 2400 2350
+Connection ~ 2400 2350
+Wire Wire Line
+	2400 2350 2500 2350
+Connection ~ 2950 3100
+$Comp
+L power:GND #PWR0110
+U 1 1 62FC8B95
+P 750 3050
+F 0 "#PWR0110" H 750 2800 50  0001 C CNN
+F 1 "GND" H 755 2877 50  0000 C CNN
+F 2 "" H 750 3050 50  0001 C CNN
+F 3 "" H 750 3050 50  0001 C CNN
+	1    750  3050
+	1    0    0    -1  
+$EndComp
+Connection ~ 750  3050
+Wire Wire Line
+	750  3050 1250 3050
+NoConn ~ 4400 1200
+$Comp
+L power:+BATT #PWR0111
+U 1 1 6303888F
+P 4400 900
+F 0 "#PWR0111" H 4400 750 50  0001 C CNN
+F 1 "+BATT" H 4250 850 50  0000 C CNN
+F 2 "" H 4400 900 50  0001 C CNN
+F 3 "" H 4400 900 50  0001 C CNN
+	1    4400 900 
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:-BATT #PWR0112
+U 1 1 6303989C
+P 4050 900
+F 0 "#PWR0112" H 4050 750 50  0001 C CNN
+F 1 "-BATT" V 3950 900 50  0000 L CNN
+F 2 "" H 4050 900 50  0001 C CNN
+F 3 "" H 4050 900 50  0001 C CNN
+	1    4050 900 
+	0    1    1    0   
+$EndComp
 $EndSCHEMATC

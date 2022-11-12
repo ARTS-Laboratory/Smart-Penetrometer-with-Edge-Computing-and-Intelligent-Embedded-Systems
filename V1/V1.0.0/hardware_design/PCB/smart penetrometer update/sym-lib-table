@@ -1,4 +1,4 @@
 (sym_lib_table
-  (lib (name smart-penetrometer-rescue)(type Legacy)(uri "${KIPRJMOD}/smart penetrometer-rescue.lib")(options "")(descr ""))
-  (lib (name smart-penetrometer-update-rescue)(type Legacy)(uri "${KIPRJMOD}/smart penetrometer update-rescue.lib")(options "")(descr ""))
+  (lib (name "smart-penetrometer-rescue")(type "Legacy")(uri "${KIPRJMOD}/smart penetrometer-rescue.lib")(options "")(descr ""))
+  (lib (name "smart-penetrometer-update-rescue")(type "Legacy")(uri "${KIPRJMOD}/smart penetrometer update-rescue.lib")(options "")(descr ""))
 )
