@@ -98,15 +98,16 @@ This work is licensed under a
 
 Cite as:
 
-@Misc{Flemming2022SPECIES,
-author       = {Malichi Flemming and Austin Downey},  
-howpublished = {GitHub},  
-month        = apr,   
-title        = {Smart Penetrometer with Edge Computing and Intelligent Embedded Systems}, 
-year         = {2022},    
-groups       = {ARTS-Lab},  
-url          = {https://github.com/ARTS-Laboratory/Smart-Penetrometers-with-Edge-Computing-and-Intelligent-Embedded-Systems},    
+@Misc{Flemming2022SmartPenetrometerEdge,  
+  author       = {Malichi Flemming and Austin Downey},  
+  howpublished = {GitHub},  
+  month        = apr,  
+  title        = {Smart Penetrometer with Edge Computing and Intelligent Embedded Systems},  
+  year         = {2022},  
+  groups       = {ARTS-Lab},  
+  url          = {https://github.com/ARTS-Laboratory/Smart-Penetrometers-with-Edge-Computing-and-Intelligent-Embedded-Systems},  
 }
+
 
 
 
