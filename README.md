@@ -1,55 +1,7 @@
 # Smart Penetrometer with Edge Computing and Intelligent Embedded Systems (SPECIES) 
 ### Design and develop UAV-deployabe smart sensor nodes in a network with edge computing and solar-charging capabilities for soil classification and fault detection.
 
-## Repository Structure
-```angular2html   
-📁 V0
-    📁 V0.1.0
-        📁 hardware_design
-            📁 CAD
-            📁 PCB        
-        📁 software_design
-    📁 V0.1.1
-        📁 hardware_design
-            📁 CAD
-            📁 PCB    
-            📄 README.md
-        📁 software_design  
-            📄 README.md
-    📁 V0.2.0
-        📁 hardware_design
-            📁 CAD
-            📁 PCB  
-            📄 README.md
-        📁 software_design  
-            📄 README.md
-    📁 V0.3.0
-        📁 hardware_design
-            📁 CAD
-            📁 PCB
-            📄 README.md
-        📁 software_design    
-            📄 README.md   
             
-📁 V1
-    📁 V1.0.0
-        📁 hardware_design
-            📁 CAD
-            📁 PCB
-            📄 README.md
-        📁 software_design   
-            📄 README.md
-            
-📁 V2
-    📁 currently empty    
-    
-📁 V3                                          
-    📁 currently empty
-    
-📁 relevant_literature
-    📁 datasheets
-    📁 research_papers
-    📄 README.md              
     
 📄 README.md
 
@@ -65,24 +17,24 @@
 </p>
 
 ## [V0](V0)
-### Sensor node beta version (complete)
-#### 1. Development of sensor node prototype.
+### Sensor node beta version 
+1. Development of sensor node prototype.
 
 ## [V1](V1)
-### Sensor node official verison (work in progress)
-#### 1. A sensor node that collects data and saves it to local memory.
-#### 2. Lasts for over a week.
+### Sensor node official verison (future goal)
+1. A sensor node that collects data and saves it to local memory.
+2. Lasts for over a week.
 
 ## [V2](V2)
 ### Sensor node in a network (future goal)
-#### 1. Can communicate and pass data between nodes.
-#### 2. Communication protocol for passing information developed.
-#### 3. Build a way-station to collect data from a network of sensors and communicate to the cloud.
+1. Can communicate and pass data between nodes.
+2. Communication protocol for passing information developed.
+3. Build a way-station to collect data from a network of sensors and communicate to the cloud.
 
 ## [V3](V3)
 ### Autnonomous sensor node in network with edge computing (future goal)
-#### 1. Has edge-computing capabilities.
-#### 2. Can do Soil classification, fault detection, etc.
+1. Has edge-computing capabilities.
+2. Can do Soil classification, fault detection, etc.
 
 ## Licensing and Citation
 
