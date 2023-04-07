@@ -19,10 +19,11 @@
 ## [V0](V0)
 ### Sensor node beta version 
 1. Development of sensor node prototype.
+1. A sensor node that collects data and saves it to local memory.
 
 ## [V1](V1)
 ### Sensor node official verison (future goal)
-1. A sensor node that collects data and saves it to local memory.
+1. Can communicate with a base station
 2. Lasts for over a week.
 
 ## [V2](V2)
