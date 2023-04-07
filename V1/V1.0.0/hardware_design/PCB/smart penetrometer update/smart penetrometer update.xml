@@ -1,0 +1,1333 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<export version="E">
+  <design>
+    <source>C:\Users\joejo\OneDrive\Documents\GitHub\Smart-Penetrometer-with-Edge-Computing-and-Intelligent-Embedded-Systems\V1\V1.0.0\hardware_design\PCB\smart penetrometer update\smart penetrometer update.kicad_sch</source>
+    <date>4/6/2023 3:30:45 PM</date>
+    <tool>Eeschema 7.0.1</tool>
+    <sheet number="1" name="/" tstamps="/">
+      <title_block>
+        <title/>
+        <company/>
+        <rev/>
+        <date/>
+        <source>smart penetrometer update.kicad_sch</source>
+        <comment number="1" value=""/>
+        <comment number="2" value=""/>
+        <comment number="3" value=""/>
+        <comment number="4" value=""/>
+        <comment number="5" value=""/>
+        <comment number="6" value=""/>
+        <comment number="7" value=""/>
+        <comment number="8" value=""/>
+        <comment number="9" value=""/>
+      </title_block>
+    </sheet>
+  </design>
+  <components>
+    <comp ref="A1">
+      <value>SD_Card_Module</value>
+      <footprint>kitest:SD Module</footprint>
+      <libsource lib="smart penetrometer update-rescue" part="SD_Card_Module-Charleslabs_Parts-kitest-rescue-smart-penetrometer-rescue-smart-penetrometer-update-rescue" description=""/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="smart penetrometer update.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>00000000-0000-0000-0000-000060a4a816</tstamps>
+    </comp>
+    <comp ref="A2">
+      <value>Arduino_Nano_v3.x</value>
+      <footprint>Module:Arduino_Nano</footprint>
+      <datasheet>http://www.mouser.com/pdfdocs/Gravitech_Arduino_Nano3_0.pdf</datasheet>
+      <libsource lib="smart penetrometer update-rescue" part="Arduino_Nano_v3.x-MCU_Module-kitest-rescue-smart-penetrometer-rescue-smart-penetrometer-update-rescue" description=""/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="smart penetrometer update.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>00000000-0000-0000-0000-000060a40c30</tstamps>
+    </comp>
+    <comp ref="BT1">
+      <value>Battery_Cell</value>
+      <footprint>kitest:battery_holder_10mm</footprint>
+      <libsource lib="Device" part="Battery_Cell" description="Single-cell battery"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="smart penetrometer update.kicad_sch"/>
+      <property name="ki_description" value="Single-cell battery"/>
+      <property name="ki_keywords" value="battery cell"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>00000000-0000-0000-0000-00006163f1f7</tstamps>
+    </comp>
+    <comp ref="C1">
+      <value>C_0.1uF</value>
+      <footprint>Capacitor_SMD:C_1206_3216Metric</footprint>
+      <libsource lib="Device" part="C_Small" description="Unpolarized capacitor, small symbol"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="smart penetrometer update.kicad_sch"/>
+      <property name="ki_description" value="Unpolarized capacitor, small symbol"/>
+      <property name="ki_keywords" value="capacitor cap"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>00000000-0000-0000-0000-000061ffc277</tstamps>
+    </comp>
+    <comp ref="C2">
+      <value>C_10uF</value>
+      <footprint>Capacitor_SMD:C_1206_3216Metric</footprint>
+      <libsource lib="Device" part="C_Small" description="Unpolarized capacitor, small symbol"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="smart penetrometer update.kicad_sch"/>
+      <property name="ki_description" value="Unpolarized capacitor, small symbol"/>
+      <property name="ki_keywords" value="capacitor cap"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>00000000-0000-0000-0000-000061ffb484</tstamps>
+    </comp>
+    <comp ref="C3">
+      <value>C_10uF</value>
+      <footprint>Capacitor_SMD:C_1206_3216Metric</footprint>
+      <libsource lib="Device" part="C_Small" description="Unpolarized capacitor, small symbol"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="smart penetrometer update.kicad_sch"/>
+      <property name="ki_description" value="Unpolarized capacitor, small symbol"/>
+      <property name="ki_keywords" value="capacitor cap"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>00000000-0000-0000-0000-000062f40264</tstamps>
+    </comp>
+    <comp ref="C4">
+      <value>C_Small</value>
+      <footprint>Capacitor_SMD:C_1206_3216Metric</footprint>
+      <libsource lib="Device" part="C_Small" description="Unpolarized capacitor, small symbol"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="smart penetrometer update.kicad_sch"/>
+      <property name="ki_description" value="Unpolarized capacitor, small symbol"/>
+      <property name="ki_keywords" value="capacitor cap"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>00000000-0000-0000-0000-00006163e9e6</tstamps>
+    </comp>
+    <comp ref="C5">
+      <value>C_0.047uF</value>
+      <footprint>Capacitor_SMD:C_1206_3216Metric</footprint>
+      <libsource lib="Device" part="C_Small" description="Unpolarized capacitor, small symbol"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="smart penetrometer update.kicad_sch"/>
+      <property name="ki_description" value="Unpolarized capacitor, small symbol"/>
+      <property name="ki_keywords" value="capacitor cap"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>00000000-0000-0000-0000-000062e32aee</tstamps>
+    </comp>
+    <comp ref="C6">
+      <value>C_0.47uF</value>
+      <footprint>Capacitor_SMD:C_1206_3216Metric</footprint>
+      <libsource lib="Device" part="C_Small" description="Unpolarized capacitor, small symbol"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="smart penetrometer update.kicad_sch"/>
+      <property name="ki_description" value="Unpolarized capacitor, small symbol"/>
+      <property name="ki_keywords" value="capacitor cap"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>00000000-0000-0000-0000-000062e30f57</tstamps>
+    </comp>
+    <comp ref="C7">
+      <value>C_0.047uF</value>
+      <footprint>Capacitor_SMD:C_1206_3216Metric</footprint>
+      <libsource lib="Device" part="C_Small" description="Unpolarized capacitor, small symbol"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="smart penetrometer update.kicad_sch"/>
+      <property name="ki_description" value="Unpolarized capacitor, small symbol"/>
+      <property name="ki_keywords" value="capacitor cap"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>00000000-0000-0000-0000-000062e301d9</tstamps>
+    </comp>
+    <comp ref="C8">
+      <value>C_10uF</value>
+      <footprint>Capacitor_SMD:C_1206_3216Metric</footprint>
+      <libsource lib="Device" part="C_Small" description="Unpolarized capacitor, small symbol"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="smart penetrometer update.kicad_sch"/>
+      <property name="ki_description" value="Unpolarized capacitor, small symbol"/>
+      <property name="ki_keywords" value="capacitor cap"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>00000000-0000-0000-0000-000062eb3bbb</tstamps>
+    </comp>
+    <comp ref="C9">
+      <value>C_0.1uF</value>
+      <footprint>Capacitor_SMD:C_1206_3216Metric</footprint>
+      <libsource lib="Device" part="C_Small" description="Unpolarized capacitor, small symbol"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="smart penetrometer update.kicad_sch"/>
+      <property name="ki_description" value="Unpolarized capacitor, small symbol"/>
+      <property name="ki_keywords" value="capacitor cap"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>00000000-0000-0000-0000-000062e32164</tstamps>
+    </comp>
+    <comp ref="C10">
+      <value>C_0.1uF</value>
+      <footprint>Capacitor_SMD:C_1206_3216Metric</footprint>
+      <libsource lib="Device" part="C_Small" description="Unpolarized capacitor, small symbol"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="smart penetrometer update.kicad_sch"/>
+      <property name="ki_description" value="Unpolarized capacitor, small symbol"/>
+      <property name="ki_keywords" value="capacitor cap"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>00000000-0000-0000-0000-000062f927f6</tstamps>
+    </comp>
+    <comp ref="C11">
+      <value>C_0.1uF</value>
+      <footprint>Capacitor_SMD:C_1206_3216Metric</footprint>
+      <libsource lib="Device" part="C_Small" description="Unpolarized capacitor, small symbol"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="smart penetrometer update.kicad_sch"/>
+      <property name="ki_description" value="Unpolarized capacitor, small symbol"/>
+      <property name="ki_keywords" value="capacitor cap"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>00000000-0000-0000-0000-000062e33434</tstamps>
+    </comp>
+    <comp ref="C12">
+      <value>CP1_Small</value>
+      <footprint>Capacitor_SMD:C_1206_3216Metric</footprint>
+      <libsource lib="smart penetrometer update-rescue" part="CP1_Small-Device" description=""/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="smart penetrometer update.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>00000000-0000-0000-0000-000062819f8f</tstamps>
+    </comp>
+    <comp ref="D1">
+      <value>D_Zener_Small</value>
+      <footprint>Diode_SMD:D_SMC</footprint>
+      <libsource lib="Device" part="D_Zener_Small" description="Zener diode, small symbol"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="smart penetrometer update.kicad_sch"/>
+      <property name="ki_description" value="Zener diode, small symbol"/>
+      <property name="ki_keywords" value="diode"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>00000000-0000-0000-0000-000062002596</tstamps>
+    </comp>
+    <comp ref="D2">
+      <value>B320</value>
+      <footprint>Diode_SMD:D_SMC</footprint>
+      <datasheet>http://www.jameco.com/Jameco/Products/ProdDS/1538777.pdf</datasheet>
+      <libsource lib="Diode" part="B320" description="20V 3A Schottky Barrier Rectifier Diode, SMC"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="smart penetrometer update.kicad_sch"/>
+      <property name="ki_description" value="20V 3A Schottky Barrier Rectifier Diode, SMC"/>
+      <property name="ki_keywords" value="diode Schottky"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>00000000-0000-0000-0000-000062054a28</tstamps>
+    </comp>
+    <comp ref="D3">
+      <value>B350</value>
+      <footprint>Diode_SMD:D_SMC</footprint>
+      <datasheet>http://www.jameco.com/Jameco/Products/ProdDS/1538777.pdf</datasheet>
+      <libsource lib="Diode" part="B350" description="50V 3A Schottky Barrier Rectifier Diode, SMC"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="smart penetrometer update.kicad_sch"/>
+      <property name="ki_description" value="50V 3A Schottky Barrier Rectifier Diode, SMC"/>
+      <property name="ki_keywords" value="diode Schottky"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>00000000-0000-0000-0000-0000620504c6</tstamps>
+    </comp>
+    <comp ref="D4">
+      <value>PMEG6045ETP</value>
+      <footprint>Diode_SMD:D_SOD-128</footprint>
+      <datasheet>https://assets.nexperia.com/documents/data-sheet/PMEG6045ETP.pdf</datasheet>
+      <libsource lib="Diode" part="PMEG6045ETP" description="60V, 4.5A High-Temperature Schottky barrier rectifier, SOD-128"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="smart penetrometer update.kicad_sch"/>
+      <property name="ki_description" value="60V, 4.5A High-Temperature Schottky barrier rectifier, SOD-128"/>
+      <property name="ki_keywords" value="forward voltage diode"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>00000000-0000-0000-0000-000062ee0f54</tstamps>
+    </comp>
+    <comp ref="J1">
+      <value>XLR3_Switched</value>
+      <footprint>kitest:grounded_switch</footprint>
+      <datasheet> ~</datasheet>
+      <libsource lib="smart penetrometer update-rescue" part="XLR3_Switched-Connector" description=""/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="smart penetrometer update.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>00000000-0000-0000-0000-000060dfb15f</tstamps>
+    </comp>
+    <comp ref="J2">
+      <value>Conn_01x11_Female</value>
+      <footprint>Connector_PinSocket_2.54mm:PinSocket_1x11_P2.54mm_Horizontal</footprint>
+      <libsource lib="smart penetrometer update-rescue" part="Conn_01x11_Female-Connector" description=""/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="smart penetrometer update.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>00000000-0000-0000-0000-000062004e69</tstamps>
+    </comp>
+    <comp ref="J3">
+      <value>Conn_01x02_Female</value>
+      <footprint>Connector_PinSocket_2.54mm:PinSocket_1x02_P2.54mm_Horizontal</footprint>
+      <libsource lib="smart penetrometer update-rescue" part="Conn_01x02_Female-Connector" description=""/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="smart penetrometer update.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>00000000-0000-0000-0000-000063030d60</tstamps>
+    </comp>
+    <comp ref="L1">
+      <value>L</value>
+      <footprint>Inductor_SMD:L_1206_3216Metric</footprint>
+      <libsource lib="Device" part="L" description="Inductor"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="smart penetrometer update.kicad_sch"/>
+      <property name="ki_description" value="Inductor"/>
+      <property name="ki_keywords" value="inductor choke coil reactor magnetic"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>00000000-0000-0000-0000-000062f67002</tstamps>
+    </comp>
+    <comp ref="R1">
+      <value>R_1MOhm</value>
+      <footprint>Resistor_SMD:R_1206_3216Metric</footprint>
+      <libsource lib="Device" part="R_Small_US" description="Resistor, small US symbol"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="smart penetrometer update.kicad_sch"/>
+      <property name="ki_description" value="Resistor, small US symbol"/>
+      <property name="ki_keywords" value="r resistor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>00000000-0000-0000-0000-000062e34881</tstamps>
+    </comp>
+    <comp ref="R2">
+      <value>R_1MOhm</value>
+      <footprint>Resistor_SMD:R_1206_3216Metric</footprint>
+      <libsource lib="Device" part="R_Small_US" description="Resistor, small US symbol"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="smart penetrometer update.kicad_sch"/>
+      <property name="ki_description" value="Resistor, small US symbol"/>
+      <property name="ki_keywords" value="r resistor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>00000000-0000-0000-0000-000062e357e2</tstamps>
+    </comp>
+    <comp ref="R3">
+      <value>R_800Ohm</value>
+      <footprint>Resistor_SMD:R_1206_3216Metric</footprint>
+      <libsource lib="Device" part="R_Small_US" description="Resistor, small US symbol"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="smart penetrometer update.kicad_sch"/>
+      <property name="ki_description" value="Resistor, small US symbol"/>
+      <property name="ki_keywords" value="r resistor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>00000000-0000-0000-0000-000062e33ecc</tstamps>
+    </comp>
+    <comp ref="R4">
+      <value>R_800Ohm</value>
+      <footprint>Resistor_SMD:R_1206_3216Metric</footprint>
+      <libsource lib="Device" part="R_Small_US" description="Resistor, small US symbol"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="smart penetrometer update.kicad_sch"/>
+      <property name="ki_description" value="Resistor, small US symbol"/>
+      <property name="ki_keywords" value="r resistor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>00000000-0000-0000-0000-000062e34b20</tstamps>
+    </comp>
+    <comp ref="R5">
+      <value>R_Small_US</value>
+      <footprint>Resistor_SMD:R_1206_3216Metric</footprint>
+      <libsource lib="Device" part="R_Small_US" description="Resistor, small US symbol"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="smart penetrometer update.kicad_sch"/>
+      <property name="ki_description" value="Resistor, small US symbol"/>
+      <property name="ki_keywords" value="r resistor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>00000000-0000-0000-0000-00006162d30f</tstamps>
+    </comp>
+    <comp ref="R6">
+      <value>R_Small_US</value>
+      <footprint>Resistor_SMD:R_1206_3216Metric</footprint>
+      <libsource lib="Device" part="R_Small_US" description="Resistor, small US symbol"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="smart penetrometer update.kicad_sch"/>
+      <property name="ki_description" value="Resistor, small US symbol"/>
+      <property name="ki_keywords" value="r resistor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>00000000-0000-0000-0000-00006162e2e0</tstamps>
+    </comp>
+    <comp ref="R7">
+      <value>R_Small_US</value>
+      <footprint>Resistor_SMD:R_1206_3216Metric</footprint>
+      <libsource lib="Device" part="R_Small_US" description="Resistor, small US symbol"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="smart penetrometer update.kicad_sch"/>
+      <property name="ki_description" value="Resistor, small US symbol"/>
+      <property name="ki_keywords" value="r resistor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>00000000-0000-0000-0000-000062f7433f</tstamps>
+    </comp>
+    <comp ref="R8">
+      <value>R_Small_US</value>
+      <footprint>Resistor_SMD:R_1206_3216Metric</footprint>
+      <libsource lib="Device" part="R_Small_US" description="Resistor, small US symbol"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="smart penetrometer update.kicad_sch"/>
+      <property name="ki_description" value="Resistor, small US symbol"/>
+      <property name="ki_keywords" value="r resistor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>00000000-0000-0000-0000-000062f84cc6</tstamps>
+    </comp>
+    <comp ref="R9">
+      <value>R_Small_US</value>
+      <footprint>Resistor_SMD:R_1206_3216Metric</footprint>
+      <libsource lib="Device" part="R_Small_US" description="Resistor, small US symbol"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="smart penetrometer update.kicad_sch"/>
+      <property name="ki_description" value="Resistor, small US symbol"/>
+      <property name="ki_keywords" value="r resistor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>00000000-0000-0000-0000-00006280ef6a</tstamps>
+    </comp>
+    <comp ref="R10">
+      <value>R_Small_US</value>
+      <footprint>Resistor_SMD:R_1206_3216Metric</footprint>
+      <libsource lib="Device" part="R_Small_US" description="Resistor, small US symbol"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="smart penetrometer update.kicad_sch"/>
+      <property name="ki_description" value="Resistor, small US symbol"/>
+      <property name="ki_keywords" value="r resistor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>00000000-0000-0000-0000-00006280faae</tstamps>
+    </comp>
+    <comp ref="U1">
+      <value>LM22676MR-5</value>
+      <footprint>Package_SO:TI_SO-PowerPAD-8</footprint>
+      <datasheet>http://www.ti.com/lit/ds/symlink/lm22676.pdf</datasheet>
+      <libsource lib="Regulator_Switching" part="LM22676MR-5" description="3A Step-Down Switching Voltage Regulater, 4.5-42V Input, 5V Output, 500kHz Switching Frequency, SOIC-8"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="smart penetrometer update.kicad_sch"/>
+      <property name="ki_description" value="3A Step-Down Switching Voltage Regulater, 4.5-42V Input, 5V Output, 500kHz Switching Frequency, SOIC-8"/>
+      <property name="ki_keywords" value="DC/DC Buck Converter 3A"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>00000000-0000-0000-0000-000062e6787b</tstamps>
+    </comp>
+    <comp ref="U2">
+      <value>DS3231M</value>
+      <footprint>Package_SO:SOIC-16W_7.5x10.3mm_P1.27mm</footprint>
+      <datasheet>http://datasheets.maximintegrated.com/en/ds/DS3231.pdf</datasheet>
+      <libsource lib="Timer_RTC" part="DS3231M" description="Extremely Accurate I2C-Integrated RTC/TCXO/Crystal SOIC-16"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="smart penetrometer update.kicad_sch"/>
+      <property name="ki_description" value="Extremely Accurate I2C-Integrated RTC/TCXO/Crystal SOIC-16"/>
+      <property name="ki_keywords" value="RTC TCXO Realtime Time Clock Crystal Oscillator I2C"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>00000000-0000-0000-0000-000060dcdb50</tstamps>
+    </comp>
+    <comp ref="U3">
+      <value>Battery_Input</value>
+      <footprint>kitest:Battery_Input</footprint>
+      <libsource lib="smart penetrometer update-rescue" part="Battery_Input-kitest-kitest-rescue-smart-penetrometer-rescue-smart-penetrometer-update-rescue-smart-penetrometer-update-rescue" description=""/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="smart penetrometer update.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>00000000-0000-0000-0000-000060a6877d</tstamps>
+    </comp>
+    <comp ref="U4">
+      <value>4023</value>
+      <footprint>kitest:TDS_module</footprint>
+      <datasheet>http://www.intersil.com/content/dam/Intersil/documents/cd40/cd4011bms-12bms-23bms.pdf</datasheet>
+      <fields>
+        <field name="1">SDA</field>
+        <field name="2">SCL</field>
+        <field name="3">V</field>
+        <field name="4">G</field>
+      </fields>
+      <libsource lib="4xxx" part="4023" description="Triple Nand 3 inputs"/>
+      <property name="4" value="G"/>
+      <property name="2" value="SCL"/>
+      <property name="1" value="SDA"/>
+      <property name="3" value="V"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="smart penetrometer update.kicad_sch"/>
+      <property name="ki_description" value="Triple Nand 3 inputs"/>
+      <property name="ki_keywords" value="CMOS Nand3"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>00000000-0000-0000-0000-0000615601ea</tstamps>
+    </comp>
+    <comp ref="U5">
+      <value>ADS1115IDGS</value>
+      <footprint>Package_SO:TSSOP-10_3x3mm_P0.5mm</footprint>
+      <datasheet>http://www.ti.com/lit/ds/symlink/ads1113.pdf</datasheet>
+      <libsource lib="Analog_ADC" part="ADS1115IDGS" description="Ultra-Small, Low-Power, I2C-Compatible, 860-SPS, 16-Bit ADCs With Internal Reference, Oscillator, and Programmable Comparator, VSSOP-10"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="smart penetrometer update.kicad_sch"/>
+      <property name="ki_description" value="Ultra-Small, Low-Power, I2C-Compatible, 860-SPS, 16-Bit ADCs With Internal Reference, Oscillator, and Programmable Comparator, VSSOP-10"/>
+      <property name="ki_keywords" value="16 bit 4 channel I2C ADC"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>00000000-0000-0000-0000-0000615b81a7</tstamps>
+    </comp>
+    <comp ref="U6">
+      <value>3v3_Voltage_Regulator</value>
+      <footprint>smart penetrometer footprints:BD433M2FP3_CE2</footprint>
+      <libsource lib="smart penetrometer update-rescue" part="3v3_Voltage_Regulator-smart-penetrometer-rescue-smart-penetrometer-update-rescue" description=""/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="smart penetrometer update.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>00000000-0000-0000-0000-000061ff42de</tstamps>
+    </comp>
+    <comp ref="U7">
+      <value>Solar_Input</value>
+      <footprint>kitest:Battery_Input</footprint>
+      <libsource lib="smart penetrometer update-rescue" part="Battery_Input-kitest-kitest-rescue-smart-penetrometer-rescue-smart-penetrometer-update-rescue-smart-penetrometer-update-rescue" description=""/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="smart penetrometer update.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>00000000-0000-0000-0000-000062051ba4</tstamps>
+    </comp>
+    <comp ref="U8">
+      <value>ADS1120-PW</value>
+      <footprint>Package_SO:TSSOP-16_4.4x5mm_P0.65mm</footprint>
+      <datasheet>http://www.ti.com/lit/ds/symlink/ads1120.pdf</datasheet>
+      <libsource lib="Analog_ADC" part="ADS1120-PW" description="Low-power, quad-input, 16-bit analog to digital converter, integrated temperature sensor, SPI interface, TSSOP-16 package"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="smart penetrometer update.kicad_sch"/>
+      <property name="ki_description" value="Low-power, quad-input, 16-bit analog to digital converter, integrated temperature sensor, SPI interface, TSSOP-16 package"/>
+      <property name="ki_keywords" value="adc spi"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>00000000-0000-0000-0000-000062e12ad9</tstamps>
+    </comp>
+    <comp ref="U9">
+      <value>SRAM(23K256)</value>
+      <footprint>smart penetrometer footprints:23K256T-E&amp;slash_SN</footprint>
+      <libsource lib="smart penetrometer update-rescue" part="SRAM(23K256)-smart-penetrometer-update-rescue" description=""/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="smart penetrometer update.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>00000000-0000-0000-0000-000062eb656f</tstamps>
+    </comp>
+    <comp ref="U10">
+      <value>FS8205A</value>
+      <footprint>smart penetrometer footprints:DUAL_MOSFET(FS8205A)</footprint>
+      <libsource lib="smart penetrometer update-rescue" part="FS8205A-smart-penetrometer-rescue-smart-penetrometer-update-rescue" description=""/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="smart penetrometer update.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>00000000-0000-0000-0000-000062819888</tstamps>
+    </comp>
+    <comp ref="U11">
+      <value>DW01</value>
+      <footprint>smart penetrometer footprints:BATTERY_PROTECTION_IC(DW01A)</footprint>
+      <libsource lib="smart penetrometer update-rescue" part="DW01-smart-penetrometer-rescue-smart-penetrometer-update-rescue" description=""/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="smart penetrometer update.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>00000000-0000-0000-0000-000062805e03</tstamps>
+    </comp>
+  </components>
+  <libparts>
+    <libpart lib="4xxx" part="4023">
+      <description>Triple Nand 3 inputs</description>
+      <docs>http://www.intersil.com/content/dam/Intersil/documents/cd40/cd4011bms-12bms-23bms.pdf</docs>
+      <footprints>
+        <fp>DIP?14*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">4023</field>
+        <field name="Datasheet">http://www.intersil.com/content/dam/Intersil/documents/cd40/cd4011bms-12bms-23bms.pdf</field>
+      </fields>
+      <pins>
+        <pin num="1" name="" type="input"/>
+        <pin num="2" name="" type="input"/>
+        <pin num="3" name="" type="input"/>
+        <pin num="4" name="" type="input"/>
+        <pin num="5" name="" type="input"/>
+        <pin num="6" name="" type="output"/>
+        <pin num="7" name="VSS" type="power_in"/>
+        <pin num="8" name="" type="input"/>
+        <pin num="9" name="" type="output"/>
+        <pin num="10" name="" type="output"/>
+        <pin num="11" name="" type="input"/>
+        <pin num="12" name="" type="input"/>
+        <pin num="13" name="" type="input"/>
+        <pin num="14" name="VDD" type="power_in"/>
+      </pins>
+    </libpart>
+    <libpart lib="Analog_ADC" part="ADS1115IDGS">
+      <description>Ultra-Small, Low-Power, I2C-Compatible, 860-SPS, 16-Bit ADCs With Internal Reference, Oscillator, and Programmable Comparator, VSSOP-10</description>
+      <docs>http://www.ti.com/lit/ds/symlink/ads1113.pdf</docs>
+      <footprints>
+        <fp>TSSOP*3x3mm*P0.5mm*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">ADS1115IDGS</field>
+        <field name="Footprint">Package_SO:TSSOP-10_3x3mm_P0.5mm</field>
+        <field name="Datasheet">http://www.ti.com/lit/ds/symlink/ads1113.pdf</field>
+      </fields>
+      <pins>
+        <pin num="1" name="ADDR" type="input"/>
+        <pin num="2" name="ALERT/RDY" type="output"/>
+        <pin num="3" name="GND" type="power_in"/>
+        <pin num="4" name="AIN0" type="input"/>
+        <pin num="5" name="AIN1" type="input"/>
+        <pin num="6" name="AIN2" type="input"/>
+        <pin num="7" name="AIN3" type="input"/>
+        <pin num="8" name="VDD" type="power_in"/>
+        <pin num="9" name="SDA" type="bidirectional"/>
+        <pin num="10" name="SCL" type="input"/>
+      </pins>
+    </libpart>
+    <libpart lib="Analog_ADC" part="ADS1120-PW">
+      <description>Low-power, quad-input, 16-bit analog to digital converter, integrated temperature sensor, SPI interface, TSSOP-16 package</description>
+      <docs>http://www.ti.com/lit/ds/symlink/ads1120.pdf</docs>
+      <footprints>
+        <fp>*TSSOP*4.4x5mm*P0.65mm*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">ADS1120-PW</field>
+        <field name="Footprint">Package_SO:TSSOP-16_4.4x5mm_P0.65mm</field>
+        <field name="Datasheet">http://www.ti.com/lit/ds/symlink/ads1120.pdf</field>
+      </fields>
+      <pins>
+        <pin num="1" name="SCLK" type="input"/>
+        <pin num="2" name="~{CS}" type="input"/>
+        <pin num="3" name="CLK" type="input"/>
+        <pin num="4" name="DGND" type="power_in"/>
+        <pin num="5" name="AVSS" type="power_in"/>
+        <pin num="6" name="AIN3/REFN1" type="input"/>
+        <pin num="7" name="AIN2" type="input"/>
+        <pin num="8" name="REFN0" type="input"/>
+        <pin num="9" name="REFP0" type="input"/>
+        <pin num="10" name="AIN1" type="input"/>
+        <pin num="11" name="AIN0/REFP1" type="input"/>
+        <pin num="12" name="AVDD" type="power_in"/>
+        <pin num="13" name="DVDD" type="power_in"/>
+        <pin num="14" name="~{DRDY}" type="output"/>
+        <pin num="15" name="DOUT/~{DRDY}" type="output"/>
+        <pin num="16" name="DIN" type="input"/>
+      </pins>
+    </libpart>
+    <libpart lib="Device" part="Battery_Cell">
+      <description>Single-cell battery</description>
+      <docs>~</docs>
+      <fields>
+        <field name="Reference">BT</field>
+        <field name="Value">Battery_Cell</field>
+        <field name="Datasheet">~</field>
+      </fields>
+      <pins>
+        <pin num="1" name="+" type="passive"/>
+        <pin num="2" name="-" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Device" part="C_Small">
+      <description>Unpolarized capacitor, small symbol</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>C_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">C</field>
+        <field name="Value">C_Small</field>
+        <field name="Datasheet">~</field>
+      </fields>
+      <pins>
+        <pin num="1" name="" type="passive"/>
+        <pin num="2" name="" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Device" part="D_Zener_Small">
+      <description>Zener diode, small symbol</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>TO-???*</fp>
+        <fp>*_Diode_*</fp>
+        <fp>*SingleDiode*</fp>
+        <fp>D_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">D</field>
+        <field name="Value">D_Zener_Small</field>
+        <field name="Datasheet">~</field>
+      </fields>
+      <pins>
+        <pin num="1" name="K" type="passive"/>
+        <pin num="2" name="A" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Device" part="L">
+      <description>Inductor</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>Choke_*</fp>
+        <fp>*Coil*</fp>
+        <fp>Inductor_*</fp>
+        <fp>L_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">L</field>
+        <field name="Value">L</field>
+        <field name="Datasheet">~</field>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Device" part="R_Small_US">
+      <description>Resistor, small US symbol</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>R_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">R</field>
+        <field name="Value">R_Small_US</field>
+        <field name="Datasheet">~</field>
+      </fields>
+      <pins>
+        <pin num="1" name="" type="passive"/>
+        <pin num="2" name="" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Diode" part="B320">
+      <description>20V 3A Schottky Barrier Rectifier Diode, SMC</description>
+      <docs>http://www.jameco.com/Jameco/Products/ProdDS/1538777.pdf</docs>
+      <footprints>
+        <fp>D*SMC*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">D</field>
+        <field name="Value">B320</field>
+        <field name="Footprint">Diode_SMD:D_SMC</field>
+        <field name="Datasheet">http://www.jameco.com/Jameco/Products/ProdDS/1538777.pdf</field>
+      </fields>
+      <pins>
+        <pin num="1" name="K" type="passive"/>
+        <pin num="2" name="A" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Diode" part="B350">
+      <description>50V 3A Schottky Barrier Rectifier Diode, SMC</description>
+      <docs>http://www.jameco.com/Jameco/Products/ProdDS/1538777.pdf</docs>
+      <footprints>
+        <fp>D*SMC*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">D</field>
+        <field name="Value">B350</field>
+        <field name="Footprint">Diode_SMD:D_SMC</field>
+        <field name="Datasheet">http://www.jameco.com/Jameco/Products/ProdDS/1538777.pdf</field>
+      </fields>
+      <pins>
+        <pin num="1" name="K" type="passive"/>
+        <pin num="2" name="A" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Diode" part="PMEG6045ETP">
+      <description>60V, 4.5A High-Temperature Schottky barrier rectifier, SOD-128</description>
+      <docs>https://assets.nexperia.com/documents/data-sheet/PMEG6045ETP.pdf</docs>
+      <footprints>
+        <fp>D*SOD?128*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">D</field>
+        <field name="Value">PMEG6045ETP</field>
+        <field name="Footprint">Diode_SMD:D_SOD-128</field>
+        <field name="Datasheet">https://assets.nexperia.com/documents/data-sheet/PMEG6045ETP.pdf</field>
+      </fields>
+      <pins>
+        <pin num="1" name="K" type="passive"/>
+        <pin num="2" name="A" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Regulator_Switching" part="LM22676MR-5">
+      <description>3A Step-Down Switching Voltage Regulater, 4.5-42V Input, 5V Output, 500kHz Switching Frequency, SOIC-8</description>
+      <docs>http://www.ti.com/lit/ds/symlink/lm22676.pdf</docs>
+      <footprints>
+        <fp>TI*SO*PowerPAD*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">LM22676MR-5</field>
+        <field name="Footprint">Package_SO:TI_SO-PowerPAD-8</field>
+        <field name="Datasheet">http://www.ti.com/lit/ds/symlink/lm22676.pdf</field>
+      </fields>
+      <pins>
+        <pin num="1" name="BOOT" type="input"/>
+        <pin num="2" name="NC" type="no_connect"/>
+        <pin num="3" name="NC" type="no_connect"/>
+        <pin num="4" name="FB" type="input"/>
+        <pin num="5" name="EN" type="input"/>
+        <pin num="6" name="GND" type="power_in"/>
+        <pin num="7" name="VIN" type="power_in"/>
+        <pin num="8" name="SW" type="power_out"/>
+        <pin num="9" name="EP" type="power_in"/>
+      </pins>
+    </libpart>
+    <libpart lib="Timer_RTC" part="DS3231M">
+      <description>Extremely Accurate I2C-Integrated RTC/TCXO/Crystal SOIC-16</description>
+      <docs>http://datasheets.maximintegrated.com/en/ds/DS3231.pdf</docs>
+      <footprints>
+        <fp>SOIC*7.5x10.3mm*P1.27mm*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">DS3231M</field>
+        <field name="Footprint">Package_SO:SOIC-16W_7.5x10.3mm_P1.27mm</field>
+        <field name="Datasheet">http://datasheets.maximintegrated.com/en/ds/DS3231.pdf</field>
+      </fields>
+      <pins>
+        <pin num="1" name="32KHZ" type="open_collector"/>
+        <pin num="2" name="VCC" type="power_in"/>
+        <pin num="3" name="~{INT}/SQW" type="open_collector"/>
+        <pin num="4" name="~{RST}" type="bidirectional"/>
+        <pin num="5" name="GND" type="passive"/>
+        <pin num="6" name="GND" type="passive"/>
+        <pin num="7" name="GND" type="passive"/>
+        <pin num="8" name="GND" type="passive"/>
+        <pin num="9" name="GND" type="passive"/>
+        <pin num="10" name="GND" type="passive"/>
+        <pin num="11" name="GND" type="passive"/>
+        <pin num="12" name="GND" type="passive"/>
+        <pin num="13" name="GND" type="power_in"/>
+        <pin num="14" name="VBAT" type="power_in"/>
+        <pin num="15" name="SDA" type="bidirectional"/>
+        <pin num="16" name="SCL" type="input"/>
+      </pins>
+    </libpart>
+    <libpart lib="smart penetrometer update-rescue" part="3v3_Voltage_Regulator-smart-penetrometer-rescue-smart-penetrometer-update-rescue">
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">smart-penetrometer-update-rescue_3v3_Voltage_Regulator-smart-penetrometer-rescue</field>
+      </fields>
+      <pins>
+        <pin num="1" name="VIN" type="power_in"/>
+        <pin num="2" name="CTR" type="output"/>
+        <pin num="3" name="VOUT" type="power_out"/>
+        <pin num="4" name="GND" type="power_in"/>
+      </pins>
+    </libpart>
+    <libpart lib="smart penetrometer update-rescue" part="Arduino_Nano_v3.x-MCU_Module-kitest-rescue-smart-penetrometer-rescue-smart-penetrometer-update-rescue">
+      <footprints>
+        <fp>Arduino*Nano*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">A</field>
+        <field name="Value">smart-penetrometer-update-rescue_Arduino_Nano_v3.x-MCU_Module-kitest-rescue-smart-penetrometer-rescue</field>
+        <field name="Footprint">Module:Arduino_Nano</field>
+      </fields>
+      <pins>
+        <pin num="1" name="D1/TX" type="bidirectional"/>
+        <pin num="2" name="D0/RX" type="bidirectional"/>
+        <pin num="3" name="RESET" type="input"/>
+        <pin num="4" name="GND" type="power_in"/>
+        <pin num="5" name="D2" type="bidirectional"/>
+        <pin num="6" name="D3" type="bidirectional"/>
+        <pin num="7" name="D4" type="bidirectional"/>
+        <pin num="8" name="D5" type="bidirectional"/>
+        <pin num="9" name="D6" type="bidirectional"/>
+        <pin num="10" name="D7" type="bidirectional"/>
+        <pin num="11" name="D8" type="bidirectional"/>
+        <pin num="12" name="D9" type="bidirectional"/>
+        <pin num="13" name="D10" type="bidirectional"/>
+        <pin num="14" name="D11" type="bidirectional"/>
+        <pin num="15" name="D12" type="bidirectional"/>
+        <pin num="16" name="D13" type="bidirectional"/>
+        <pin num="17" name="3V3" type="power_out"/>
+        <pin num="18" name="AREF" type="input"/>
+        <pin num="19" name="A0" type="bidirectional"/>
+        <pin num="20" name="A1" type="bidirectional"/>
+        <pin num="21" name="A2" type="bidirectional"/>
+        <pin num="22" name="A3" type="bidirectional"/>
+        <pin num="23" name="A4" type="bidirectional"/>
+        <pin num="24" name="A5" type="bidirectional"/>
+        <pin num="25" name="A6" type="bidirectional"/>
+        <pin num="26" name="A7" type="bidirectional"/>
+        <pin num="27" name="+5V" type="power_out"/>
+        <pin num="28" name="RESET" type="input"/>
+        <pin num="29" name="GND" type="power_in"/>
+        <pin num="30" name="VIN" type="power_in"/>
+      </pins>
+    </libpart>
+    <libpart lib="smart penetrometer update-rescue" part="Battery_Input-kitest-kitest-rescue-smart-penetrometer-rescue-smart-penetrometer-update-rescue-smart-penetrometer-update-rescue">
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">smart-penetrometer-update-rescue_Battery_Input-kitest-kitest-rescue-smart-penetrometer-rescue-smart-penetrometer-update-rescue</field>
+      </fields>
+      <pins>
+        <pin num="1" name="Pos" type="power_in"/>
+        <pin num="2" name="Neg" type="power_in"/>
+      </pins>
+    </libpart>
+    <libpart lib="smart penetrometer update-rescue" part="CP1_Small-Device">
+      <footprints>
+        <fp>CP_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">C</field>
+        <field name="Value">Device_CP1_Small</field>
+      </fields>
+      <pins>
+        <pin num="1" name="" type="passive"/>
+        <pin num="2" name="" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="smart penetrometer update-rescue" part="Conn_01x02_Female-Connector">
+      <footprints>
+        <fp>Connector*:*_1x??_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">J</field>
+        <field name="Value">Connector_Conn_01x02_Female</field>
+      </fields>
+      <pins>
+        <pin num="1" name="Pin_1" type="passive"/>
+        <pin num="2" name="Pin_2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="smart penetrometer update-rescue" part="Conn_01x11_Female-Connector">
+      <footprints>
+        <fp>Connector*:*_1x??_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">J</field>
+        <field name="Value">Connector_Conn_01x11_Female</field>
+      </fields>
+      <pins>
+        <pin num="1" name="Pin_1" type="passive"/>
+        <pin num="2" name="Pin_2" type="passive"/>
+        <pin num="3" name="Pin_3" type="passive"/>
+        <pin num="4" name="Pin_4" type="passive"/>
+        <pin num="5" name="Pin_5" type="passive"/>
+        <pin num="6" name="Pin_6" type="passive"/>
+        <pin num="7" name="Pin_7" type="passive"/>
+        <pin num="8" name="Pin_8" type="passive"/>
+        <pin num="9" name="Pin_9" type="passive"/>
+        <pin num="10" name="Pin_10" type="passive"/>
+        <pin num="11" name="Pin_11" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="smart penetrometer update-rescue" part="DW01-smart-penetrometer-rescue-smart-penetrometer-update-rescue">
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">smart-penetrometer-update-rescue_DW01-smart-penetrometer-rescue</field>
+      </fields>
+      <pins>
+        <pin num="1" name="OD" type="output"/>
+        <pin num="2" name="CS" type="input"/>
+        <pin num="3" name="OC" type="output"/>
+        <pin num="4" name="TD" type="input"/>
+        <pin num="5" name="VCC" type="power_in"/>
+        <pin num="6" name="GND" type="power_in"/>
+      </pins>
+    </libpart>
+    <libpart lib="smart penetrometer update-rescue" part="FS8205A-smart-penetrometer-rescue-smart-penetrometer-update-rescue">
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">smart-penetrometer-update-rescue_FS8205A-smart-penetrometer-rescue</field>
+      </fields>
+      <pins>
+        <pin num="1" name="D12" type="bidirectional"/>
+        <pin num="2" name="S1" type="bidirectional"/>
+        <pin num="3" name="S1" type="bidirectional"/>
+        <pin num="4" name="G1" type="bidirectional"/>
+        <pin num="5" name="G2" type="bidirectional"/>
+        <pin num="6" name="S2" type="bidirectional"/>
+        <pin num="7" name="S2" type="bidirectional"/>
+        <pin num="8" name="D12" type="bidirectional"/>
+      </pins>
+    </libpart>
+    <libpart lib="smart penetrometer update-rescue" part="SD_Card_Module-Charleslabs_Parts-kitest-rescue-smart-penetrometer-rescue-smart-penetrometer-update-rescue">
+      <fields>
+        <field name="Reference">A</field>
+        <field name="Value">smart-penetrometer-update-rescue_SD_Card_Module-Charleslabs_Parts-kitest-rescue-smart-penetrometer-rescue</field>
+        <field name="Footprint">Charleslabs_Parts:SD_Card_Module</field>
+      </fields>
+      <pins>
+        <pin num="1" name="3V3" type="power_in"/>
+        <pin num="2" name="CS" type="input"/>
+        <pin num="3" name="MOSI" type="input"/>
+        <pin num="4" name="CLK" type="input"/>
+        <pin num="5" name="MISO" type="tri_state"/>
+        <pin num="6" name="GND" type="power_in"/>
+      </pins>
+    </libpart>
+    <libpart lib="smart penetrometer update-rescue" part="SRAM(23K256)-smart-penetrometer-update-rescue">
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">smart-penetrometer-update-rescue_SRAM(23K256)</field>
+      </fields>
+      <pins>
+        <pin num="1" name="CS" type="input"/>
+        <pin num="2" name="SO" type="tri_state"/>
+        <pin num="3" name="NC" type="no_connect"/>
+        <pin num="4" name="VSS" type="power_in"/>
+        <pin num="5" name="SI" type="input"/>
+        <pin num="6" name="SCK" type="input"/>
+        <pin num="7" name="HOLD" type="input"/>
+        <pin num="8" name="VCC" type="power_in"/>
+      </pins>
+    </libpart>
+    <libpart lib="smart penetrometer update-rescue" part="XLR3_Switched-Connector">
+      <footprints>
+        <fp>Jack*XLR*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">J</field>
+        <field name="Value">Connector_XLR3_Switched</field>
+      </fields>
+      <pins>
+        <pin num="1" name="" type="passive"/>
+        <pin num="2" name="" type="passive"/>
+        <pin num="3" name="" type="passive"/>
+        <pin num="N" name="" type="passive"/>
+        <pin num="NC" name="" type="passive"/>
+        <pin num="NO" name="" type="passive"/>
+      </pins>
+    </libpart>
+  </libparts>
+  <libraries>
+    <library logical="4xxx">
+      <uri>C:\Program Files\KiCad\7.0\share\kicad\symbols\/4xxx.kicad_sym</uri>
+    </library>
+    <library logical="Analog_ADC">
+      <uri>C:\Program Files\KiCad\7.0\share\kicad\symbols\/Analog_ADC.kicad_sym</uri>
+    </library>
+    <library logical="Device">
+      <uri>C:\Program Files\KiCad\7.0\share\kicad\symbols\/Device.kicad_sym</uri>
+    </library>
+    <library logical="Diode">
+      <uri>C:\Program Files\KiCad\7.0\share\kicad\symbols\/Diode.kicad_sym</uri>
+    </library>
+    <library logical="Regulator_Switching">
+      <uri>C:\Program Files\KiCad\7.0\share\kicad\symbols\/Regulator_Switching.kicad_sym</uri>
+    </library>
+    <library logical="Timer_RTC">
+      <uri>C:\Program Files\KiCad\7.0\share\kicad\symbols\/Timer_RTC.kicad_sym</uri>
+    </library>
+    <library logical="smart penetrometer update-rescue">
+      <uri>C:\Users\joejo\OneDrive\Documents\GitHub\Smart-Penetrometer-with-Edge-Computing-and-Intelligent-Embedded-Systems\V1\V1.0.0\hardware_design\PCB\smart penetrometer update/smart penetrometer update-rescue.kicad_sym</uri>
+    </library>
+  </libraries>
+  <nets>
+    <net code="1" name="+BATT">
+      <node ref="D2" pin="2" pinfunction="A" pintype="passive"/>
+      <node ref="D3" pin="2" pinfunction="A" pintype="passive"/>
+      <node ref="R10" pin="1" pintype="passive"/>
+      <node ref="U3" pin="1" pinfunction="Pos" pintype="power_in"/>
+      <node ref="U7" pin="1" pinfunction="Pos" pintype="power_in"/>
+    </net>
+    <net code="2" name="-BATT">
+      <node ref="C12" pin="1" pintype="passive"/>
+      <node ref="U10" pin="2" pinfunction="S1" pintype="bidirectional"/>
+      <node ref="U10" pin="3" pinfunction="S1" pintype="bidirectional"/>
+      <node ref="U11" pin="6" pinfunction="GND" pintype="power_in"/>
+      <node ref="U3" pin="2" pinfunction="Neg" pintype="power_in"/>
+    </net>
+    <net code="3" name="Earth">
+      <node ref="U8" pin="4" pinfunction="DGND" pintype="power_in"/>
+    </net>
+    <net code="4" name="GND">
+      <node ref="A1" pin="6" pinfunction="GND" pintype="power_in"/>
+      <node ref="A2" pin="29" pinfunction="GND" pintype="power_in"/>
+      <node ref="A2" pin="4" pinfunction="GND" pintype="power_in"/>
+      <node ref="C1" pin="2" pintype="passive"/>
+      <node ref="C10" pin="1" pintype="passive"/>
+      <node ref="C11" pin="2" pintype="passive"/>
+      <node ref="C2" pin="1" pintype="passive"/>
+      <node ref="C3" pin="1" pintype="passive"/>
+      <node ref="C5" pin="1" pintype="passive"/>
+      <node ref="C7" pin="2" pintype="passive"/>
+      <node ref="C9" pin="2" pintype="passive"/>
+      <node ref="D1" pin="2" pinfunction="A" pintype="passive"/>
+      <node ref="D4" pin="2" pinfunction="A" pintype="passive"/>
+      <node ref="R2" pin="2" pintype="passive"/>
+      <node ref="R8" pin="1" pintype="passive"/>
+      <node ref="R9" pin="2" pintype="passive"/>
+      <node ref="U1" pin="6" pinfunction="GND" pintype="power_in"/>
+      <node ref="U10" pin="6" pinfunction="S2" pintype="bidirectional"/>
+      <node ref="U10" pin="7" pinfunction="S2" pintype="bidirectional"/>
+      <node ref="U2" pin="10" pinfunction="GND" pintype="passive"/>
+      <node ref="U2" pin="11" pinfunction="GND" pintype="passive"/>
+      <node ref="U2" pin="12" pinfunction="GND" pintype="passive"/>
+      <node ref="U2" pin="13" pinfunction="GND" pintype="power_in"/>
+      <node ref="U2" pin="5" pinfunction="GND" pintype="passive"/>
+      <node ref="U2" pin="6" pinfunction="GND" pintype="passive"/>
+      <node ref="U2" pin="7" pinfunction="GND" pintype="passive"/>
+      <node ref="U2" pin="8" pinfunction="GND" pintype="passive"/>
+      <node ref="U2" pin="9" pinfunction="GND" pintype="passive"/>
+      <node ref="U4" pin="10" pintype="output"/>
+      <node ref="U6" pin="2" pinfunction="CTR" pintype="output"/>
+      <node ref="U6" pin="4" pinfunction="GND" pintype="power_in"/>
+      <node ref="U7" pin="2" pinfunction="Neg" pintype="power_in"/>
+      <node ref="U8" pin="3" pinfunction="CLK" pintype="input"/>
+      <node ref="U8" pin="5" pinfunction="AVSS" pintype="power_in"/>
+      <node ref="U9" pin="4" pinfunction="VSS" pintype="power_in"/>
+    </net>
+    <net code="5" name="GNDREF">
+      <node ref="J2" pin="8" pinfunction="Pin_8" pintype="passive"/>
+      <node ref="J2" pin="9" pinfunction="Pin_9" pintype="passive"/>
+    </net>
+    <net code="6" name="GNDS">
+      <node ref="BT1" pin="2" pinfunction="-" pintype="passive"/>
+      <node ref="C4" pin="1" pintype="passive"/>
+      <node ref="U5" pin="3" pinfunction="GND" pintype="power_in"/>
+    </net>
+    <net code="7" name="Net-(A1-3V3)">
+      <node ref="A1" pin="1" pinfunction="3V3" pintype="power_in"/>
+      <node ref="A2" pin="30" pinfunction="VIN" pintype="power_in"/>
+      <node ref="C11" pin="1" pintype="passive"/>
+      <node ref="C2" pin="2" pintype="passive"/>
+      <node ref="C9" pin="1" pintype="passive"/>
+      <node ref="J2" pin="10" pinfunction="Pin_10" pintype="passive"/>
+      <node ref="J2" pin="6" pinfunction="Pin_6" pintype="passive"/>
+      <node ref="J2" pin="7" pinfunction="Pin_7" pintype="passive"/>
+      <node ref="R1" pin="1" pintype="passive"/>
+      <node ref="R5" pin="1" pintype="passive"/>
+      <node ref="R6" pin="1" pintype="passive"/>
+      <node ref="U2" pin="2" pinfunction="VCC" pintype="power_in"/>
+      <node ref="U4" pin="13" pintype="input"/>
+      <node ref="U5" pin="8" pinfunction="VDD" pintype="power_in"/>
+      <node ref="U6" pin="3" pinfunction="VOUT" pintype="power_out"/>
+      <node ref="U8" pin="12" pinfunction="AVDD" pintype="power_in"/>
+      <node ref="U8" pin="13" pinfunction="DVDD" pintype="power_in"/>
+      <node ref="U9" pin="8" pinfunction="VCC" pintype="power_in"/>
+    </net>
+    <net code="8" name="Net-(A1-CLK)">
+      <node ref="A1" pin="4" pinfunction="CLK" pintype="input"/>
+      <node ref="A2" pin="16" pinfunction="D13" pintype="bidirectional"/>
+      <node ref="U8" pin="1" pinfunction="SCLK" pintype="input"/>
+      <node ref="U9" pin="6" pinfunction="SCK" pintype="input"/>
+    </net>
+    <net code="9" name="Net-(A1-CS)">
+      <node ref="A1" pin="2" pinfunction="CS" pintype="input"/>
+      <node ref="A2" pin="13" pinfunction="D10" pintype="bidirectional"/>
+    </net>
+    <net code="10" name="Net-(A1-MISO)">
+      <node ref="A1" pin="5" pinfunction="MISO" pintype="tri_state"/>
+      <node ref="A2" pin="15" pinfunction="D12" pintype="bidirectional"/>
+      <node ref="U8" pin="15" pinfunction="DOUT/~{DRDY}" pintype="output"/>
+      <node ref="U9" pin="2" pinfunction="SO" pintype="tri_state"/>
+    </net>
+    <net code="11" name="Net-(A1-MOSI)">
+      <node ref="A1" pin="3" pinfunction="MOSI" pintype="input"/>
+      <node ref="A2" pin="14" pinfunction="D11" pintype="bidirectional"/>
+      <node ref="U8" pin="16" pinfunction="DIN" pintype="input"/>
+      <node ref="U9" pin="5" pinfunction="SI" pintype="input"/>
+    </net>
+    <net code="12" name="Net-(A2-A0)">
+      <node ref="A2" pin="19" pinfunction="A0" pintype="bidirectional"/>
+      <node ref="J2" pin="11" pinfunction="Pin_11" pintype="passive"/>
+    </net>
+    <net code="13" name="Net-(A2-A4)">
+      <node ref="A2" pin="23" pinfunction="A4" pintype="bidirectional"/>
+      <node ref="J2" pin="4" pinfunction="Pin_4" pintype="passive"/>
+      <node ref="R5" pin="2" pintype="passive"/>
+      <node ref="U2" pin="15" pinfunction="SDA" pintype="bidirectional"/>
+      <node ref="U4" pin="12" pintype="input"/>
+      <node ref="U5" pin="9" pinfunction="SDA" pintype="bidirectional"/>
+    </net>
+    <net code="14" name="Net-(A2-A5)">
+      <node ref="A2" pin="24" pinfunction="A5" pintype="bidirectional"/>
+      <node ref="J2" pin="3" pinfunction="Pin_3" pintype="passive"/>
+      <node ref="R6" pin="2" pintype="passive"/>
+      <node ref="U2" pin="16" pinfunction="SCL" pintype="input"/>
+      <node ref="U4" pin="11" pintype="input"/>
+      <node ref="U5" pin="10" pinfunction="SCL" pintype="input"/>
+    </net>
+    <net code="15" name="Net-(A2-D2)">
+      <node ref="A2" pin="5" pinfunction="D2" pintype="bidirectional"/>
+      <node ref="J2" pin="5" pinfunction="Pin_5" pintype="passive"/>
+    </net>
+    <net code="16" name="Net-(A2-D7)">
+      <node ref="A2" pin="10" pinfunction="D7" pintype="bidirectional"/>
+      <node ref="U9" pin="7" pinfunction="HOLD" pintype="input"/>
+    </net>
+    <net code="17" name="Net-(A2-D8)">
+      <node ref="A2" pin="11" pinfunction="D8" pintype="bidirectional"/>
+      <node ref="U9" pin="1" pinfunction="CS" pintype="input"/>
+    </net>
+    <net code="18" name="Net-(A2-D9)">
+      <node ref="A2" pin="12" pinfunction="D9" pintype="bidirectional"/>
+      <node ref="U8" pin="2" pinfunction="~{CS}" pintype="input"/>
+    </net>
+    <net code="19" name="Net-(BT1-+)">
+      <node ref="BT1" pin="1" pinfunction="+" pintype="passive"/>
+      <node ref="C4" pin="2" pintype="passive"/>
+      <node ref="U2" pin="14" pinfunction="VBAT" pintype="power_in"/>
+    </net>
+    <net code="20" name="Net-(D1-K)">
+      <node ref="C1" pin="1" pintype="passive"/>
+      <node ref="C10" pin="2" pintype="passive"/>
+      <node ref="D1" pin="1" pinfunction="K" pintype="passive"/>
+      <node ref="L1" pin="1" pinfunction="1" pintype="passive"/>
+      <node ref="R7" pin="1" pintype="passive"/>
+      <node ref="U6" pin="1" pinfunction="VIN" pintype="power_in"/>
+    </net>
+    <net code="21" name="Net-(D2-K)">
+      <node ref="D2" pin="1" pinfunction="K" pintype="passive"/>
+      <node ref="D3" pin="1" pinfunction="K" pintype="passive"/>
+      <node ref="J1" pin="2" pintype="passive"/>
+    </net>
+    <net code="22" name="Net-(D4-K)">
+      <node ref="C8" pin="1" pintype="passive"/>
+      <node ref="D4" pin="1" pinfunction="K" pintype="passive"/>
+      <node ref="L1" pin="2" pinfunction="2" pintype="passive"/>
+      <node ref="U1" pin="8" pinfunction="SW" pintype="power_out"/>
+    </net>
+    <net code="23" name="Net-(J2-Pin_1)">
+      <node ref="J2" pin="1" pinfunction="Pin_1" pintype="passive"/>
+      <node ref="U5" pin="5" pinfunction="AIN1" pintype="input"/>
+    </net>
+    <net code="24" name="Net-(J2-Pin_2)">
+      <node ref="J2" pin="2" pinfunction="Pin_2" pintype="passive"/>
+      <node ref="U5" pin="4" pinfunction="AIN0" pintype="input"/>
+    </net>
+    <net code="25" name="Net-(J3-Pin_1)">
+      <node ref="J3" pin="1" pinfunction="Pin_1" pintype="passive"/>
+      <node ref="R2" pin="1" pintype="passive"/>
+      <node ref="R4" pin="2" pintype="passive"/>
+    </net>
+    <net code="26" name="Net-(J3-Pin_2)">
+      <node ref="J3" pin="2" pinfunction="Pin_2" pintype="passive"/>
+      <node ref="R1" pin="2" pintype="passive"/>
+      <node ref="R3" pin="2" pintype="passive"/>
+    </net>
+    <net code="27" name="Net-(U1-BOOT)">
+      <node ref="C8" pin="2" pintype="passive"/>
+      <node ref="U1" pin="1" pinfunction="BOOT" pintype="input"/>
+    </net>
+    <net code="28" name="Net-(U1-FB)">
+      <node ref="R7" pin="2" pintype="passive"/>
+      <node ref="R8" pin="2" pintype="passive"/>
+      <node ref="U1" pin="4" pinfunction="FB" pintype="input"/>
+    </net>
+    <net code="29" name="Net-(U1-VIN)">
+      <node ref="C3" pin="2" pintype="passive"/>
+      <node ref="J1" pin="3" pintype="passive"/>
+      <node ref="U1" pin="7" pinfunction="VIN" pintype="power_in"/>
+    </net>
+    <net code="30" name="Net-(U8-AIN0{slash}REFP1)">
+      <node ref="C5" pin="2" pintype="passive"/>
+      <node ref="C6" pin="1" pintype="passive"/>
+      <node ref="R3" pin="1" pintype="passive"/>
+      <node ref="U8" pin="11" pinfunction="AIN0/REFP1" pintype="input"/>
+    </net>
+    <net code="31" name="Net-(U8-AIN1)">
+      <node ref="C6" pin="2" pintype="passive"/>
+      <node ref="C7" pin="1" pintype="passive"/>
+      <node ref="R4" pin="1" pintype="passive"/>
+      <node ref="U8" pin="10" pinfunction="AIN1" pintype="input"/>
+    </net>
+    <net code="32" name="Net-(U10-D12-Pad1)">
+      <node ref="U10" pin="1" pinfunction="D12" pintype="bidirectional"/>
+      <node ref="U10" pin="8" pinfunction="D12" pintype="bidirectional"/>
+    </net>
+    <net code="33" name="Net-(U10-G1)">
+      <node ref="U10" pin="4" pinfunction="G1" pintype="bidirectional"/>
+      <node ref="U11" pin="1" pinfunction="OD" pintype="output"/>
+    </net>
+    <net code="34" name="Net-(U10-G2)">
+      <node ref="U10" pin="5" pinfunction="G2" pintype="bidirectional"/>
+      <node ref="U11" pin="3" pinfunction="OC" pintype="output"/>
+    </net>
+    <net code="35" name="Net-(U11-CS)">
+      <node ref="R9" pin="1" pintype="passive"/>
+      <node ref="U11" pin="2" pinfunction="CS" pintype="input"/>
+    </net>
+    <net code="36" name="Net-(U11-VCC)">
+      <node ref="C12" pin="2" pintype="passive"/>
+      <node ref="R10" pin="2" pintype="passive"/>
+      <node ref="U11" pin="5" pinfunction="VCC" pintype="power_in"/>
+    </net>
+    <net code="37" name="unconnected-(A2-+5V-Pad27)">
+      <node ref="A2" pin="27" pinfunction="+5V" pintype="power_out+no_connect"/>
+    </net>
+    <net code="38" name="unconnected-(A2-3V3-Pad17)">
+      <node ref="A2" pin="17" pinfunction="3V3" pintype="power_out+no_connect"/>
+    </net>
+    <net code="39" name="unconnected-(A2-A1-Pad20)">
+      <node ref="A2" pin="20" pinfunction="A1" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="40" name="unconnected-(A2-A2-Pad21)">
+      <node ref="A2" pin="21" pinfunction="A2" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="41" name="unconnected-(A2-A3-Pad22)">
+      <node ref="A2" pin="22" pinfunction="A3" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="42" name="unconnected-(A2-A6-Pad25)">
+      <node ref="A2" pin="25" pinfunction="A6" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="43" name="unconnected-(A2-A7-Pad26)">
+      <node ref="A2" pin="26" pinfunction="A7" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="44" name="unconnected-(A2-AREF-Pad18)">
+      <node ref="A2" pin="18" pinfunction="AREF" pintype="input+no_connect"/>
+    </net>
+    <net code="45" name="unconnected-(A2-D0{slash}RX-Pad2)">
+      <node ref="A2" pin="2" pinfunction="D0/RX" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="46" name="unconnected-(A2-D1{slash}TX-Pad1)">
+      <node ref="A2" pin="1" pinfunction="D1/TX" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="47" name="unconnected-(A2-D3-Pad6)">
+      <node ref="A2" pin="6" pinfunction="D3" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="48" name="unconnected-(A2-D4-Pad7)">
+      <node ref="A2" pin="7" pinfunction="D4" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="49" name="unconnected-(A2-D5-Pad8)">
+      <node ref="A2" pin="8" pinfunction="D5" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="50" name="unconnected-(A2-D6-Pad9)">
+      <node ref="A2" pin="9" pinfunction="D6" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="51" name="unconnected-(A2-RESET-Pad3)">
+      <node ref="A2" pin="3" pinfunction="RESET" pintype="input+no_connect"/>
+    </net>
+    <net code="52" name="unconnected-(A2-RESET-Pad28)">
+      <node ref="A2" pin="28" pinfunction="RESET" pintype="input+no_connect"/>
+    </net>
+    <net code="53" name="unconnected-(J1-Pad1)">
+      <node ref="J1" pin="1" pintype="passive+no_connect"/>
+    </net>
+    <net code="54" name="unconnected-(U1-EN-Pad5)">
+      <node ref="U1" pin="5" pinfunction="EN" pintype="input+no_connect"/>
+    </net>
+    <net code="55" name="unconnected-(U1-EP-Pad9)">
+      <node ref="U1" pin="9" pinfunction="EP" pintype="power_in+no_connect"/>
+    </net>
+    <net code="56" name="unconnected-(U1-NC-Pad2)">
+      <node ref="U1" pin="2" pinfunction="NC" pintype="no_connect"/>
+    </net>
+    <net code="57" name="unconnected-(U1-NC-Pad3)">
+      <node ref="U1" pin="3" pinfunction="NC" pintype="no_connect"/>
+    </net>
+    <net code="58" name="unconnected-(U2-32KHZ-Pad1)">
+      <node ref="U2" pin="1" pinfunction="32KHZ" pintype="open_collector+no_connect"/>
+    </net>
+    <net code="59" name="unconnected-(U2-~{INT}{slash}SQW-Pad3)">
+      <node ref="U2" pin="3" pinfunction="~{INT}/SQW" pintype="open_collector+no_connect"/>
+    </net>
+    <net code="60" name="unconnected-(U2-~{RST}-Pad4)">
+      <node ref="U2" pin="4" pinfunction="~{RST}" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="61" name="unconnected-(U5-ADDR-Pad1)">
+      <node ref="U5" pin="1" pinfunction="ADDR" pintype="input+no_connect"/>
+    </net>
+    <net code="62" name="unconnected-(U5-AIN2-Pad6)">
+      <node ref="U5" pin="6" pinfunction="AIN2" pintype="input+no_connect"/>
+    </net>
+    <net code="63" name="unconnected-(U5-AIN3-Pad7)">
+      <node ref="U5" pin="7" pinfunction="AIN3" pintype="input+no_connect"/>
+    </net>
+    <net code="64" name="unconnected-(U5-ALERT{slash}RDY-Pad2)">
+      <node ref="U5" pin="2" pinfunction="ALERT/RDY" pintype="output+no_connect"/>
+    </net>
+    <net code="65" name="unconnected-(U8-AIN2-Pad7)">
+      <node ref="U8" pin="7" pinfunction="AIN2" pintype="input+no_connect"/>
+    </net>
+    <net code="66" name="unconnected-(U8-AIN3{slash}REFN1-Pad6)">
+      <node ref="U8" pin="6" pinfunction="AIN3/REFN1" pintype="input+no_connect"/>
+    </net>
+    <net code="67" name="unconnected-(U8-REFN0-Pad8)">
+      <node ref="U8" pin="8" pinfunction="REFN0" pintype="input+no_connect"/>
+    </net>
+    <net code="68" name="unconnected-(U8-REFP0-Pad9)">
+      <node ref="U8" pin="9" pinfunction="REFP0" pintype="input+no_connect"/>
+    </net>
+    <net code="69" name="unconnected-(U8-~{DRDY}-Pad14)">
+      <node ref="U8" pin="14" pinfunction="~{DRDY}" pintype="output+no_connect"/>
+    </net>
+    <net code="70" name="unconnected-(U9-NC-Pad3)">
+      <node ref="U9" pin="3" pinfunction="NC" pintype="no_connect"/>
+    </net>
+    <net code="71" name="unconnected-(U11-TD-Pad4)">
+      <node ref="U11" pin="4" pinfunction="TD" pintype="input+no_connect"/>
+    </net>
+  </nets>
+</export>

@@ -1,5 +1,5 @@
 EESchema Schematic File Version 5
-EELAYER 36 0
+EELAYER 43 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
@@ -976,7 +976,7 @@ F 3 "~" V 2850 3100 50  0001 C CNN
 	-1   0    0    1   
 $EndComp
 $Comp
-L smart-penetrometer-update-rescue:CP1_Small-Device C12
+L smart~penetrometer~update-rescue:CP1_Small-Device C12
 U 1 1 62819F8F
 P 4200 1000
 F 0 "C12" V 4300 950 50  0000 C CNN
@@ -1108,7 +1108,7 @@ F 3 "~" H 6850 3350 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L Connector:Conn_01x02_Female J3
+L smart~penetrometer~update-rescue:Conn_01x02_Female-Connector J3
 U 1 1 63030D60
 P 850 5850
 F 0 "J3" V 696 5898 50  0000 L CNN
@@ -1152,7 +1152,7 @@ F 3 "http://www.jameco.com/Jameco/Products/ProdDS/1538777.pdf" H 4450 2250 50  0
 	0    -1   -1   0   
 $EndComp
 $Comp
-L smart-penetrometer-update-rescue:Battery_Input-kitest-kitest-rescue-smart-penetrometer-rescue-smart-penetrometer-update-rescue U7
+L smart~penetrometer~update-rescue:Battery_Input-kitest-kitest-rescue-smart-penetrometer-rescue-smart-penetrometer-update-rescue-smart-penetrometer-update-rescue U7
 U 1 1 62051BA4
 P 3400 1950
 F 0 "U7" H 3658 1984 50  0000 L CNN
@@ -1163,7 +1163,7 @@ F 3 "" H 3400 1950 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L smart-penetrometer-update-rescue:Battery_Input-kitest-kitest-rescue-smart-penetrometer-rescue-smart-penetrometer-update-rescue U3
+L smart~penetrometer~update-rescue:Battery_Input-kitest-kitest-rescue-smart-penetrometer-rescue-smart-penetrometer-update-rescue-smart-penetrometer-update-rescue U3
 U 1 1 60A6877D
 P 4200 750
 F 0 "U3" H 4458 784 50  0000 L CNN
@@ -1200,7 +1200,7 @@ F 7 "V" H 7850 4650 50  0000 C CNN "3"
 	1    0    0    -1  
 $EndComp
 $Comp
-L smart-penetrometer-update-rescue:DW01-smart-penetrometer-rescue-smart-penetrometer-update-rescue U11
+L smart~penetrometer~update-rescue:DW01-smart-penetrometer-rescue-smart-penetrometer-update-rescue U11
 U 1 1 62805E03
 P 4300 1450
 F 0 "U11" H 4528 1496 50  0000 L CNN
@@ -1211,7 +1211,7 @@ F 3 "" H 4300 1450 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Connector:Conn_01x11_Female J2
+L smart~penetrometer~update-rescue:Conn_01x11_Female-Connector J2
 U 1 1 62004E69
 P 7000 6200
 F 0 "J2" V 7073 6180 50  0000 C CNN
@@ -1222,7 +1222,7 @@ F 3 "~" H 7000 6200 50  0001 C CNN
 	0    -1   1    0   
 $EndComp
 $Comp
-L smart-penetrometer-update-rescue:3v3_Voltage_Regulator-smart-penetrometer-rescue-smart-penetrometer-update-rescue U6
+L smart~penetrometer~update-rescue:3v3_Voltage_Regulator-smart-penetrometer-rescue-smart-penetrometer-update-rescue U6
 U 1 1 61FF42DE
 P 3100 2600
 F 0 "U6" H 3050 2950 50  0000 L CNN
@@ -1233,7 +1233,7 @@ F 3 "" H 3100 2600 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Connector:XLR3_Switched J1
+L smart~penetrometer~update-rescue:XLR3_Switched-Connector J1
 U 1 1 60DFB15F
 P 3950 4050
 F 0 "J1" H 3950 4415 50  0000 C CNN
@@ -1244,7 +1244,7 @@ F 3 " ~" H 3950 4150 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L smart-penetrometer-update-rescue:SRAM(23K256)-smart-penetrometer-update-rescue U9
+L smart~penetrometer~update-rescue:SRAM(23K256)-smart-penetrometer-update-rescue U9
 U 1 1 62EB656F
 P 2500 6900
 F 0 "U9" H 2500 7465 50  0000 C CNN
@@ -1266,7 +1266,7 @@ F 3 "http://www.ti.com/lit/ds/symlink/lm22676.pdf" H 1200 2550 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L smart-penetrometer-update-rescue:SD_Card_Module-Charleslabs_Parts-kitest-rescue-smart-penetrometer-rescue-smart-penetrometer-update-rescue A1
+L smart~penetrometer~update-rescue:SD_Card_Module-Charleslabs_Parts-kitest-rescue-smart-penetrometer-rescue-smart-penetrometer-update-rescue A1
 U 1 1 60A4A816
 P 5350 2750
 F 0 "A1" H 5680 2796 50  0000 L CNN
@@ -1288,7 +1288,7 @@ F 3 "http://www.ti.com/lit/ds/symlink/ads1113.pdf" H 5100 5400 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L smart-penetrometer-update-rescue:FS8205A-smart-penetrometer-rescue-smart-penetrometer-update-rescue U10
+L smart~penetrometer~update-rescue:FS8205A-smart-penetrometer-rescue-smart-penetrometer-update-rescue U10
 U 1 1 62819888
 P 2600 1250
 F 0 "U10" H 2600 1815 50  0000 C CNN
@@ -1321,7 +1321,7 @@ F 3 "http://www.ti.com/lit/ds/symlink/ads1120.pdf" H 1750 5600 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L smart-penetrometer-update-rescue:Arduino_Nano_v3.x-MCU_Module-kitest-rescue-smart-penetrometer-rescue-smart-penetrometer-update-rescue A2
+L smart~penetrometer~update-rescue:Arduino_Nano_v3.x-MCU_Module-kitest-rescue-smart-penetrometer-rescue-smart-penetrometer-update-rescue A2
 U 1 1 60A40C30
 P 5350 4150
 F 0 "A2" H 5350 2800 50  0000 C CNN

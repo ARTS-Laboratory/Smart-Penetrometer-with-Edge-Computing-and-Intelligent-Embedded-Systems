@@ -1,4 +1,6 @@
 (sym_lib_table
+  (version 7)
   (lib (name "smart-penetrometer-rescue")(type "Legacy")(uri "${KIPRJMOD}/smart penetrometer-rescue.lib")(options "")(descr ""))
   (lib (name "smart-penetrometer-update-rescue")(type "Legacy")(uri "${KIPRJMOD}/smart penetrometer update-rescue.lib")(options "")(descr ""))
+  (lib (name "smart penetrometer update-rescue")(type "KiCad")(uri "${KIPRJMOD}/smart penetrometer update-rescue.kicad_sym")(options "")(descr ""))
 )
