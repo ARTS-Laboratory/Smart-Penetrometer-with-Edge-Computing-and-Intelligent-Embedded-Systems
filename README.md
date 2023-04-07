@@ -2,7 +2,7 @@
 ### Design and develop UAV-deployabe smart sensor nodes in a network with edge computing and solar-charging capabilities for soil classification and fault detection.
 
             
-    
+```angular2html      
 📄 README.md
 
 📄 image.PNG
