@@ -1,4 +1,4 @@
-# V1.0.0
+# Hardware Design
 ## [CAD](CAD)
 ### Fusion360 CAD models of sensor node structure
 
