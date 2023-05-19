@@ -1,4 +1,4 @@
-20904741394846277
+20906425925738118
 Audio_Module
 Reverb_BTDR-1H
 Digital Reverberation Unit, http://www.belton.co.kr/inc/downfile.php?seq=17&file=pdf (footprint from http://www.uk-electronic.de/PDF/BTDR-1.pdf)
@@ -77356,13 +77356,6 @@ Potentiometer vertical Vishay T73YP
 0
 3
 3
-QFN
-10X2QFN
-
-ADS1115IRUGT 
-0
-6
-6
 RF
 Skyworks_SKY13575_639LF
 http://www.skyworksinc.com/uploads/documents/SKY13575_639LF_203270D.pdf
@@ -87471,6 +87464,20 @@ varistor
 0
 2
 2
+footprints
+Vishay_VOS615A
+package for Vishay CNY70 refective photo coupler/interrupter
+Vishay CNY70 refective photo coupler
+0
+4
+4
+kitest
+10X2QFN
+
+ADS1115IRUGT 
+0
+6
+6
 kitest
 Accelerometer_Connector
 
