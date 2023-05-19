@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <export version="E">
   <design>
-    <source>C:\Users\joejo\OneDrive\Documents\GitHub\Smart-Penetrometer-with-Edge-Computing-and-Intelligent-Embedded-Systems\V1\V1.0.0\hardware_design\PCB\smart penetrometer update\smart penetrometer update.kicad_sch</source>
-    <date>4/6/2023 3:30:45 PM</date>
-    <tool>Eeschema 7.0.1</tool>
+    <source>E:\github\Smart-Penetrometer-with-Edge-Computing-and-Intelligent-Embedded-Systems\V0\V0.4.0\hardware_design\PCB\smart_penetrometer_v0.4.0.kicad_sch</source>
+    <date>5/19/2023 1:53:09 PM</date>
+    <tool>Eeschema 7.0.2</tool>
     <sheet number="1" name="/" tstamps="/">
       <title_block>
         <title/>
         <company/>
         <rev/>
         <date/>
-        <source>smart penetrometer update.kicad_sch</source>
+        <source>smart_penetrometer_v0.4.0.kicad_sch</source>
         <comment number="1" value=""/>
         <comment number="2" value=""/>
         <comment number="3" value=""/>
@@ -29,7 +29,7 @@
       <footprint>kitest:SD Module</footprint>
       <libsource lib="smart penetrometer update-rescue" part="SD_Card_Module-Charleslabs_Parts-kitest-rescue-smart-penetrometer-rescue-smart-penetrometer-update-rescue" description=""/>
       <property name="Sheetname" value=""/>
-      <property name="Sheetfile" value="smart penetrometer update.kicad_sch"/>
+      <property name="Sheetfile" value="smart_penetrometer_v0.4.0.kicad_sch"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamps>00000000-0000-0000-0000-000060a4a816</tstamps>
     </comp>
@@ -39,7 +39,7 @@
       <datasheet>http://www.mouser.com/pdfdocs/Gravitech_Arduino_Nano3_0.pdf</datasheet>
       <libsource lib="smart penetrometer update-rescue" part="Arduino_Nano_v3.x-MCU_Module-kitest-rescue-smart-penetrometer-rescue-smart-penetrometer-update-rescue" description=""/>
       <property name="Sheetname" value=""/>
-      <property name="Sheetfile" value="smart penetrometer update.kicad_sch"/>
+      <property name="Sheetfile" value="smart_penetrometer_v0.4.0.kicad_sch"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamps>00000000-0000-0000-0000-000060a40c30</tstamps>
     </comp>
@@ -48,7 +48,7 @@
       <footprint>kitest:battery_holder_10mm</footprint>
       <libsource lib="Device" part="Battery_Cell" description="Single-cell battery"/>
       <property name="Sheetname" value=""/>
-      <property name="Sheetfile" value="smart penetrometer update.kicad_sch"/>
+      <property name="Sheetfile" value="smart_penetrometer_v0.4.0.kicad_sch"/>
       <property name="ki_description" value="Single-cell battery"/>
       <property name="ki_keywords" value="battery cell"/>
       <sheetpath names="/" tstamps="/"/>
@@ -59,7 +59,7 @@
       <footprint>Capacitor_SMD:C_1206_3216Metric</footprint>
       <libsource lib="Device" part="C_Small" description="Unpolarized capacitor, small symbol"/>
       <property name="Sheetname" value=""/>
-      <property name="Sheetfile" value="smart penetrometer update.kicad_sch"/>
+      <property name="Sheetfile" value="smart_penetrometer_v0.4.0.kicad_sch"/>
       <property name="ki_description" value="Unpolarized capacitor, small symbol"/>
       <property name="ki_keywords" value="capacitor cap"/>
       <sheetpath names="/" tstamps="/"/>
@@ -70,7 +70,7 @@
       <footprint>Capacitor_SMD:C_1206_3216Metric</footprint>
       <libsource lib="Device" part="C_Small" description="Unpolarized capacitor, small symbol"/>
       <property name="Sheetname" value=""/>
-      <property name="Sheetfile" value="smart penetrometer update.kicad_sch"/>
+      <property name="Sheetfile" value="smart_penetrometer_v0.4.0.kicad_sch"/>
       <property name="ki_description" value="Unpolarized capacitor, small symbol"/>
       <property name="ki_keywords" value="capacitor cap"/>
       <sheetpath names="/" tstamps="/"/>
@@ -81,7 +81,7 @@
       <footprint>Capacitor_SMD:C_1206_3216Metric</footprint>
       <libsource lib="Device" part="C_Small" description="Unpolarized capacitor, small symbol"/>
       <property name="Sheetname" value=""/>
-      <property name="Sheetfile" value="smart penetrometer update.kicad_sch"/>
+      <property name="Sheetfile" value="smart_penetrometer_v0.4.0.kicad_sch"/>
       <property name="ki_description" value="Unpolarized capacitor, small symbol"/>
       <property name="ki_keywords" value="capacitor cap"/>
       <sheetpath names="/" tstamps="/"/>
@@ -92,7 +92,7 @@
       <footprint>Capacitor_SMD:C_1206_3216Metric</footprint>
       <libsource lib="Device" part="C_Small" description="Unpolarized capacitor, small symbol"/>
       <property name="Sheetname" value=""/>
-      <property name="Sheetfile" value="smart penetrometer update.kicad_sch"/>
+      <property name="Sheetfile" value="smart_penetrometer_v0.4.0.kicad_sch"/>
       <property name="ki_description" value="Unpolarized capacitor, small symbol"/>
       <property name="ki_keywords" value="capacitor cap"/>
       <sheetpath names="/" tstamps="/"/>
@@ -103,7 +103,7 @@
       <footprint>Capacitor_SMD:C_1206_3216Metric</footprint>
       <libsource lib="Device" part="C_Small" description="Unpolarized capacitor, small symbol"/>
       <property name="Sheetname" value=""/>
-      <property name="Sheetfile" value="smart penetrometer update.kicad_sch"/>
+      <property name="Sheetfile" value="smart_penetrometer_v0.4.0.kicad_sch"/>
       <property name="ki_description" value="Unpolarized capacitor, small symbol"/>
       <property name="ki_keywords" value="capacitor cap"/>
       <sheetpath names="/" tstamps="/"/>
@@ -114,7 +114,7 @@
       <footprint>Capacitor_SMD:C_1206_3216Metric</footprint>
       <libsource lib="Device" part="C_Small" description="Unpolarized capacitor, small symbol"/>
       <property name="Sheetname" value=""/>
-      <property name="Sheetfile" value="smart penetrometer update.kicad_sch"/>
+      <property name="Sheetfile" value="smart_penetrometer_v0.4.0.kicad_sch"/>
       <property name="ki_description" value="Unpolarized capacitor, small symbol"/>
       <property name="ki_keywords" value="capacitor cap"/>
       <sheetpath names="/" tstamps="/"/>
@@ -125,7 +125,7 @@
       <footprint>Capacitor_SMD:C_1206_3216Metric</footprint>
       <libsource lib="Device" part="C_Small" description="Unpolarized capacitor, small symbol"/>
       <property name="Sheetname" value=""/>
-      <property name="Sheetfile" value="smart penetrometer update.kicad_sch"/>
+      <property name="Sheetfile" value="smart_penetrometer_v0.4.0.kicad_sch"/>
       <property name="ki_description" value="Unpolarized capacitor, small symbol"/>
       <property name="ki_keywords" value="capacitor cap"/>
       <sheetpath names="/" tstamps="/"/>
@@ -136,7 +136,7 @@
       <footprint>Capacitor_SMD:C_1206_3216Metric</footprint>
       <libsource lib="Device" part="C_Small" description="Unpolarized capacitor, small symbol"/>
       <property name="Sheetname" value=""/>
-      <property name="Sheetfile" value="smart penetrometer update.kicad_sch"/>
+      <property name="Sheetfile" value="smart_penetrometer_v0.4.0.kicad_sch"/>
       <property name="ki_description" value="Unpolarized capacitor, small symbol"/>
       <property name="ki_keywords" value="capacitor cap"/>
       <sheetpath names="/" tstamps="/"/>
@@ -147,7 +147,7 @@
       <footprint>Capacitor_SMD:C_1206_3216Metric</footprint>
       <libsource lib="Device" part="C_Small" description="Unpolarized capacitor, small symbol"/>
       <property name="Sheetname" value=""/>
-      <property name="Sheetfile" value="smart penetrometer update.kicad_sch"/>
+      <property name="Sheetfile" value="smart_penetrometer_v0.4.0.kicad_sch"/>
       <property name="ki_description" value="Unpolarized capacitor, small symbol"/>
       <property name="ki_keywords" value="capacitor cap"/>
       <sheetpath names="/" tstamps="/"/>
@@ -158,7 +158,7 @@
       <footprint>Capacitor_SMD:C_1206_3216Metric</footprint>
       <libsource lib="Device" part="C_Small" description="Unpolarized capacitor, small symbol"/>
       <property name="Sheetname" value=""/>
-      <property name="Sheetfile" value="smart penetrometer update.kicad_sch"/>
+      <property name="Sheetfile" value="smart_penetrometer_v0.4.0.kicad_sch"/>
       <property name="ki_description" value="Unpolarized capacitor, small symbol"/>
       <property name="ki_keywords" value="capacitor cap"/>
       <sheetpath names="/" tstamps="/"/>
@@ -169,7 +169,7 @@
       <footprint>Capacitor_SMD:C_1206_3216Metric</footprint>
       <libsource lib="Device" part="C_Small" description="Unpolarized capacitor, small symbol"/>
       <property name="Sheetname" value=""/>
-      <property name="Sheetfile" value="smart penetrometer update.kicad_sch"/>
+      <property name="Sheetfile" value="smart_penetrometer_v0.4.0.kicad_sch"/>
       <property name="ki_description" value="Unpolarized capacitor, small symbol"/>
       <property name="ki_keywords" value="capacitor cap"/>
       <sheetpath names="/" tstamps="/"/>
@@ -180,7 +180,7 @@
       <footprint>Capacitor_SMD:C_1206_3216Metric</footprint>
       <libsource lib="smart penetrometer update-rescue" part="CP1_Small-Device" description=""/>
       <property name="Sheetname" value=""/>
-      <property name="Sheetfile" value="smart penetrometer update.kicad_sch"/>
+      <property name="Sheetfile" value="smart_penetrometer_v0.4.0.kicad_sch"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamps>00000000-0000-0000-0000-000062819f8f</tstamps>
     </comp>
@@ -189,7 +189,7 @@
       <footprint>Diode_SMD:D_SMC</footprint>
       <libsource lib="Device" part="D_Zener_Small" description="Zener diode, small symbol"/>
       <property name="Sheetname" value=""/>
-      <property name="Sheetfile" value="smart penetrometer update.kicad_sch"/>
+      <property name="Sheetfile" value="smart_penetrometer_v0.4.0.kicad_sch"/>
       <property name="ki_description" value="Zener diode, small symbol"/>
       <property name="ki_keywords" value="diode"/>
       <sheetpath names="/" tstamps="/"/>
@@ -201,7 +201,7 @@
       <datasheet>http://www.jameco.com/Jameco/Products/ProdDS/1538777.pdf</datasheet>
       <libsource lib="Diode" part="B320" description="20V 3A Schottky Barrier Rectifier Diode, SMC"/>
       <property name="Sheetname" value=""/>
-      <property name="Sheetfile" value="smart penetrometer update.kicad_sch"/>
+      <property name="Sheetfile" value="smart_penetrometer_v0.4.0.kicad_sch"/>
       <property name="ki_description" value="20V 3A Schottky Barrier Rectifier Diode, SMC"/>
       <property name="ki_keywords" value="diode Schottky"/>
       <sheetpath names="/" tstamps="/"/>
@@ -213,7 +213,7 @@
       <datasheet>http://www.jameco.com/Jameco/Products/ProdDS/1538777.pdf</datasheet>
       <libsource lib="Diode" part="B350" description="50V 3A Schottky Barrier Rectifier Diode, SMC"/>
       <property name="Sheetname" value=""/>
-      <property name="Sheetfile" value="smart penetrometer update.kicad_sch"/>
+      <property name="Sheetfile" value="smart_penetrometer_v0.4.0.kicad_sch"/>
       <property name="ki_description" value="50V 3A Schottky Barrier Rectifier Diode, SMC"/>
       <property name="ki_keywords" value="diode Schottky"/>
       <sheetpath names="/" tstamps="/"/>
@@ -225,7 +225,7 @@
       <datasheet>https://assets.nexperia.com/documents/data-sheet/PMEG6045ETP.pdf</datasheet>
       <libsource lib="Diode" part="PMEG6045ETP" description="60V, 4.5A High-Temperature Schottky barrier rectifier, SOD-128"/>
       <property name="Sheetname" value=""/>
-      <property name="Sheetfile" value="smart penetrometer update.kicad_sch"/>
+      <property name="Sheetfile" value="smart_penetrometer_v0.4.0.kicad_sch"/>
       <property name="ki_description" value="60V, 4.5A High-Temperature Schottky barrier rectifier, SOD-128"/>
       <property name="ki_keywords" value="forward voltage diode"/>
       <sheetpath names="/" tstamps="/"/>
@@ -237,7 +237,7 @@
       <datasheet> ~</datasheet>
       <libsource lib="smart penetrometer update-rescue" part="XLR3_Switched-Connector" description=""/>
       <property name="Sheetname" value=""/>
-      <property name="Sheetfile" value="smart penetrometer update.kicad_sch"/>
+      <property name="Sheetfile" value="smart_penetrometer_v0.4.0.kicad_sch"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamps>00000000-0000-0000-0000-000060dfb15f</tstamps>
     </comp>
@@ -246,7 +246,7 @@
       <footprint>Connector_PinSocket_2.54mm:PinSocket_1x11_P2.54mm_Horizontal</footprint>
       <libsource lib="smart penetrometer update-rescue" part="Conn_01x11_Female-Connector" description=""/>
       <property name="Sheetname" value=""/>
-      <property name="Sheetfile" value="smart penetrometer update.kicad_sch"/>
+      <property name="Sheetfile" value="smart_penetrometer_v0.4.0.kicad_sch"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamps>00000000-0000-0000-0000-000062004e69</tstamps>
     </comp>
@@ -255,7 +255,7 @@
       <footprint>Connector_PinSocket_2.54mm:PinSocket_1x02_P2.54mm_Horizontal</footprint>
       <libsource lib="smart penetrometer update-rescue" part="Conn_01x02_Female-Connector" description=""/>
       <property name="Sheetname" value=""/>
-      <property name="Sheetfile" value="smart penetrometer update.kicad_sch"/>
+      <property name="Sheetfile" value="smart_penetrometer_v0.4.0.kicad_sch"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamps>00000000-0000-0000-0000-000063030d60</tstamps>
     </comp>
@@ -264,7 +264,7 @@
       <footprint>Inductor_SMD:L_1206_3216Metric</footprint>
       <libsource lib="Device" part="L" description="Inductor"/>
       <property name="Sheetname" value=""/>
-      <property name="Sheetfile" value="smart penetrometer update.kicad_sch"/>
+      <property name="Sheetfile" value="smart_penetrometer_v0.4.0.kicad_sch"/>
       <property name="ki_description" value="Inductor"/>
       <property name="ki_keywords" value="inductor choke coil reactor magnetic"/>
       <sheetpath names="/" tstamps="/"/>
@@ -275,7 +275,7 @@
       <footprint>Resistor_SMD:R_1206_3216Metric</footprint>
       <libsource lib="Device" part="R_Small_US" description="Resistor, small US symbol"/>
       <property name="Sheetname" value=""/>
-      <property name="Sheetfile" value="smart penetrometer update.kicad_sch"/>
+      <property name="Sheetfile" value="smart_penetrometer_v0.4.0.kicad_sch"/>
       <property name="ki_description" value="Resistor, small US symbol"/>
       <property name="ki_keywords" value="r resistor"/>
       <sheetpath names="/" tstamps="/"/>
@@ -286,7 +286,7 @@
       <footprint>Resistor_SMD:R_1206_3216Metric</footprint>
       <libsource lib="Device" part="R_Small_US" description="Resistor, small US symbol"/>
       <property name="Sheetname" value=""/>
-      <property name="Sheetfile" value="smart penetrometer update.kicad_sch"/>
+      <property name="Sheetfile" value="smart_penetrometer_v0.4.0.kicad_sch"/>
       <property name="ki_description" value="Resistor, small US symbol"/>
       <property name="ki_keywords" value="r resistor"/>
       <sheetpath names="/" tstamps="/"/>
@@ -297,7 +297,7 @@
       <footprint>Resistor_SMD:R_1206_3216Metric</footprint>
       <libsource lib="Device" part="R_Small_US" description="Resistor, small US symbol"/>
       <property name="Sheetname" value=""/>
-      <property name="Sheetfile" value="smart penetrometer update.kicad_sch"/>
+      <property name="Sheetfile" value="smart_penetrometer_v0.4.0.kicad_sch"/>
       <property name="ki_description" value="Resistor, small US symbol"/>
       <property name="ki_keywords" value="r resistor"/>
       <sheetpath names="/" tstamps="/"/>
@@ -308,7 +308,7 @@
       <footprint>Resistor_SMD:R_1206_3216Metric</footprint>
       <libsource lib="Device" part="R_Small_US" description="Resistor, small US symbol"/>
       <property name="Sheetname" value=""/>
-      <property name="Sheetfile" value="smart penetrometer update.kicad_sch"/>
+      <property name="Sheetfile" value="smart_penetrometer_v0.4.0.kicad_sch"/>
       <property name="ki_description" value="Resistor, small US symbol"/>
       <property name="ki_keywords" value="r resistor"/>
       <sheetpath names="/" tstamps="/"/>
@@ -319,7 +319,7 @@
       <footprint>Resistor_SMD:R_1206_3216Metric</footprint>
       <libsource lib="Device" part="R_Small_US" description="Resistor, small US symbol"/>
       <property name="Sheetname" value=""/>
-      <property name="Sheetfile" value="smart penetrometer update.kicad_sch"/>
+      <property name="Sheetfile" value="smart_penetrometer_v0.4.0.kicad_sch"/>
       <property name="ki_description" value="Resistor, small US symbol"/>
       <property name="ki_keywords" value="r resistor"/>
       <sheetpath names="/" tstamps="/"/>
@@ -330,7 +330,7 @@
       <footprint>Resistor_SMD:R_1206_3216Metric</footprint>
       <libsource lib="Device" part="R_Small_US" description="Resistor, small US symbol"/>
       <property name="Sheetname" value=""/>
-      <property name="Sheetfile" value="smart penetrometer update.kicad_sch"/>
+      <property name="Sheetfile" value="smart_penetrometer_v0.4.0.kicad_sch"/>
       <property name="ki_description" value="Resistor, small US symbol"/>
       <property name="ki_keywords" value="r resistor"/>
       <sheetpath names="/" tstamps="/"/>
@@ -341,7 +341,7 @@
       <footprint>Resistor_SMD:R_1206_3216Metric</footprint>
       <libsource lib="Device" part="R_Small_US" description="Resistor, small US symbol"/>
       <property name="Sheetname" value=""/>
-      <property name="Sheetfile" value="smart penetrometer update.kicad_sch"/>
+      <property name="Sheetfile" value="smart_penetrometer_v0.4.0.kicad_sch"/>
       <property name="ki_description" value="Resistor, small US symbol"/>
       <property name="ki_keywords" value="r resistor"/>
       <sheetpath names="/" tstamps="/"/>
@@ -352,7 +352,7 @@
       <footprint>Resistor_SMD:R_1206_3216Metric</footprint>
       <libsource lib="Device" part="R_Small_US" description="Resistor, small US symbol"/>
       <property name="Sheetname" value=""/>
-      <property name="Sheetfile" value="smart penetrometer update.kicad_sch"/>
+      <property name="Sheetfile" value="smart_penetrometer_v0.4.0.kicad_sch"/>
       <property name="ki_description" value="Resistor, small US symbol"/>
       <property name="ki_keywords" value="r resistor"/>
       <sheetpath names="/" tstamps="/"/>
@@ -363,7 +363,7 @@
       <footprint>Resistor_SMD:R_1206_3216Metric</footprint>
       <libsource lib="Device" part="R_Small_US" description="Resistor, small US symbol"/>
       <property name="Sheetname" value=""/>
-      <property name="Sheetfile" value="smart penetrometer update.kicad_sch"/>
+      <property name="Sheetfile" value="smart_penetrometer_v0.4.0.kicad_sch"/>
       <property name="ki_description" value="Resistor, small US symbol"/>
       <property name="ki_keywords" value="r resistor"/>
       <sheetpath names="/" tstamps="/"/>
@@ -374,7 +374,7 @@
       <footprint>Resistor_SMD:R_1206_3216Metric</footprint>
       <libsource lib="Device" part="R_Small_US" description="Resistor, small US symbol"/>
       <property name="Sheetname" value=""/>
-      <property name="Sheetfile" value="smart penetrometer update.kicad_sch"/>
+      <property name="Sheetfile" value="smart_penetrometer_v0.4.0.kicad_sch"/>
       <property name="ki_description" value="Resistor, small US symbol"/>
       <property name="ki_keywords" value="r resistor"/>
       <sheetpath names="/" tstamps="/"/>
@@ -386,7 +386,7 @@
       <datasheet>http://www.ti.com/lit/ds/symlink/lm22676.pdf</datasheet>
       <libsource lib="Regulator_Switching" part="LM22676MR-5" description="3A Step-Down Switching Voltage Regulater, 4.5-42V Input, 5V Output, 500kHz Switching Frequency, SOIC-8"/>
       <property name="Sheetname" value=""/>
-      <property name="Sheetfile" value="smart penetrometer update.kicad_sch"/>
+      <property name="Sheetfile" value="smart_penetrometer_v0.4.0.kicad_sch"/>
       <property name="ki_description" value="3A Step-Down Switching Voltage Regulater, 4.5-42V Input, 5V Output, 500kHz Switching Frequency, SOIC-8"/>
       <property name="ki_keywords" value="DC/DC Buck Converter 3A"/>
       <sheetpath names="/" tstamps="/"/>
@@ -398,7 +398,7 @@
       <datasheet>http://datasheets.maximintegrated.com/en/ds/DS3231.pdf</datasheet>
       <libsource lib="Timer_RTC" part="DS3231M" description="Extremely Accurate I2C-Integrated RTC/TCXO/Crystal SOIC-16"/>
       <property name="Sheetname" value=""/>
-      <property name="Sheetfile" value="smart penetrometer update.kicad_sch"/>
+      <property name="Sheetfile" value="smart_penetrometer_v0.4.0.kicad_sch"/>
       <property name="ki_description" value="Extremely Accurate I2C-Integrated RTC/TCXO/Crystal SOIC-16"/>
       <property name="ki_keywords" value="RTC TCXO Realtime Time Clock Crystal Oscillator I2C"/>
       <sheetpath names="/" tstamps="/"/>
@@ -409,7 +409,7 @@
       <footprint>kitest:Battery_Input</footprint>
       <libsource lib="smart penetrometer update-rescue" part="Battery_Input-kitest-kitest-rescue-smart-penetrometer-rescue-smart-penetrometer-update-rescue-smart-penetrometer-update-rescue" description=""/>
       <property name="Sheetname" value=""/>
-      <property name="Sheetfile" value="smart penetrometer update.kicad_sch"/>
+      <property name="Sheetfile" value="smart_penetrometer_v0.4.0.kicad_sch"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamps>00000000-0000-0000-0000-000060a6877d</tstamps>
     </comp>
@@ -429,7 +429,7 @@
       <property name="1" value="SDA"/>
       <property name="3" value="V"/>
       <property name="Sheetname" value=""/>
-      <property name="Sheetfile" value="smart penetrometer update.kicad_sch"/>
+      <property name="Sheetfile" value="smart_penetrometer_v0.4.0.kicad_sch"/>
       <property name="ki_description" value="Triple Nand 3 inputs"/>
       <property name="ki_keywords" value="CMOS Nand3"/>
       <sheetpath names="/" tstamps="/"/>
@@ -441,7 +441,7 @@
       <datasheet>http://www.ti.com/lit/ds/symlink/ads1113.pdf</datasheet>
       <libsource lib="Analog_ADC" part="ADS1115IDGS" description="Ultra-Small, Low-Power, I2C-Compatible, 860-SPS, 16-Bit ADCs With Internal Reference, Oscillator, and Programmable Comparator, VSSOP-10"/>
       <property name="Sheetname" value=""/>
-      <property name="Sheetfile" value="smart penetrometer update.kicad_sch"/>
+      <property name="Sheetfile" value="smart_penetrometer_v0.4.0.kicad_sch"/>
       <property name="ki_description" value="Ultra-Small, Low-Power, I2C-Compatible, 860-SPS, 16-Bit ADCs With Internal Reference, Oscillator, and Programmable Comparator, VSSOP-10"/>
       <property name="ki_keywords" value="16 bit 4 channel I2C ADC"/>
       <sheetpath names="/" tstamps="/"/>
@@ -452,7 +452,7 @@
       <footprint>smart penetrometer footprints:BD433M2FP3_CE2</footprint>
       <libsource lib="smart penetrometer update-rescue" part="3v3_Voltage_Regulator-smart-penetrometer-rescue-smart-penetrometer-update-rescue" description=""/>
       <property name="Sheetname" value=""/>
-      <property name="Sheetfile" value="smart penetrometer update.kicad_sch"/>
+      <property name="Sheetfile" value="smart_penetrometer_v0.4.0.kicad_sch"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamps>00000000-0000-0000-0000-000061ff42de</tstamps>
     </comp>
@@ -461,7 +461,7 @@
       <footprint>kitest:Battery_Input</footprint>
       <libsource lib="smart penetrometer update-rescue" part="Battery_Input-kitest-kitest-rescue-smart-penetrometer-rescue-smart-penetrometer-update-rescue-smart-penetrometer-update-rescue" description=""/>
       <property name="Sheetname" value=""/>
-      <property name="Sheetfile" value="smart penetrometer update.kicad_sch"/>
+      <property name="Sheetfile" value="smart_penetrometer_v0.4.0.kicad_sch"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamps>00000000-0000-0000-0000-000062051ba4</tstamps>
     </comp>
@@ -471,7 +471,7 @@
       <datasheet>http://www.ti.com/lit/ds/symlink/ads1120.pdf</datasheet>
       <libsource lib="Analog_ADC" part="ADS1120-PW" description="Low-power, quad-input, 16-bit analog to digital converter, integrated temperature sensor, SPI interface, TSSOP-16 package"/>
       <property name="Sheetname" value=""/>
-      <property name="Sheetfile" value="smart penetrometer update.kicad_sch"/>
+      <property name="Sheetfile" value="smart_penetrometer_v0.4.0.kicad_sch"/>
       <property name="ki_description" value="Low-power, quad-input, 16-bit analog to digital converter, integrated temperature sensor, SPI interface, TSSOP-16 package"/>
       <property name="ki_keywords" value="adc spi"/>
       <sheetpath names="/" tstamps="/"/>
@@ -482,7 +482,7 @@
       <footprint>smart penetrometer footprints:23K256T-E&amp;slash_SN</footprint>
       <libsource lib="smart penetrometer update-rescue" part="SRAM(23K256)-smart-penetrometer-update-rescue" description=""/>
       <property name="Sheetname" value=""/>
-      <property name="Sheetfile" value="smart penetrometer update.kicad_sch"/>
+      <property name="Sheetfile" value="smart_penetrometer_v0.4.0.kicad_sch"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamps>00000000-0000-0000-0000-000062eb656f</tstamps>
     </comp>
@@ -491,7 +491,7 @@
       <footprint>smart penetrometer footprints:DUAL_MOSFET(FS8205A)</footprint>
       <libsource lib="smart penetrometer update-rescue" part="FS8205A-smart-penetrometer-rescue-smart-penetrometer-update-rescue" description=""/>
       <property name="Sheetname" value=""/>
-      <property name="Sheetfile" value="smart penetrometer update.kicad_sch"/>
+      <property name="Sheetfile" value="smart_penetrometer_v0.4.0.kicad_sch"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamps>00000000-0000-0000-0000-000062819888</tstamps>
     </comp>
@@ -500,7 +500,7 @@
       <footprint>smart penetrometer footprints:BATTERY_PROTECTION_IC(DW01A)</footprint>
       <libsource lib="smart penetrometer update-rescue" part="DW01-smart-penetrometer-rescue-smart-penetrometer-update-rescue" description=""/>
       <property name="Sheetname" value=""/>
-      <property name="Sheetfile" value="smart penetrometer update.kicad_sch"/>
+      <property name="Sheetfile" value="smart_penetrometer_v0.4.0.kicad_sch"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamps>00000000-0000-0000-0000-000062805e03</tstamps>
     </comp>
@@ -990,7 +990,7 @@
       <uri>C:\Program Files\KiCad\7.0\share\kicad\symbols\/Timer_RTC.kicad_sym</uri>
     </library>
     <library logical="smart penetrometer update-rescue">
-      <uri>C:\Users\joejo\OneDrive\Documents\GitHub\Smart-Penetrometer-with-Edge-Computing-and-Intelligent-Embedded-Systems\V1\V1.0.0\hardware_design\PCB\smart penetrometer update/smart penetrometer update-rescue.kicad_sym</uri>
+      <uri>E:\github\Smart-Penetrometer-with-Edge-Computing-and-Intelligent-Embedded-Systems\V0\V0.4.0\hardware_design\PCB/smart penetrometer update-rescue.kicad_sym</uri>
     </library>
   </libraries>
   <nets>
