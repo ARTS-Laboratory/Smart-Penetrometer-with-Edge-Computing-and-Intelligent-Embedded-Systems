@@ -8,12 +8,7 @@
 #include <Adafruit_ADS1X15.h>
 #include <Adafruit_Sensor.h>
 #include <Adafruit_BME280.h>
-#include<ADXL345_WE.h>
-#define ADXL345_I2CADDR 0x53
 SdFat SD;
-
-volatile bool freeFall = false;
-ADXL345_WE myAcc = ADXL345_WE(ADXL345_I2CADDR);
 
 Adafruit_ADS1115 ads;  /* Use this for the 16-bit version */
 
@@ -35,20 +30,7 @@ void setup() {
   while (!Serial) {
     ; // wait for serial port to connect. Needed for native USB port only
   }
-  if(!myAcc.init()){
-    Serial.println("ADXL345 not connected!");
-  }
 
-/* Insert your data from ADXL345_calibration.ino and uncomment for more precise results */
-  myAcc.setCorrFactors(-256.0, 266.0, -285.0, 239.0, -243.0, 287.0);
-
-  myAcc.setDataRate(ADXL345_DATA_RATE_3200);
-  myAcc.setRange(ADXL345_RANGE_16G);
-  myAcc.setFreeFallThresholds(0.4, 100);
-  myAcc.setInterrupt(ADXL345_FREEFALL, INT_PIN_2);
-  
-  attachInterrupt(digitalPinToInterrupt(2), freeFallISR, RISING); 
-  freeFall=false;
   rtc.begin();
   rtc.adjust(DateTime(F(__DATE__), F(__TIME__)));
 
@@ -74,9 +56,9 @@ void setup() {
 
   bme.begin(0x76);
 
-
- /* char daysOfTheWeek[7][12] = {"Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"};
+  char daysOfTheWeek[7][12] = {"Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"};
   DateTime now = rtc.now();
+  File dataFile = SD.open("new_data.txt", FILE_WRITE);
   Serial.print(now.year(), DEC);
   Serial.print('/');
   Serial.print(now.month(), DEC);
@@ -84,7 +66,27 @@ void setup() {
   Serial.print(now.day(), DEC);
   Serial.print(" (");
   Serial.print(daysOfTheWeek[now.dayOfTheWeek()]);
-  Serial.println(") ");
+  Serial.print(") ");
+  Serial.print(now.hour(), DEC);
+  Serial.print(':');
+  Serial.print(now.minute(), DEC);
+  Serial.print(':');
+  Serial.println(now.second(), DEC);
+  
+  /*dataFile.print(now.year(), DEC);
+  dataFile.print('/');
+  dataFile.print(now.month(), DEC);
+  dataFile.print('/');
+  dataFile.print(now.day(), DEC);
+  dataFile.print(" (");
+  dataFile.print(daysOfTheWeek[now.dayOfTheWeek()]);
+  dataFile.print(") ");
+  dataFile.print(now.hour(), DEC);
+  dataFile.print(':');
+  dataFile.print(now.minute(), DEC);
+  dataFile.print(':');
+  dataFile.println(now.second(), DEC);
+  dataFile.close();
   Serial.println("Getting differential reading from AIN0 (P) and AIN1 (N)");
   Serial.println("ADC Range: +/- 0.256V (1 bit = 0.125mV/ADS1115)");
   Serial.println("time(hr, min, sec), count(ms), ground velocity(m/s), temperature(*C), humidity(%), pressure(hPa), conductivity(uohm)");*/
@@ -97,8 +99,7 @@ void tdsFunc(float & condValue)
   const int SCOUNT  = 30;           // sum of sample point
   int analogBuffer[SCOUNT];    // store the analog value in the array, read from ADC
   int analogBufferTemp[SCOUNT];
-  float tdsValue; 
-  
+  float tdsValue;
   static unsigned long analogSampleTimepoint = millis();
   if (millis() - analogSampleTimepoint > 40U)  //every 40 milliseconds,read the analog value from the ADC
   {
@@ -121,76 +122,32 @@ void tdsFunc(float & condValue)
     condValue = .893 * tdsValue / 640;
   }
 }
-void freefall() {
-  File dataFile = SD.open("datalog2.txt", FILE_WRITE);
-
-  //   if the file is available, write to it:
-  if (dataFile) {
-    xyzFloat raw = myAcc.getRawValues();
-    xyzFloat g = myAcc.getGValues();
-
-    Serial.print(millis());
-    Serial.print(" ");
-    Serial.print(raw.z);
-    Serial.print(" ");
-    Serial.println(g.z);
-
-    dataFile.print(millis());
-    dataFile.print(" ");
-    dataFile.print(raw.z);
-    dataFile.print(" ");
-    dataFile.println(g.z);
-    dataFile.close();
-    
-    freeFall = false;
-    myAcc.readAndClearInterrupts();
-  }
-  // if the file isn't open, pop up an error:
-  else {
-    Serial.println("error opening datalog.txt");
-  } 
-}
 
 void logData() {
-
   int16_t results;
-
   /* Be sure to update this value based on the IC and the gain settings! */
   float multiplier = 0.0078125F; /* ADS1115  @ +/- 6.144V gain (16-bit results) */
-
   results = ads.readADC_Differential_0_1();
-
   float trueResults = (results * multiplier);
   //  Serial.print(results); Serial.print("(");
   //  Serial.print(trueResults); Serial.print(" ");
   //  Serial.println("mV)");
   float gVelocity = trueResults / 27.50;
-
   float condValue;
   tdsFunc (condValue);
- 
   float SEALEVELPRESSURE_HPA = 1014.9;
-
   // open the file. note that only one file can be open at a time,
   // so you have to close this one before opening another.
-  
-  File dataFile = SD.open("datalog2.txt", FILE_WRITE);
-
   //   if the file is available, write to it:
+  File dataFile = SD.open("new_data.txt", FILE_WRITE);
   if (dataFile) {
-    DateTime now = rtc.now();
     unsigned long time = millis();
-    /*Serial.print(now.hour(), DEC);
-    Serial.print(':');
-    Serial.print(now.minute(), DEC);
-    Serial.print(':');
-    Serial.print(now.second(), DEC);*/
-    Serial.print(float(time)/1000000000, 9);
+    Serial.print(float(time) / 1000000000, 9);
     Serial.print(" ");
     if (gVelocity < 0) {
       Serial.print(gVelocity, 6);
     }
-    else{
+    else {
       Serial.print(gVelocity, 7);
     }
     Serial.print(" ");
@@ -200,20 +157,13 @@ void logData() {
     Serial.print(" ");
     Serial.print(bme.readPressure() / 100.0F);
     Serial.print(" ");
-    Serial.println(condValue,3);
-
-    /*dataFile.print(now.hour(), DEC);
-    dataFile.print(':');
-    dataFile.print(now.minute(), DEC);
-    dataFile.print(':');
-    dataFile.print(now.second(), DEC);
-    dataFile.print(" ");*/
-    dataFile.print(float(time)/1000000000,9);
+    Serial.println(condValue, 3);
+    dataFile.print(float(time) / 1000000000, 9);
     dataFile.print(" ");
     if (gVelocity < 0) {
       dataFile.print(gVelocity, 6);
     }
-    else{
+    else {
       dataFile.print(gVelocity, 7);
     }
     dataFile.print(" ");
@@ -233,11 +183,9 @@ void logData() {
 }
 
 void loop() {
-  if (freeFall==true)
-    freefall();
-  else 
-    logData();
+  logData();
 }
+
 int getMedianNum(int bArray[], int iFilterLen)
 {
   int bTab[iFilterLen];
@@ -261,7 +209,4 @@ int getMedianNum(int bArray[], int iFilterLen)
   else
     bTemp = (bTab[iFilterLen / 2] + bTab[iFilterLen / 2 - 1]) / 2;
   return bTemp;
-}
-void freeFallISR(){
-  freeFall = true;
 }
