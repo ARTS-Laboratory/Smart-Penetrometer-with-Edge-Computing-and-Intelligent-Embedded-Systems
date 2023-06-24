@@ -1,4 +1,0 @@
-(fp_lib_table
-  (lib (name "smart penetrometer footprints")(type KiCad)(uri "${KIPRJMOD}/smart penetrometer footprints.pretty")(options "")(descr ""))
-  (lib (name kitest)(type KiCad)(uri C:/kitest/kitest.pretty)(options "")(descr ""))
-)
