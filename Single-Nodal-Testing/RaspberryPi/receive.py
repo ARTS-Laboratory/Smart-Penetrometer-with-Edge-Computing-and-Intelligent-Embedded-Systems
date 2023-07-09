@@ -6,7 +6,7 @@ import struct
 #pipes = [ 0x52, 0x78, 0x41, 0x41, 0x41 ] 
 #pipesbytes = bytearray(pipes)
 
-pipesbytes = 0x3130303030
+pipesbytes = 0x7878787878
 
 radio = RF24()
 radio.begin(22, 0) #Set CE and IRQ pins
