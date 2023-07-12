@@ -9,15 +9,15 @@ spi.open(0, 0)
 spi.max_speed_hz = 8000000
 
 # Setup NRF24L01
-radio = RF24(22, 0)
+radio = RF24(25, 0)
 radio.begin()
-radio.setPALevel(RF24_PA_LOW)  # Set power level
+radio.setPALevel(RF24_PA_MAX)  # Set power level
 radio.enableDynamicPayloads()
-#radio.setDataRate(RF24_2MBPS)
+radio.setDataRate(RF24_2MBPS)
 
 # Set the network address and channel
-network_address = b"00001"
-channel = 0
+network_address = 0xF0F0F0F0D2
+channel = 0x4c
 radio.openWritingPipe(network_address)
 radio.setChannel(channel)
 

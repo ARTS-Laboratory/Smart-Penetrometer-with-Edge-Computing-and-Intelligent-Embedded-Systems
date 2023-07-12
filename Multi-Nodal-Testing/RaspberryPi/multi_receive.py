@@ -2,7 +2,7 @@ from pyrf24 import *
 import time
 
 pipes = [0x7878787878, 0xB3B4B5B6F1, 0xB3B4B5B6CD, 0xB3B4B5B6A3, 0xB3B4B5B60F, 0xB3B4B5B605]
-read_pipe = 0xF0F0F0F0D2
+write_pipe = 0xF0F0F0F0D2
 
 file_handles = []
 gotobyte = bytearray([])

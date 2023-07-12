@@ -11,7 +11,7 @@ pipesbytes = 0x7878787878
 radio = RF24()
 radio.begin(22, 0) #Set CE and IRQ pins
 radio.setPALevel(RF24_PA_HIGH)
-radio.setDataRate(RF24_250KBPS)
+radio.setDataRate(RF24_1MBPS)
 radio.setChannel(0x4c)
 radio.openReadingPipe(1, pipesbytes)
 radio.startListening()
