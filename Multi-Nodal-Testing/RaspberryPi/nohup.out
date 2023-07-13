@@ -1,0 +1,477 @@
+Sending to 2 ... ok
+Sending to 3 ... ok
+================================================
+payload length: 20
+From: 2
+To: 0
+Id: 1811
+Time: 7184600
+Temperature: 6.0
+Humidity: 8.199999809265137
+Conductivity: 0.0
+Packet Number: 1810
+Sending to 1 ... ok
+================================================
+payload length: 20
+From: 3
+To: 0
+Id: 1822
+Time: 7226096
+Temperature: 8.5
+Humidity: 5.300000190734863
+Conductivity: 5.300000190734863
+Packet Number: 1821
+Sending to 2 ... ok
+================================================
+payload length: 20
+From: 1
+To: 0
+Id: 1878
+Time: 7344790
+Temperature: 5.300000190734863
+Humidity: 4.099999904632568
+Conductivity: 7.099999904632568
+Packet Number: 1877
+Sending to 3 ... ok
+================================================
+payload length: 20
+From: 2
+To: 0
+Id: 1812
+Time: 7187602
+Temperature: 3.0
+Humidity: 2.0
+Conductivity: 3.4000000953674316
+Packet Number: 1811
+Sending to 1 ... ok
+powering down radio and exiting.
+================ SPI Configuration ================
+CSN Pin			= /dev/spidev0.0
+CE Pin			= Custom GPIO22
+SPI Frequency		= 10 Mhz
+================ NRF Configuration ================
+Channel			= 90 (~ 2490 MHz)
+Model			= nRF24L01+
+RF Data Rate		= 1 MBPS
+RF Power Amplifier	= PA_LOW
+RF Low Noise Amplifier	= Enabled
+CRC Length		= 16 bits
+Address Length		= 5 bytes
+Static Payload Length	= 32 bytes
+Auto Retry Delay	= 1500 microseconds
+Auto Retry Attempts	= 5 maximum
+Packets lost on
+    current channel	= 0
+Retry attempts made for
+    last transmission	= 0
+Multicast		= Disabled
+Custom ACK Payload	= Disabled
+Dynamic Payloads	= Enabled
+Auto Acknowledgment	= 0b111110
+Primary Mode		= RX
+TX address		= 0xcccccc3ce3
+pipe 0 ( open ) bound	= 0xccccccccc3
+pipe 1 ( open ) bound	= 0xcccccccc3c
+pipe 2 ( open ) bound	= 0x33
+pipe 3 ( open ) bound	= 0xce
+pipe 4 ( open ) bound	= 0x3e
+pipe 5 ( open ) bound	= 0xe3
+Sending to 1 ... ok
+Sending to 2 ... ok
+================================================
+payload length: 20
+From: 1
+To: 0
+Id: 1880
+Time: 7353312
+Temperature: 3.9000000953674316
+Humidity: 1.600000023841858
+Conductivity: 0.30000001192092896
+Packet Number: 1879
+Sending to 3 ... ok
+================================================
+payload length: 20
+From: 2
+To: 0
+Id: 1813
+Time: 7196109
+Temperature: 6.900000095367432
+Humidity: 4.0
+Conductivity: 1.2000000476837158
+Packet Number: 1812
+Sending to 1 ... ok
+================================================
+payload length: 20
+From: 3
+To: 0
+Id: 1824
+Time: 7237598
+Temperature: 2.0
+Humidity: 1.100000023841858
+Conductivity: 1.0
+Packet Number: 1823
+Sending to 2 ... ok
+================================================
+payload length: 20
+From: 1
+To: 0
+Id: 1881
+Time: 7356313
+Temperature: 7.300000190734863
+Humidity: 7.300000190734863
+Conductivity: 1.100000023841858
+Packet Number: 1880
+Sending to 3 ... ok
+================================================
+payload length: 20
+From: 2
+To: 0
+Id: 1814
+Time: 7199105
+Temperature: 5.900000095367432
+Humidity: 6.699999809265137
+Conductivity: 2.299999952316284
+Packet Number: 1813
+Sending to 1 ... ok
+================================================
+payload length: 20
+From: 3
+To: 0
+Id: 1825
+Time: 7240591
+Temperature: 6.699999809265137
+Humidity: 0.8999999761581421
+Conductivity: 6.400000095367432
+Packet Number: 1824
+Sending to 2 ... ok
+================================================
+payload length: 20
+From: 1
+To: 0
+Id: 1882
+Time: 7359313
+Temperature: 6.900000095367432
+Humidity: 0.699999988079071
+Conductivity: 2.299999952316284
+Packet Number: 1881
+Sending to 3 ... ok
+================================================
+payload length: 20
+From: 2
+To: 0
+Id: 1815
+Time: 7202101
+Temperature: 2.5
+Humidity: 3.4000000953674316
+Conductivity: 1.899999976158142
+Packet Number: 1814
+Sending to 1 ... ok
+================================================
+payload length: 20
+From: 3
+To: 0
+Id: 1826
+Time: 7243588
+Temperature: 6.5
+Humidity: 9.699999809265137
+Conductivity: 0.6000000238418579
+Packet Number: 1825
+Sending to 2 ... ok
+================================================
+payload length: 20
+From: 1
+To: 0
+Id: 1883
+Time: 7362319
+Temperature: 8.100000381469727
+Humidity: 3.5
+Conductivity: 0.8999999761581421
+Packet Number: 1882
+Sending to 3 ... ok
+================================================
+payload length: 20
+From: 2
+To: 0
+Id: 1816
+Time: 7205100
+Temperature: 6.699999809265137
+Humidity: 4.5
+Conductivity: 1.0
+Packet Number: 1815
+Sending to 1 ... ok
+================================================
+payload length: 20
+From: 3
+To: 0
+Id: 1827
+Time: 7246585
+Temperature: 6.699999809265137
+Humidity: 0.800000011920929
+Conductivity: 0.8999999761581421
+Packet Number: 1826
+Sending to 2 ... ok
+================================================
+payload length: 20
+From: 1
+To: 0
+Id: 1884
+Time: 7365322
+Temperature: 3.9000000953674316
+Humidity: 0.5
+Conductivity: 6.300000190734863
+Packet Number: 1883
+Sending to 3 ... ok
+================================================
+payload length: 20
+From: 2
+To: 0
+Id: 1817
+Time: 7208099
+Temperature: 2.0
+Humidity: 3.0
+Conductivity: 3.5999999046325684
+Packet Number: 1816
+Sending to 1 ... ok
+================================================
+payload length: 20
+From: 3
+To: 0
+Id: 1828
+Time: 7249584
+Temperature: 6.099999904632568
+Humidity: 5.699999809265137
+Conductivity: 3.5
+Packet Number: 1827
+Sending to 2 ... ok
+================================================
+payload length: 20
+From: 1
+To: 0
+Id: 1885
+Time: 7368328
+Temperature: 2.5999999046325684
+Humidity: 5.199999809265137
+Conductivity: 4.699999809265137
+Packet Number: 1884
+Sending to 3 ... ok
+================================================
+payload length: 20
+From: 2
+To: 0
+Id: 1818
+Time: 7211098
+Temperature: 3.299999952316284
+Humidity: 4.599999904632568
+Conductivity: 7.0
+Packet Number: 1817
+Sending to 1 ... ok
+================================================
+payload length: 20
+From: 3
+To: 0
+Id: 1829
+Time: 7252579
+Temperature: 4.5
+Humidity: 5.300000190734863
+Conductivity: 1.2000000476837158
+Packet Number: 1828
+Sending to 2 ... ok
+================================================
+payload length: 20
+From: 1
+To: 0
+Id: 1886
+Time: 7371334
+Temperature: 8.800000190734863
+Humidity: 8.399999618530273
+Conductivity: 8.600000381469727
+Packet Number: 1885
+Sending to 3 ... ok
+================================================
+payload length: 20
+From: 2
+To: 0
+Id: 1819
+Time: 7214099
+Temperature: 6.0
+Humidity: 5.900000095367432
+Conductivity: 4.300000190734863
+Packet Number: 1818
+Sending to 1 ... ok
+================================================
+payload length: 20
+From: 3
+To: 0
+Id: 1830
+Time: 7255579
+Temperature: 4.0
+Humidity: 8.300000190734863
+Conductivity: 3.4000000953674316
+Packet Number: 1829
+Sending to 2 ... ok
+================================================
+payload length: 20
+From: 1
+To: 0
+Id: 1887
+Time: 7374336
+Temperature: 6.900000095367432
+Humidity: 9.899999618530273
+Conductivity: 1.100000023841858
+Packet Number: 1886
+Sending to 3 ... ok
+================================================
+payload length: 20
+From: 2
+To: 0
+Id: 1820
+Time: 7217101
+Temperature: 7.099999904632568
+Humidity: 2.0999999046325684
+Conductivity: 9.699999809265137
+Packet Number: 1819
+Sending to 1 ... ok
+================================================
+payload length: 20
+From: 3
+To: 0
+Id: 1831
+Time: 7258580
+Temperature: 6.5
+Humidity: 3.0999999046325684
+Conductivity: 7.5
+Packet Number: 1830
+Sending to 2 ... ok
+================================================
+payload length: 20
+From: 1
+To: 0
+Id: 1888
+Time: 7377345
+Temperature: 3.4000000953674316
+Humidity: 1.2999999523162842
+Conductivity: 4.0
+Packet Number: 1887
+Sending to 3 ... ok
+================================================
+payload length: 20
+From: 2
+To: 0
+Id: 1821
+Time: 7220100
+Temperature: 1.0
+Humidity: 0.10000000149011612
+Conductivity: 4.300000190734863
+Packet Number: 1820
+Sending to 1 ... ok
+================================================
+payload length: 20
+From: 3
+To: 0
+Id: 1832
+Time: 7261578
+Temperature: 3.5
+Humidity: 0.4000000059604645
+Conductivity: 8.300000190734863
+Packet Number: 1831
+Sending to 2 ... ok
+================================================
+payload length: 20
+From: 1
+To: 0
+Id: 1889
+Time: 7380348
+Temperature: 9.600000381469727
+Humidity: 7.800000190734863
+Conductivity: 5.199999809265137
+Packet Number: 1888
+Sending to 3 ... ok
+================================================
+payload length: 20
+From: 2
+To: 0
+Id: 1822
+Time: 7223099
+Temperature: 8.5
+Humidity: 5.300000190734863
+Conductivity: 5.300000190734863
+Packet Number: 1821
+Sending to 1 ... ok
+================================================
+payload length: 20
+From: 3
+To: 0
+Id: 1833
+Time: 7264574
+Temperature: 1.5
+Humidity: 0.0
+Conductivity: 8.600000381469727
+Packet Number: 1832
+Sending to 2 ... ok
+================================================
+payload length: 20
+From: 1
+To: 0
+Id: 1890
+Time: 7383352
+Temperature: 4.199999809265137
+Humidity: 8.399999618530273
+Conductivity: 0.10000000149011612
+Packet Number: 1889
+Sending to 3 ... ok
+================================================
+payload length: 20
+From: 2
+To: 0
+Id: 1823
+Time: 7226097
+Temperature: 8.100000381469727
+Humidity: 6.300000190734863
+Conductivity: 2.0999999046325684
+Packet Number: 1822
+Sending to 1 ... ok
+================================================
+payload length: 20
+From: 3
+To: 0
+Id: 1834
+Time: 7267571
+Temperature: 6.400000095367432
+Humidity: 3.0999999046325684
+Conductivity: 5.900000095367432
+Packet Number: 1833
+Sending to 2 ... ok
+================================================
+payload length: 20
+From: 1
+To: 0
+Id: 1891
+Time: 7386355
+Temperature: 3.700000047683716
+Humidity: 4.0
+Conductivity: 2.5
+Packet Number: 1890
+Sending to 3 ... ok
+================================================
+payload length: 20
+From: 2
+To: 0
+Id: 1824
+Time: 7229094
+Temperature: 2.0
+Humidity: 1.100000023841858
+Conductivity: 1.0
+Packet Number: 1823
+Sending to 1 ... ok
+================================================
+payload length: 20
+From: 3
+To: 0
+Id: 1835
+Time: 7270565
+Temperature: 3.5
+Humidity: 7.900000095367432
+Conductivity: 5.199999809265137
+Packet Number: 1834
+Sending to 2 ... ok
+================================================
