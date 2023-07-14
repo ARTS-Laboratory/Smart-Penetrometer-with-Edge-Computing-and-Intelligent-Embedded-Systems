@@ -18,10 +18,5 @@
 <img src="https://user-images.githubusercontent.com/87868879/167042322-896100dd-04d2-4cb5-a131-dcdc036ecfeb.jpg" alt="drawing" width="300"/>
 </p>
 
-### 4. Solar cell attachment with fletching
-<p align="center">
-<img src="https://user-images.githubusercontent.com/87868879/167037050-c722c09d-1397-497c-aa07-957cd55efcfd.jpg" alt="drawing" width="300"/>
-</p>
-
 
 ## [Return to V0.3.0](https://github.com/ARTS-Laboratory/Smart-Penetrometers-with-Edge-Computing-and-Intelligent-Embedded-Systems/blob/main/V0/V0.3.0/hardware_design/README.md)
