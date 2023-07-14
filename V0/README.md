@@ -11,13 +11,15 @@
 1. Added 4-pin connector for accelerometer.
 2. Removed op-amp.
 ## [V0.3.0](V0.3.0)
-1. Added solar power input
+1. Added solar power input.
 2. Added 3v3 voltage regulator, Zener diode, and 2 Schottsky diodes for power management.
 ## [V0.4.0](V0.4.0)
-1. A working version with geophone and conductivity probe
-2. Saves data to SD card
-3. No solar
+1. A working version with geophone and conductivity probe.
+2. Saves data to SD card.
+3. No solar.
 4. All needed design files in this folder.
 ## [V0.5.0](V0.5.0)
-1. Adds wireless communication
+1. Adds wireless communication.
+2. Adds solar charger.
+3. Adds thermocouple sensor.
 ## [Return to Main ReadMe](https://github.com/ARTS-Laboratory/Smart-Penetrometers-with-Edge-Computing-and-Intelligent-Embedded-Systems/blob/main/README.md)
