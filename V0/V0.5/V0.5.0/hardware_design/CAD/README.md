@@ -20,7 +20,7 @@
 
 ### 4. Solar cell attachment with fletching
 <p align="center">
-<img src=![image](https://github.com/ARTS-Laboratory/Smart-Penetrometer-with-Edge-Computing-and-Intelligent-Embedded-Systems/assets/87868879/1888d01c-2f71-422e-903f-6400432207f7) alt="drawing" width="300"/>
+<img src="https://github.com/ARTS-Laboratory/Smart-Penetrometer-with-Edge-Computing-and-Intelligent-Embedded-Systems/assets/87868879/1888d01c-2f71-422e-903f-6400432207f7" alt="drawing" width="300"/>
 </p>
 
 
