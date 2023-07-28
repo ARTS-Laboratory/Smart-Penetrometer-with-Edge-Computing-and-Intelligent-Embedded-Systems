@@ -18,7 +18,7 @@
 2. Saves data to SD card.
 3. No solar.
 4. All needed design files in this folder.
-## [V0.5.0](V0.5.0)
+## [V0.5.0](https://github.com/ARTS-Laboratory/Smart-Penetrometer-with-Edge-Computing-and-Intelligent-Embedded-Systems/tree/main/V0/V0.5/V0.5.0)
 1. Adds wireless communication.
 2. Adds solar charger.
 3. Adds thermocouple sensor.
