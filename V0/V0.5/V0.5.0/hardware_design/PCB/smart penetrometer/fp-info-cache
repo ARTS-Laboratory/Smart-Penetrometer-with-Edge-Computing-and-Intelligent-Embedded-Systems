@@ -1,4 +1,4 @@
-21688489054049895
+21691868982117867
 Audio_Module
 Reverb_BTDR-1H
 Digital Reverberation Unit, http://www.belton.co.kr/inc/downfile.php?seq=17&file=pdf (footprint from http://www.uk-electronic.de/PDF/BTDR-1.pdf)
@@ -90201,6 +90201,20 @@ ADS1115IRUGT
 0
 6
 6
+kitest
+ADS1118_10VSSOP
+
+
+0
+10
+10
+kitest
+ADS1120IPW 16TSSOP
+
+
+0
+16
+16
 kitest
 ARTS_lab_logo
 
