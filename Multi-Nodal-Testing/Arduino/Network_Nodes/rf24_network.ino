@@ -1,8 +1,7 @@
-// Node02
 #include <RF24.h>
 #include <RF24Network.h>
 #include <SPI.h>
-#include <limits.h>
+#include <SD.h>
 
 RF24 radio(9, 10); // nRF24L01 (CE,CSN)
 RF24Network network(radio); // Include the radio in the network
@@ -10,21 +9,26 @@ const uint16_t this_node = 02; // Address of this node in Octal format
 const uint16_t node00 = 00;
 unsigned long iteration = 0;
 
+// Define the file name to store data on the SD card
+const char* filename = "sensor.csv";
+
 struct SensorData {
   unsigned long time; // 4 bytes
   float temperature;  // 4 bytes
   float humidity;     // 4 bytes
   float conductivity; // 4 bytes
-  unsigned short battery_level; //2 bytes
+  unsigned short battery_level; // 2 bytes
   unsigned long packetNumber;   // 4 bytes
 };
 
 SensorData data;
 
+File dataFile; // Declare the File object as a global variable
+
 void setup() {
   Serial.begin(115200);
   SPI.begin();
-  
+
   if (!radio.begin()) {
     Serial.println(F("Radio hardware not responding!"));
     while (1) {
@@ -36,8 +40,28 @@ void setup() {
   radio.setDataRate(RF24_2MBPS);
   radio.setPALevel(RF24_PA_MAX);
 
-}
+  // Initialize the SD card
+  if (!SD.begin(4)) {
+    Serial.println(F("SD card initialization failed!"));
+    while (1) {
+      // hold in infinite loop
+    }
+  }
 
+  // Open the file for data writing and keep it open during the program's execution
+  dataFile = SD.open(filename, FILE_WRITE);
+  if (!dataFile) {
+    Serial.println(F("Error opening file for writing!"));
+    while (1) {
+      // hold in infinite loop
+    }
+  }
+
+  // Check if the file is empty. If so, write the header.
+  if (dataFile.size() == 0) {
+    writeHeaderToFile();
+  }
+}
 
 void loop() {
   network.update();
@@ -49,28 +73,58 @@ void loop() {
   data.temperature = random(0, 100) / 10.0;     // Random float value between 0 and 10
   data.humidity = random(0, 100) / 10.0;        // Random float value between 0 and 10
   data.conductivity = random(0, 100) / 10.0;    // Random float value between 0 and 10
-  data.battery_level = random(501);    // Random float value between 0 and 500
+  data.battery_level = random(501);    // Random value between 0 and 500
   data.packetNumber = iteration;
-//  printSensorData(data);
-  
+
+  Serial.println();
+  printSensorData(data);
+
+  // Write the data to the SD card
+  writeDataToFile(data);
+
   bool ok = network.write(header, &data, sizeof(data)); // Send the data
   Serial.println(ok ? F("ok.") : F("failed."));
-  
+
   iteration++;
   delay(1000);
 }
 
+void writeHeaderToFile() {
+  dataFile.println("Time, Temperature, Humidity, Conductivity, Battery Level, Packet Number");
+  dataFile.flush(); // Ensure data is written immediately to the card
+}
+
+void writeDataToFile(const SensorData& data) {
+  if (dataFile) {
+    // Write sensor data to the file
+    dataFile.print(data.time);
+    dataFile.print(", ");
+    dataFile.print(data.temperature);
+    dataFile.print(", ");
+    dataFile.print(data.humidity);
+    dataFile.print(", ");
+    dataFile.print(data.conductivity);
+    dataFile.print(", ");
+    dataFile.print(data.battery_level);
+    dataFile.print(", ");
+    dataFile.println(data.packetNumber);
+    dataFile.flush(); // Ensure data is written immediately to the card
+  } else {
+    Serial.println(F("Error opening file for writing!"));
+  }
+}
+
 void printSensorData(const SensorData& data) {
-  Serial.print("Time: ");
+  Serial.print(F("Time: "));
   Serial.println(data.time);
-  Serial.print("Temperature: ");
-  Serial.println(data.temperature);
-  Serial.print("Humidity: ");
-  Serial.println(data.humidity);
-  Serial.print("Conductivity: ");
-  Serial.println(data.conductivity);
-  Serial.print("Battery Level: ");
+  Serial.print(F("Temperature: "));
+  Serial.println(data.temperature, 2); // Display float with 2 decimal places
+  Serial.print(F("Humidity: "));
+  Serial.println(data.humidity, 2); // Display float with 2 decimal places
+  Serial.print(F("Conductivity: "));
+  Serial.println(data.conductivity, 2); // Display float with 2 decimal places
+  Serial.print(F("Battery Level: "));
   Serial.println(data.battery_level);
-  Serial.print("Packet Number: ");
+  Serial.print(F("Packet Number: "));
   Serial.println(data.packetNumber);
 }
