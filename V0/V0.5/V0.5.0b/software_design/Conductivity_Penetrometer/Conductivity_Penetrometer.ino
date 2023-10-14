@@ -1,5 +1,5 @@
 /*
-
+Written by Malichi Flemming II
 */
 #include <Wire.h>
 #include "RTClib.h"
@@ -26,7 +26,7 @@ void setup() {
     Serial.println("RTC failed.");
     while (1);
   }
-  //rtc.adjust(DateTime(F(__DATE__), F(__TIME__)));
+  //rtc.adjust(DateTime(F(__DATE__), F(__TIME__))); //uncomment line, upload sketch, and run sketch to adjust time then comment line and upload sketch to set time.
   
 	if (!bmx280.begin()) {
     Serial.println("BME failed.");
@@ -92,15 +92,15 @@ void logData() {
   File dataFile = SD.open(name, FILE_WRITE);
   if (dataFile) {
     unsigned long time = millis();
-    Serial.print(float(time) / 1000000000, 9);
-    Serial.print(" ");
-    Serial.print(bmx280.getTemperature());
-    Serial.print(" ");
-    Serial.print(bmx280.getHumidity());
-    Serial.print(" ");
-    Serial.print(bmx280.getPressure64() / 100.0F);
-    Serial.print(" ");
-    Serial.println(condValue, 3);
+    // Serial.print(float(time) / 1000000000, 9);
+    // Serial.print(" ");
+    // Serial.print(bmx280.getTemperature());
+    // Serial.print(" ");
+    // Serial.print(bmx280.getHumidity());
+    // Serial.print(" ");
+    // Serial.print(bmx280.getPressure64() / 100.0F);
+    // Serial.print(" ");
+    // Serial.println(condValue, 3);
 
     dataFile.print(float(time) / 1000000000, 9);
     dataFile.print(" ");
