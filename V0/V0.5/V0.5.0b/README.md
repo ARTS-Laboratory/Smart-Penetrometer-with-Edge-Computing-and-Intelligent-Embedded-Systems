@@ -4,3 +4,6 @@ Sensor node
 1. Utilizes solar recharging..
 1. 4-layer PCB
 
+<p align="center">
+<img src="https://github.com/ARTS-Laboratory/Smart-Penetrometer-with-Edge-Computing-and-Intelligent-Embedded-Systems/assets/87868879/f72e26ce-91bb-42ee-896f-61404e517929" alt="drawing" width="1000"/>
+</p>
