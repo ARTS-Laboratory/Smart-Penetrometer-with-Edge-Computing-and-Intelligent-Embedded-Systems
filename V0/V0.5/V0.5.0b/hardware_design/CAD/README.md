@@ -8,12 +8,22 @@
 <img src="https://github.com/ARTS-Laboratory/Smart-Penetrometer-with-Edge-Computing-and-Intelligent-Embedded-Systems/assets/87868879/4f86029d-4c4c-4e32-adee-03f96c36024f.jpg" alt="drawing" width="300"/>
 </p>
 
-### 2. Housing
+### 2. Housing1
 <p align="center">
 <img src="https://github.com/ARTS-Laboratory/Smart-Penetrometer-with-Edge-Computing-and-Intelligent-Embedded-Systems/assets/87868879/02bfbb29-3c20-4ad4-9ad7-66eea5082b3b.jpg" alt="drawing" width="300"/>
 </p>
 
-### 3. Solar cell attachment with fletching
+### 2. Housing2
+<p align="center">
+<img src="https://github.com/ARTS-Laboratory/Smart-Penetrometer-with-Edge-Computing-and-Intelligent-Embedded-Systems/assets/87868879/02bfbb29-3c20-4ad4-9ad7-66eea5082b3b.jpg" alt="drawing" width="300"/>
+</p>
+
+### 2. Housing3
+<p align="center">
+<img src="https://github.com/ARTS-Laboratory/Smart-Penetrometer-with-Edge-Computing-and-Intelligent-Embedded-Systems/assets/87868879/02bfbb29-3c20-4ad4-9ad7-66eea5082b3b.jpg" alt="drawing" width="300"/>
+</p>
+
+### 3. Solar cell attachment 
 <p align="center">
 <img src="https://github.com/ARTS-Laboratory/Smart-Penetrometer-with-Edge-Computing-and-Intelligent-Embedded-Systems/assets/87868879/1888d01c-2f71-422e-903f-6400432207f7" alt="drawing" width="300"/>
 </p>
