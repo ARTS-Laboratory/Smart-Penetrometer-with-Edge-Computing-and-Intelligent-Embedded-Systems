@@ -5,27 +5,27 @@
 
 ### 1. Cap
 <p align="center">
-<img src="https://github.com/ARTS-Laboratory/Smart-Penetrometer-with-Edge-Computing-and-Intelligent-Embedded-Systems/assets/87868879/4f86029d-4c4c-4e32-adee-03f96c36024f.jpg" alt="drawing" width="300"/>
+<img src="https://github.com/ARTS-Laboratory/Smart-Penetrometer-with-Edge-Computing-and-Intelligent-Embedded-Systems/assets/87868879/8b2f5b60-6c55-4578-96ad-d79ac46b7217" alt="drawing" width="300"/>
 </p>
 
 ### 2. Housing1
 <p align="center">
-<img src="https://github.com/ARTS-Laboratory/Smart-Penetrometer-with-Edge-Computing-and-Intelligent-Embedded-Systems/assets/87868879/02bfbb29-3c20-4ad4-9ad7-66eea5082b3b.jpg" alt="drawing" width="300"/>
+<img src="https://github.com/ARTS-Laboratory/Smart-Penetrometer-with-Edge-Computing-and-Intelligent-Embedded-Systems/assets/87868879/a8ec73e7-2814-4ef1-8800-518d028c8a55" alt="drawing" width="900"/>
 </p>
 
 ### 2. Housing2
 <p align="center">
-<img src="https://github.com/ARTS-Laboratory/Smart-Penetrometer-with-Edge-Computing-and-Intelligent-Embedded-Systems/assets/87868879/02bfbb29-3c20-4ad4-9ad7-66eea5082b3b.jpg" alt="drawing" width="300"/>
+<img src="https://github.com/ARTS-Laboratory/Smart-Penetrometer-with-Edge-Computing-and-Intelligent-Embedded-Systems/assets/87868879/66bbd69f-4459-4216-97de-455c599cf788" alt="drawing" width="900"/>
 </p>
 
 ### 2. Housing3
 <p align="center">
-<img src="https://github.com/ARTS-Laboratory/Smart-Penetrometer-with-Edge-Computing-and-Intelligent-Embedded-Systems/assets/87868879/02bfbb29-3c20-4ad4-9ad7-66eea5082b3b.jpg" alt="drawing" width="300"/>
+<img src="https://github.com/ARTS-Laboratory/Smart-Penetrometer-with-Edge-Computing-and-Intelligent-Embedded-Systems/assets/87868879/5de86f47-5036-4b0d-aec8-7583314b36a9" alt="drawing" width="300"/>
 </p>
 
 ### 3. Solar cell attachment 
 <p align="center">
-<img src="https://github.com/ARTS-Laboratory/Smart-Penetrometer-with-Edge-Computing-and-Intelligent-Embedded-Systems/assets/87868879/1888d01c-2f71-422e-903f-6400432207f7" alt="drawing" width="300"/>
+<img src="https://github.com/ARTS-Laboratory/Smart-Penetrometer-with-Edge-Computing-and-Intelligent-Embedded-Systems/assets/87868879/2536514c-a19b-4240-bac0-ed30fc698267" alt="drawing" width="600"/>
 </p>
 
 
