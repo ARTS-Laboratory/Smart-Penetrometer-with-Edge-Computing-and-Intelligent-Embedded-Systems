@@ -8,7 +8,7 @@
 <img src="https://github.com/ARTS-Laboratory/Smart-Penetrometer-with-Edge-Computing-and-Intelligent-Embedded-Systems/assets/87868879/92924e1b-dd16-4c1c-afa6-afaf3f3a4120" alt="drawing" width="910"/>
 </p>
 
-## [Return to V0.5](https://github.com/ARTS-Laboratory/Solar-Charged-UAV-deployable-Penetrometer-System-for-Fault-Detection-of-Geological-Structures/tree/main/hardware_design/V0.0/V0.4)
+## [Return to V0.5.1](https://github.com/ARTS-Laboratory/Smart-Penetrometer-with-Edge-Computing-and-Intelligent-Embedded-Systems/edit/main/V0/V0.5/V0.5.1)
 
 
 
