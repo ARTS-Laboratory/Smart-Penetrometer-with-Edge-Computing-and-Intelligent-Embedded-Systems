@@ -10945,7 +10945,7 @@
   (gr_text "BY MALICHI FLEMMING II 11/25/2023" (at 177.072 60.832) (layer "B.SilkS") (tstamp 97685039-5a96-46ee-a0d4-a754717fefee)
     (effects (font (size 0.75 0.75) (thickness 0.15)) (justify mirror))
   )
-  (gr_text "SPECIES V0.5.0" (at 177.58 58.8) (layer "B.SilkS") (tstamp ba362dc9-a1a8-4675-89c7-baac12469044)
+  (gr_text "SPECIES V0.5.1" (at 177.58 58.8) (layer "B.SilkS") (tstamp ba362dc9-a1a8-4675-89c7-baac12469044)
     (effects (font (size 1 1) (thickness 0.15)) (justify mirror))
   )
   (gr_text "TERMINALS" (at 168.5 68.87) (layer "B.SilkS") (tstamp c117ae96-dc1f-48ac-9184-551fff4c78e5)
