@@ -113,18 +113,6 @@ void logData() {
   File dataFile = SD.open(name, FILE_WRITE);
   if (dataFile) {
     unsigned long time = millis();
-    Serial.print(float(time) / 1000000000, 9);
-    Serial.print(" ");
-    Serial.print(bmx280.getTemperature());
-    Serial.print(" ");
-    Serial.print(Temp);    
-    Serial.print(" ");
-    Serial.print(bmx280.getHumidity());
-    Serial.print(" ");
-    Serial.print(bmx280.getPressure64() / 100.0F);
-    Serial.print(" ");
-    Serial.println(condValue, 3);
-
     dataFile.print(float(time) / 1000000000, 9);
     dataFile.print(" ");
     dataFile.print(bmx280.getTemperature(), 2);
@@ -175,161 +163,156 @@ int getMedianNum(int bArray[], int iFilterLen) {
   return bTemp;
 }
 
-int rtdTemp(int buff){
-switch (buff) 
-  {
-  case 100000 ... 103902:
-    switch (buff) 
-    {
-      case 100000 ... 100390:
-        Temp = 0;
-        break;
-      case 100391 ... 100780:
-        Temp = 1;
-        break;
-      case 100781 ... 101171:
-        Temp = 2;
-        break;
-      case 101172 ... 101561:
-        Temp = 3;
-        break;
-      case 101562 ... 101952:
-        Temp = 4;
-        break;
-      case 101953 ... 102342:
-        Temp = 5;
-        break;     
-      case 102343 ... 102732:
-        Temp = 6;
-        break;
-      case 102733 ... 103122:
-        Temp = 7;
-        break;  
-      case 103123 ... 103512:
-        Temp = 8;
-        break;
-      case 103513 ... 103902:
-        Temp = 9;
-        break;                             
-      default:
-        break;
-    }
-    break;
-  case 103903 ... 107793:
-    switch (buff) 
-    {
-      case 103903 ... 104291:
-        Temp = 10;
-        break;
-      case 104292 ... 104681:
-        Temp = 11;
-        break;
-      case 104682 ... 105070:
-        Temp = 12;
-        break;
-      case 105071 ... 105459:
-        Temp = 13;
-        break;
-      case 105460 ... 105849:
-        Temp = 14;
-        break;
-      case 105850 ... 106238:
-        Temp = 15;
-        break;     
-      case 106239 ... 106626:
-        Temp = 16;
-        break;
-      case 106627 ... 107015:
-        Temp = 17;
-        break;  
-      case 107016 ... 107404:
-        Temp = 18;
-        break;
-      case 107405 ... 107793:
-        Temp = 19;
-        break;                             
-      default:
-        break;
-    }
-    break;
-  case 107794 ... 111672:
-    switch (buff) 
-    {
-      case 107794 ... 108181:
-        Temp = 20;
-        break;
-      case 108182 ... 108569:
-        Temp = 21;
-        break;
-      case 108570 ... 108958:
-        Temp = 22;
-        break;
-      case 108959 ... 109346:
-        Temp = 23;
-        break;
-      case 109347 ... 109734:
-        Temp = 24;
-        break;
-      case 109735 ... 110122:
-        Temp = 25;
-        break;         
-      case 110123 ... 110509:
-        Temp = 26;
-        break;     
-      case 110510 ... 110897:
-        Temp = 27;
-        break;
-      case 110898 ... 111285:
-        Temp = 28;
-        break;  
-      case 111286 ... 111672:
-        Temp = 29;
-        break;
-                            
-      default:
-        break;
-    }
-    break;
-  case 111673 ... 115540:
-    switch (buff) 
-    {
-      case 111673 ... 112059:
-        Temp = 30;
-        break;
-      case 112060 ... 112446:
-        Temp = 31;
-        break;
-      case 112447 ... 112834:
-        Temp = 32;
-        break;
-      case 112835 ... 113221:
-        Temp = 33;
-        break;
-      case 113222 ... 113607:
-        Temp = 34;
-        break;
-      case 113608 ... 113994:
-        Temp = 35;
-        break;     
-      case 113995 ... 114381:
-        Temp = 36;
-        break;
-      case 114382 ... 114767:
-        Temp = 37;
-        break;  
-      case 114768 ... 115154:
-        Temp = 38;
-        break;
-      case 115155 ... 115540:
-        Temp = 39;
-        break;                             
-      default:
-        break;
-    }
-    break;    
-  default:
-    Temp = 0;
-    break;
+int rtdTemp(int buff) {
+  switch (buff) {
+    case 100000 ... 103902:
+      switch (buff) {
+        case 100000 ... 100390:
+          Temp = 0;
+          break;
+        case 100391 ... 100780:
+          Temp = 1;
+          break;
+        case 100781 ... 101171:
+          Temp = 2;
+          break;
+        case 101172 ... 101561:
+          Temp = 3;
+          break;
+        case 101562 ... 101952:
+          Temp = 4;
+          break;
+        case 101953 ... 102342:
+          Temp = 5;
+          break;     
+        case 102343 ... 102732:
+          Temp = 6;
+          break;
+        case 102733 ... 103122:
+          Temp = 7;
+          break;  
+        case 103123 ... 103512:
+          Temp = 8;
+          break;
+        case 103513 ... 103902:
+          Temp = 9;
+          break;                             
+        default:
+          break;
+      }
+      break;
+    case 103903 ... 107793:
+      switch (buff) {
+        case 103903 ... 104291:
+          Temp = 10;
+          break;
+        case 104292 ... 104681:
+          Temp = 11;
+          break;
+        case 104682 ... 105070:
+          Temp = 12;
+          break;
+        case 105071 ... 105459:
+          Temp = 13;
+          break;
+        case 105460 ... 105849:
+          Temp = 14;
+          break;
+        case 105850 ... 106238:
+          Temp = 15;
+          break;     
+        case 106239 ... 106626:
+          Temp = 16;
+          break;
+        case 106627 ... 107015:
+          Temp = 17;
+          break;  
+        case 107016 ... 107404:
+          Temp = 18;
+          break;
+        case 107405 ... 107793:
+          Temp = 19;
+          break;                             
+        default:
+          break;
+      }
+      break;
+    case 107794 ... 111672:
+      switch (buff) {
+        case 107794 ... 108181:
+          Temp = 20;
+          break;
+        case 108182 ... 108569:
+          Temp = 21;
+          break;
+        case 108570 ... 108958:
+          Temp = 22;
+          break;
+        case 108959 ... 109346:
+          Temp = 23;
+          break;
+        case 109347 ... 109734:
+          Temp = 24;
+          break;
+        case 109735 ... 110122:
+          Temp = 25;
+          break;         
+        case 110123 ... 110509:
+          Temp = 26;
+          break;     
+        case 110510 ... 110897:
+          Temp = 27;
+          break;
+        case 110898 ... 111285:
+          Temp = 28;
+          break;  
+        case 111286 ... 111672:
+          Temp = 29;
+          break;
+                              
+        default:
+          break;
+      }
+      break;
+    case 111673 ... 115540:
+      switch (buff) {
+        case 111673 ... 112059:
+          Temp = 30;
+          break;
+        case 112060 ... 112446:
+          Temp = 31;
+          break;
+        case 112447 ... 112834:
+          Temp = 32;
+          break;
+        case 112835 ... 113221:
+          Temp = 33;
+          break;
+        case 113222 ... 113607:
+          Temp = 34;
+          break;
+        case 113608 ... 113994:
+          Temp = 35;
+          break;     
+        case 113995 ... 114381:
+          Temp = 36;
+          break;
+        case 114382 ... 114767:
+          Temp = 37;
+          break;  
+        case 114768 ... 115154:
+          Temp = 38;
+          break;
+        case 115155 ... 115540:
+          Temp = 39;
+          break;                             
+        default:
+          break;
+      }
+      break;    
+    default:
+      Temp = 0;
+      break;
   }
   return Temp;
 }  
