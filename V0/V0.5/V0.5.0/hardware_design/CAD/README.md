@@ -14,12 +14,12 @@
 <img src="https://github.com/ARTS-Laboratory/Smart-Penetrometer-with-Edge-Computing-and-Intelligent-Embedded-Systems/assets/87868879/a8ec73e7-2814-4ef1-8800-518d028c8a55" alt="drawing" width="900"/>
 </p>
 
-### 2. Housing2
+### 3. Housing2
 <p align="center">
 <img src="https://github.com/ARTS-Laboratory/Smart-Penetrometer-with-Edge-Computing-and-Intelligent-Embedded-Systems/assets/87868879/66bbd69f-4459-4216-97de-455c599cf788" alt="drawing" width="900"/>
 </p>
 
-### 2. Housing3
+### 4. Housing3
 <p align="center">
 <img src="https://github.com/ARTS-Laboratory/Smart-Penetrometer-with-Edge-Computing-and-Intelligent-Embedded-Systems/assets/87868879/5de86f47-5036-4b0d-aec8-7583314b36a9" alt="drawing" width="300"/>
 </p>
