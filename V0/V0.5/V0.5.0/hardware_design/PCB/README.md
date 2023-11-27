@@ -3,7 +3,7 @@
 2. Updated schematic and PCB to include optocoupler, thermocouple amplifier, and screw terminal for digital trigger with accompanying resistors and capacitors.
 
 
-## [Return to V0.5](https://github.com/ARTS-Laboratory/Solar-Charged-UAV-deployable-Penetrometer-System-for-Fault-Detection-of-Geological-Structures/tree/main/hardware_design/V0.0/V0.4)
+## [Return to V0.5.0](https://github.com/ARTS-Laboratory/Smart-Penetrometer-with-Edge-Computing-and-Intelligent-Embedded-Systems/edit/main/V0/V0.5/V0.5.0/README.md)
 
 
 
