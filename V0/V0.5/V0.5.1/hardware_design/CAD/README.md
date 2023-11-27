@@ -23,4 +23,4 @@
 <img src="https://github.com/ARTS-Laboratory/Smart-Penetrometer-with-Edge-Computing-and-Intelligent-Embedded-Systems/assets/87868879/5de86f47-5036-4b0d-aec8-7583314b36a9" alt="drawing" width="300"/>
 </p>
 
-## [Return to V0.5.0](https://github.com/ARTS-Laboratory/Smart-Penetrometer-with-Edge-Computing-and-Intelligent-Embedded-Systems/tree/main/V0/V0.5/V0.5.0)
+## [Return to V0.5.1](https://github.com/ARTS-Laboratory/Smart-Penetrometer-with-Edge-Computing-and-Intelligent-Embedded-Systems/tree/main/V0/V0.5/V0.5.1)
