@@ -1,4 +1,4 @@
-# V 0.5.0
+# V 0.5.1
 Sensor node
 1. A sensor node that collects data, saves it to local memory, and sends it wirelessly to gateway station.
 1. Utilizes solar recharging..
