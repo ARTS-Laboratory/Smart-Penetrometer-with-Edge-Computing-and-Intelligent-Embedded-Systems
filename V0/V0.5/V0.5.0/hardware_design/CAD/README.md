@@ -5,8 +5,7 @@
 
 ### 1. Solar Cap
 <p align="center">
-<img src="https://github.com/ARTS-Laboratory/Smart-Penetrometer-with-Edge-Computing-and-Intelligent-Embedded-Systems/assets/87868879/fc339a5a-07ed-407d-a183-1781f18dd331
-" alt="drawing" width="900"/>
+<img src="https://github.com/ARTS-Laboratory/Smart-Penetrometer-with-Edge-Computing-and-Intelligent-Embedded-Systems/assets/87868879/fc339a5a-07ed-407d-a183-1781f18dd331" alt="drawing" width="900"/>
 </p>
 
 ### 2. Housing1
