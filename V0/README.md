@@ -21,5 +21,7 @@
 ## [V0.5.0](https://github.com/ARTS-Laboratory/Smart-Penetrometer-with-Edge-Computing-and-Intelligent-Embedded-Systems/tree/main/V0/V0.5/V0.5.0)
 1. Adds wireless communication.
 2. Adds solar charger.
-3. Adds thermocouple sensor.
+3. Adds RTD sensor.
+## [V0.5.1](https://github.com/ARTS-Laboratory/Smart-Penetrometer-with-Edge-Computing-and-Intelligent-Embedded-Systems/tree/main/V0/V0.5/V0.5.1)
+1. Fixes wireless communication and RTD issues.
 ## [Return to Main ReadMe](https://github.com/ARTS-Laboratory/Smart-Penetrometers-with-Edge-Computing-and-Intelligent-Embedded-Systems/blob/main/README.md)
