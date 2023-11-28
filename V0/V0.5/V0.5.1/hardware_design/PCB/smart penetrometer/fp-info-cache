@@ -1,4 +1,4 @@
-21691868982117867
+21693629640675163
 Audio_Module
 Reverb_BTDR-1H
 Digital Reverberation Unit, http://www.belton.co.kr/inc/downfile.php?seq=17&file=pdf (footprint from http://www.uk-electronic.de/PDF/BTDR-1.pdf)
@@ -90230,6 +90230,13 @@ Accelerometer_Connector
 5
 5
 kitest
+BME260
+
+
+0
+4
+4
+kitest
 Battery_Input
 
 
@@ -90251,13 +90258,6 @@ SD Module
 6
 6
 kitest
-TDS_module
-
-
-0
-4
-4
-kitest
 battery_holder_10mm
 
 
@@ -90278,6 +90278,13 @@ grounded_switch
 0
 5
 3
+kitest
+qrCode
+
+
+0
+0
+0
 kitest
 slide_switch
 
