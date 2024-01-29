@@ -18,7 +18,7 @@ int n = 1;
 int analogBufferIndex = 0, copyIndex = 0;
 float averageVoltage = 0, temperature = 25;
 String file = "";
-const char *name = "";
+const char* name = "";
 
 void setup() {
   Serial.begin(115200);
@@ -27,23 +27,26 @@ void setup() {
   pinMode(A1, INPUT);
   if (!rtc.begin()) {
     Serial.println("RTC failed.");
-    while (1);
+    while (1)
+      ;
   }
   //rtc.adjust(DateTime(F(__DATE__), F(__TIME__))); //uncomment line, upload sketch, and run sketch to adjust time then comment line and upload sketch to set time.
-  
-	if (!bmx280.begin()) {
+
+  if (!bmx280.begin()) {
     Serial.println("BME failed.");
-    while (1);
+    while (1)
+      ;
   }
-	bmx280.resetToDefaults();
-	bmx280.writeOversamplingPressure(BMx280MI::OSRS_P_x16);
-	bmx280.writeOversamplingTemperature(BMx280MI::OSRS_T_x16);
+  bmx280.resetToDefaults();
+  bmx280.writeOversamplingPressure(BMx280MI::OSRS_P_x16);
+  bmx280.writeOversamplingTemperature(BMx280MI::OSRS_T_x16);
   bmx280.writeOversamplingHumidity(BMx280MI::OSRS_H_x16);
 
   if (!SD.begin(10)) {
     Serial.println("Card failed, or not present");
-    while (1);
-  }  
+    while (1)
+      ;
+  }
 }
 
 void nameFileByTime(String& file) {
@@ -56,36 +59,35 @@ void nameFileByTime(String& file) {
   int hour = now.hour();
   int min = now.minute();
   int sec = now.second();
-  file = (String(year) + String(month) + String(day) + dow + String(hour) + String(min) + String(sec) + ".txt");   
+  file = (String(year) + String(month) + String(day) + dow + String(hour) + String(min) + String(sec) + ".txt");
 }
 
-void gTemp(int& Temp){
+void gTemp(int& Temp) {
   count = count + 1;
-  float sensorValue = analogRead(A0);
-  float neW = sensorValue * 3.3 / 1024;
-  float r1 = (10000 * (3.3 - neW)) / neW;
+  float sensorValue = analogRead(A1);
+  float neW = (sensorValue * 3.05 / 1024) + 0.02;
+  float r1 = (10000 * (3.05 - neW)) / neW;
   buffer = buffer + r1;
-  if (count == 50)
-  {
-  buffer = buffer / count;
-  buffer = round(buffer * 100);
-  int buff = buffer;
-  Temp = rtdTemp(buff);
-  count = 0;
-  buffer = 0;
+  if (count == 10) {
+    buffer = buffer / count;
+    buffer = round(buffer * 100);
+    int buff = buffer;
+    Temp = rtdTemp(buff);
+    count = 0;
+    buffer = 0;
   }
 }
 
 void tdsFunc(float& condValue) {
-  const float VREF = 3.3;     
-  const int SCOUNT = 30;     
-  int analogBuffer[SCOUNT];  
+  const float VREF = 3.3;
+  const int SCOUNT = 30;
+  int analogBuffer[SCOUNT];
   int analogBufferTemp[SCOUNT];
   float tdsValue;
   static unsigned long analogSampleTimepoint = millis();
   if (millis() - analogSampleTimepoint > 40U) {
     analogSampleTimepoint = millis();
-    analogBuffer[analogBufferIndex] = analogRead(A0); 
+    analogBuffer[analogBufferIndex] = analogRead(A0);
     analogBufferIndex++;
     if (analogBufferIndex == SCOUNT)
       analogBufferIndex = 0;
@@ -95,18 +97,19 @@ void tdsFunc(float& condValue) {
     printTimepoint = millis();
     for (copyIndex = 0; copyIndex < SCOUNT; copyIndex++)
       analogBufferTemp[copyIndex] = analogBuffer[copyIndex];
-    averageVoltage = getMedianNum(analogBufferTemp, SCOUNT)* VREF / 1024.0;                                                                                                  // read the analog value more stable by the median filtering algorithm, and convert to voltage value
+    averageVoltage = getMedianNum(analogBufferTemp, SCOUNT) * VREF / 1024.0;                                                                                                          // read the analog value more stable by the median filtering algorithm, and convert to voltage value
     float compensationCoefficient = 1.0 + 0.02 * (temperature - 25.0);                                                                                                                //temperature compensation formula: fFinalResult(25^C) = fFinalResult(current)/(1.0+0.02*(fTP-25.0));
     float compensationVoltage = averageVoltage / compensationCoefficient;                                                                                                             //temperature compensation
     tdsValue = (133.42 * compensationVoltage * compensationVoltage * compensationVoltage - 255.86 * compensationVoltage * compensationVoltage + 857.39 * compensationVoltage) * 0.5;  //convert voltage value to tds value
-    condValue = .667 * tdsValue / .640;
+    condValue = .5135 * tdsValue / .670;
   }
 }
 
 void logData() {
   float condValue;
   bmx280.measure();
-	while (!bmx280.hasValue());  
+  while (!bmx280.hasValue())
+    ;
   temperature = bmx280.getTemperature();
   tdsFunc(condValue);
   gTemp(Temp);
@@ -125,8 +128,7 @@ void logData() {
     dataFile.print(" ");
     dataFile.println(condValue, 3);
     dataFile.close();
-  }
-  else {
+  } else {
     Serial.println("error opening .txt file");
   }
 }
@@ -136,8 +138,7 @@ void loop() {
     nameFileByTime(file);
     name = file.c_str();
     n = n + 1;
-  }
-  else {
+  } else {
   }
   logData();
 }
@@ -184,19 +185,19 @@ int rtdTemp(int buff) {
           break;
         case 101953 ... 102342:
           Temp = 5;
-          break;     
+          break;
         case 102343 ... 102732:
           Temp = 6;
           break;
         case 102733 ... 103122:
           Temp = 7;
-          break;  
+          break;
         case 103123 ... 103512:
           Temp = 8;
           break;
         case 103513 ... 103902:
           Temp = 9;
-          break;                             
+          break;
         default:
           break;
       }
@@ -220,19 +221,19 @@ int rtdTemp(int buff) {
           break;
         case 105850 ... 106238:
           Temp = 15;
-          break;     
+          break;
         case 106239 ... 106626:
           Temp = 16;
           break;
         case 106627 ... 107015:
           Temp = 17;
-          break;  
+          break;
         case 107016 ... 107404:
           Temp = 18;
           break;
         case 107405 ... 107793:
           Temp = 19;
-          break;                             
+          break;
         default:
           break;
       }
@@ -256,20 +257,20 @@ int rtdTemp(int buff) {
           break;
         case 109735 ... 110122:
           Temp = 25;
-          break;         
+          break;
         case 110123 ... 110509:
           Temp = 26;
-          break;     
+          break;
         case 110510 ... 110897:
           Temp = 27;
           break;
         case 110898 ... 111285:
           Temp = 28;
-          break;  
+          break;
         case 111286 ... 111672:
           Temp = 29;
           break;
-                              
+
         default:
           break;
       }
@@ -293,27 +294,26 @@ int rtdTemp(int buff) {
           break;
         case 113608 ... 113994:
           Temp = 35;
-          break;     
+          break;
         case 113995 ... 114381:
           Temp = 36;
           break;
         case 114382 ... 114767:
           Temp = 37;
-          break;  
+          break;
         case 114768 ... 115154:
           Temp = 38;
           break;
         case 115155 ... 115540:
           Temp = 39;
-          break;                             
+          break;
         default:
           break;
       }
-      break;    
+      break;
     default:
       Temp = 0;
       break;
   }
   return Temp;
-}  
-
+}
