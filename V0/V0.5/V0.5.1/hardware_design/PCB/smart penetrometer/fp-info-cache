@@ -1,4 +1,4 @@
-21693629640675163
+21707247048481326
 Audio_Module
 Reverb_BTDR-1H
 Digital Reverberation Unit, http://www.belton.co.kr/inc/downfile.php?seq=17&file=pdf (footprint from http://www.uk-electronic.de/PDF/BTDR-1.pdf)
@@ -90194,6 +90194,41 @@ varistor
 0
 2
 2
+footprint
+VTLA124_MCH
+
+MCP37211-200 
+0
+125
+125
+footprint
+Vishay_VOS615A
+package for Vishay VOS615A refective photo coupler/interrupter
+Vishay VOS615A refective photo coupler
+0
+4
+4
+footprints
+VTLA124_MCH
+
+MCP37211-200 
+0
+125
+125
+footprints
+Vishay_VOS615A
+package for Vishay VOS615A refective photo coupler/interrupter
+Vishay VOS615A refective photo coupler
+0
+4
+4
+kitest
+8 channel ADC
+
+MCP37211-200 
+0
+125
+125
 kitest
 10X2QFN
 
@@ -90258,6 +90293,20 @@ SD Module
 6
 6
 kitest
+Teensy4.1(BGA196C80P14X14)
+
+
+0
+196
+196
+kitest
+VTLA124_MCH
+
+MCP37211-200 
+0
+125
+125
+kitest
 battery_holder_10mm
 
 
@@ -90278,6 +90327,13 @@ grounded_switch
 0
 5
 3
+kitest
+octogon
+
+
+0
+0
+0
 kitest
 qrCode
 
