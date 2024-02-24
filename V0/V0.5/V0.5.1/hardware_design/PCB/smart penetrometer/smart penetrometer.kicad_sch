@@ -2540,7 +2540,7 @@
   )
 
   (symbol (lib_id "power:+BATT") (at 66.294 40.386 0) (unit 1)
-    (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
+    (in_bom yes) (on_board yes) (dnp no)
     (uuid 106aa186-add4-4050-8183-6af615383678)
     (property "Reference" "#PWR04" (at 66.294 44.196 0)
       (effects (font (size 1.27 1.27)) hide)
@@ -2554,7 +2554,7 @@
     (property "Datasheet" "" (at 66.294 40.386 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid fdeab6f9-1715-46ad-abd1-add769ade993))
+    (pin "1" (uuid 1528a996-7e33-46d0-ba82-f66788d400c1))
     (instances
       (project "smart penetrometer"
         (path "/4bd690aa-2164-4561-b480-04505132937c"

@@ -1,77 +1,47 @@
-/*
-Written by Malichi Flemming II
-*/
+// SimpleTx - the master or the transmitter
 #include <Wire.h>
 #include "RTClib.h"
 #include <SPI.h>
-#include "RF24.h"
-#include "nRF24L01.h"
-#include <SdFat.h>
+#include <nRF24L01.h>
+#include <RF24.h>
 #include <BMx280I2C.h>
 
-SdFat SD;
 RTC_DS3231 rtc;
 BMx280I2C bmx280(0x76);
-
-#define INTERVAL_MS_TRANSMISSION 250
-RF24 radio(6, 7);
-const byte address[6] = "00001";
-//NRF24L01 buffer limit is 32 bytes (max struct size)
-struct payload {
-  float data1;
-  byte data2;
-  byte data3;
-  float data4;
-  float data5;
-  byte data6;    
-};
-payload payload;
-
 int count = 0;
 float buffer = 0;
 int Temp = 0;
 int n = 1;
+int dcount = 0;
 int analogBufferIndex = 0, copyIndex = 0;
 float averageVoltage = 0, temperature = 25;
 String file = "";
 const char* name = "";
+bool dataCollected = false;
+float combData[6];
+const byte slaveAddress[5] = { 'R', 'x', 'A', 'A', 'A' };
+
+RF24 radio(6, 7);  // Create a Radio
+
+float dataToSend;
+char txNum = '0';
+
+unsigned long currentMillis;
+unsigned long prevMillis;
+unsigned long txIntervalMillis = 1000;  // send once per second
 
 void setup() {
+
   Serial.begin(115200);
   Wire.begin();
-  radio.begin();
-  delay(100);
   pinMode(A0, INPUT);
   pinMode(A1, INPUT);
+  Serial.println("SimpleTx Starting");
   if (!rtc.begin()) {
     Serial.println("RTC failed.");
     while (1)
       ;
   }
-  //rtc.adjust(DateTime(F(__DATE__), F(__TIME__))); //uncomment line, upload sketch, and run sketch to adjust time then comment line and upload sketch to set time.
-  
-  // if (!SD.begin(10)) {
-  //   Serial.println("Card failed, or not present");
-  //   while (1)
-  //     ;
-  // }
-
-  if (!radio.isChipConnected()) {
-  Serial.println("radio hardware is not responding!!");
-  while (1) {}  // hold in infinite loop
-  }
-  //Append ACK packet from the receiving radio back to the transmitting radio
-  radio.setAutoAck(false); //(true|false)
-  //Set the transmission datarate
-  radio.setDataRate(RF24_250KBPS); //(RF24_250KBPS|RF24_1MBPS|RF24_2MBPS)
-  //Greater level = more consumption = longer distance
-  radio.setPALevel(RF24_PA_MAX); //(RF24_PA_MIN|RF24_PA_LOW|RF24_PA_HIGH|RF24_PA_MAX)
-  //Default value is the maximum 32 bytes
-  radio.setPayloadSize(sizeof(payload));
-  //Act as transmitter
-  radio.openWritingPipe(address);
-  radio.stopListening();
-
   if (!bmx280.begin()) {
     Serial.println("BME failed.");
     while (1)
@@ -81,7 +51,30 @@ void setup() {
   bmx280.writeOversamplingPressure(BMx280MI::OSRS_P_x16);
   bmx280.writeOversamplingTemperature(BMx280MI::OSRS_T_x16);
   bmx280.writeOversamplingHumidity(BMx280MI::OSRS_H_x16);
+
+  radio.begin();
+  if (!radio.isChipConnected()) {
+    Serial.println("radio hardware is not responding!!");
+    while (1) {}  // hold in infinite loop
+  }
+  radio.setDataRate(RF24_250KBPS);
+  radio.setRetries(3, 5);  // delay, count
+  radio.openWritingPipe(slaveAddress);
 }
+
+//====================
+
+void loop() {
+  if (!dataCollected) {
+    collect();
+    dataToSend = combData[dcount];
+  } else {
+    send();
+    updateMessage();
+  }
+}
+
+//====================
 
 void nameFileByTime(String& file) {
   char daysOfTheWeek[7][12] = { "Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday" };
@@ -110,132 +103,6 @@ void gTemp(int& Temp) {
     count = 0;
     buffer = 0;
   }
-}
-
-void tdsFunc(float& condValue) {
-  const float VREF = 3.3;
-  const int SCOUNT = 30;
-  int analogBuffer[SCOUNT];
-  int analogBufferTemp[SCOUNT];
-  float tdsValue;
-  static unsigned long analogSampleTimepoint = millis();
-  if (millis() - analogSampleTimepoint > 40U) {
-    analogSampleTimepoint = millis();
-    analogBuffer[analogBufferIndex] = analogRead(A0);
-    analogBufferIndex++;
-    if (analogBufferIndex == SCOUNT)
-      analogBufferIndex = 0;
-  }
-  static unsigned long printTimepoint = millis();
-  if (millis() - printTimepoint > 800U) {
-    printTimepoint = millis();
-    for (copyIndex = 0; copyIndex < SCOUNT; copyIndex++)
-      analogBufferTemp[copyIndex] = analogBuffer[copyIndex];
-    averageVoltage = getMedianNum(analogBufferTemp, SCOUNT) * VREF / 1024.0;                                                                                                          // read the analog value more stable by the median filtering algorithm, and convert to voltage value
-    float compensationCoefficient = 1.0 + 0.02 * (temperature - 25.0);                                                                                                                //temperature compensation formula: fFinalResult(25^C) = fFinalResult(current)/(1.0+0.02*(fTP-25.0));
-    float compensationVoltage = averageVoltage / compensationCoefficient;                                                                                                             //temperature compensation
-    tdsValue = (133.42 * compensationVoltage * compensationVoltage * compensationVoltage - 255.86 * compensationVoltage * compensationVoltage + 857.39 * compensationVoltage) * 0.5;  //convert voltage value to tds value
-    condValue = .5135 * tdsValue / .670;
-  }
-}
-
-// void logData() {
-//   float condValue;
-//   bmx280.measure();
-//   while (!bmx280.hasValue())
-//     ;
-//   temperature = bmx280.getTemperature();
-//   tdsFunc(condValue);
-//   gTemp(Temp);
-//   File dataFile = SD.open(name, FILE_WRITE);
-//   if (dataFile) {
-//     unsigned long time = millis();
-//     dataFile.print(float(time) / 1000000000, 9);
-//     dataFile.print(" ");
-//     dataFile.print(bmx280.getTemperature(), 2);
-//     dataFile.print(" ");
-//     dataFile.print(Temp);
-//     dataFile.print(" ");
-//     dataFile.print(bmx280.getHumidity(), 2);
-//     dataFile.print(" ");
-//     dataFile.print(bmx280.getPressure64() / 100.0F, 2);
-//     dataFile.print(" ");
-//     dataFile.println(condValue, 3);
-//     dataFile.close();
-//   } else {
-//     Serial.println("error opening .txt file");
-//   }
-// }
-
-void transmitData() {
-  float condValue;
-  bmx280.measure();
-  while (!bmx280.hasValue())
-    ;
-  temperature = bmx280.getTemperature();
-  tdsFunc(condValue);
-  gTemp(Temp);
-  unsigned long time = millis();
-  payload.data1 = float(time) / 1000000000;
-  payload.data2 = bmx280.getTemperature();
-  payload.data3 = Temp;
-  payload.data4 = bmx280.getHumidity();
-  payload.data5 = bmx280.getPressure64() / 100.0F;
-  payload.data6 = condValue;
-
-  radio.write(&payload, sizeof(payload));
-
-  char buffer[870] = {'\0'};
-  // uint16_t used_chars = radio.sprintfPrettyDetails(buffer);
-  Serial.println(buffer);
-  // Serial.print(F("strlen = "));
-  // Serial.println(used_chars + 1); // +1 for c-strings' null terminating byte
-  Serial.print("Data1:");
-  Serial.println(payload.data1, 9);  
-  Serial.print("Data2:");
-  Serial.println(payload.data2);
-  Serial.print("Data3:");
-  Serial.println(payload.data3);
-  Serial.print("Data4:");
-  Serial.println(payload.data4);  
-  Serial.print("Data5:");
-  Serial.println(payload.data5), 2;
-  Serial.print("Data6:");
-  Serial.println(payload.data6);  
-
-  delay(INTERVAL_MS_TRANSMISSION);
-}
-
-void loop() {
-  if (n == 1) {
-    nameFileByTime(file);
-    name = file.c_str();
-    n = n + 1;
-  } else {
-  }
-  // logData();
-  transmitData();
-}
-
-int getMedianNum(int bArray[], int iFilterLen) {
-  int bTab[iFilterLen];
-  for (byte i = 0; i < iFilterLen; i++)
-    bTab[i] = bArray[i];
-  int i, j, bTemp;
-  for (j = 0; j < iFilterLen - 1; j++) {
-    for (i = 0; i < iFilterLen - j - 1; i++) {
-      if (bTab[i] > bTab[i + 1]) {
-        bTemp = bTab[i];
-        bTab[i] = bTab[i + 1];
-        bTab[i + 1] = bTemp;
-      }
-    }
-  }
-  if ((iFilterLen & 1) > 0)
-    bTemp = bTab[(iFilterLen - 1) / 2];
-  else
-    bTemp = (bTab[iFilterLen / 2] + bTab[iFilterLen / 2 - 1]) / 2;
-  return bTemp;
 }
 
 int rtdTemp(int buff) {
@@ -390,4 +257,105 @@ int rtdTemp(int buff) {
       break;
   }
   return Temp;
+}
+void tdsFunc(float& condValue) {
+  const float VREF = 3.3;
+  const int SCOUNT = 30;
+  int analogBuffer[SCOUNT];
+  int analogBufferTemp[SCOUNT];
+  float tdsValue;
+  static unsigned long analogSampleTimepoint = millis();
+  if (millis() - analogSampleTimepoint > 40U) {
+    analogSampleTimepoint = millis();
+    analogBuffer[analogBufferIndex] = analogRead(A0);
+    analogBufferIndex++;
+    if (analogBufferIndex == SCOUNT)
+      analogBufferIndex = 0;
+  }
+  static unsigned long printTimepoint = millis();
+  if (millis() - printTimepoint > 800U) {
+    printTimepoint = millis();
+    for (copyIndex = 0; copyIndex < SCOUNT; copyIndex++)
+      analogBufferTemp[copyIndex] = analogBuffer[copyIndex];
+    averageVoltage = getMedianNum(analogBufferTemp, SCOUNT) * VREF / 1024.0;                                                                                                          // read the analog value more stable by the median filtering algorithm, and convert to voltage value
+    float compensationCoefficient = 1.0 + 0.02 * (temperature - 25.0);                                                                                                                //temperature compensation formula: fFinalResult(25^C) = fFinalResult(current)/(1.0+0.02*(fTP-25.0));
+    float compensationVoltage = averageVoltage / compensationCoefficient;                                                                                                             //temperature compensation
+    tdsValue = (133.42 * compensationVoltage * compensationVoltage * compensationVoltage - 255.86 * compensationVoltage * compensationVoltage + 857.39 * compensationVoltage) * 0.5;  //convert voltage value to tds value
+    condValue = .5135 * tdsValue / .670;
+  }
+}
+
+int getMedianNum(int bArray[], int iFilterLen) {
+  int bTab[iFilterLen];
+  for (byte i = 0; i < iFilterLen; i++)
+    bTab[i] = bArray[i];
+  int i, j, bTemp;
+  for (j = 0; j < iFilterLen - 1; j++) {
+    for (i = 0; i < iFilterLen - j - 1; i++) {
+      if (bTab[i] > bTab[i + 1]) {
+        bTemp = bTab[i];
+        bTab[i] = bTab[i + 1];
+        bTab[i + 1] = bTemp;
+      }
+    }
+  }
+  if ((iFilterLen & 1) > 0)
+    bTemp = bTab[(iFilterLen - 1) / 2];
+  else
+    bTemp = (bTab[iFilterLen / 2] + bTab[iFilterLen / 2 - 1]) / 2;
+  return bTemp;
+}
+
+void collect() {
+  float condValue;
+  bmx280.measure();
+  while (!bmx280.hasValue())
+    ;
+  unsigned long time = millis();
+  combData[0] = float(time) / 1000000000;
+  combData[1] = bmx280.getTemperature();
+  gTemp(Temp);
+  combData[2] = Temp;
+  combData[3] = bmx280.getHumidity();
+  combData[4] = bmx280.getPressure64() / 100.0F;
+  tdsFunc(condValue);
+  combData[5] = condValue;
+  dataCollected = true;
+}
+
+void send() {
+  // currentMillis = millis();
+  // if (currentMillis - prevMillis >= txIntervalMillis) {
+
+  bool rslt;
+  rslt = radio.write(&dataToSend, sizeof(dataToSend));
+  // Always use sizeof() as it gives the size as the number of bytes.
+  // For example if dataToSend was an int sizeof() would correctly return 2
+
+  Serial.println(dataToSend, 9);
+
+  if (rslt) {
+    Serial.println("  Acknowledge received");
+
+  } else {
+  }
+  //     prevMillis = millis();
+  //   }
+  // Serial.println("seee");
+}
+
+//================
+
+void updateMessage() {
+  // so you can see that new data is being sent
+  dcount++;
+  dataToSend = combData[dcount];
+  if (dcount == 6) {
+    dcount = 0;
+    dataCollected = false;
+    Serial.println("Data Sent ");
+    delay(10000);
+  } else {
+    dcount = dcount;
+  }
 }
