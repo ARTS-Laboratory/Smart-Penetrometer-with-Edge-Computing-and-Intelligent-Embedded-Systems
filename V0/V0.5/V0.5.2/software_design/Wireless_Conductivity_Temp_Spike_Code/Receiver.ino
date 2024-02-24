@@ -1,4 +1,4 @@
-// SimpleRx - the slave or the receiver
+// SimpleRx - the transmitter or the receiver
 
 #include <SPI.h>
 #include <nRF24L01.h>
@@ -7,7 +7,7 @@
 #define CE_PIN   6
 #define CSN_PIN 7
 
-const byte thisSlaveAddress[5] = {'R','x','A','A','A'};
+const byte thisAddress[5] = {'R','x','A','A','A'};
 
 RF24 radio(CE_PIN, CSN_PIN);
 
@@ -23,7 +23,7 @@ void setup() {
     Serial.println("SimpleRx Starting");
     radio.begin();
     radio.setDataRate( RF24_250KBPS );
-    radio.openReadingPipe(1, thisSlaveAddress);
+    radio.openReadingPipe(1, thisAddress);
     radio.startListening();
 }
 
