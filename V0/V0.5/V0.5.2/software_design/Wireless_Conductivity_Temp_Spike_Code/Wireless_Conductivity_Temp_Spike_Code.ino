@@ -19,7 +19,7 @@ String file = "";
 const char* name = "";
 bool dataCollected = false;
 float combData[6];
-const byte slaveAddress[5] = { 'R', 'x', 'A', 'A', 'A' };
+const byte Address[5] = { 'R', 'x', 'A', 'A', 'A' };
 
 RF24 radio(6, 7);  // Create a Radio
 
@@ -59,7 +59,7 @@ void setup() {
   }
   radio.setDataRate(RF24_250KBPS);
   radio.setRetries(3, 5);  // delay, count
-  radio.openWritingPipe(slaveAddress);
+  radio.openWritingPipe(Address);
 }
 
 //====================

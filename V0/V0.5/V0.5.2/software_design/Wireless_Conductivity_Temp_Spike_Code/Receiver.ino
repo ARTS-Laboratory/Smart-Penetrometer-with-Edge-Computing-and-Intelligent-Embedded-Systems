@@ -1,4 +1,4 @@
-// SimpleRx - the transmitter or the receiver
+// SimpleRx - the receiver
 
 #include <SPI.h>
 #include <nRF24L01.h>
