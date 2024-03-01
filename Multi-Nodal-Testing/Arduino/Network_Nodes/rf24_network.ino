@@ -5,7 +5,7 @@
 
 RF24 radio(9, 10); // nRF24L01 (CE,CSN)
 RF24Network network(radio); // Include the radio in the network
-const uint16_t this_node = 02; // Address of this node in Octal format
+const uint16_t this_node = 04; // Address of this node in Octal format -- change this for each node 01, 02, ...etc.
 const uint16_t node00 = 00;
 unsigned long iteration = 0;
 
@@ -24,6 +24,10 @@ struct SensorData {
 SensorData data;
 
 File dataFile; // Declare the File object as a global variable
+
+// Declare pin for soil moisture sensor
+const int moistureSensorPin = A3;
+
 
 void setup() {
   Serial.begin(115200);
@@ -63,6 +67,7 @@ void setup() {
   }
 }
 
+
 void loop() {
   network.update();
   RF24NetworkHeader header(node00);
@@ -70,10 +75,10 @@ void loop() {
   Serial.print(F("Sending... "));
 
   data.time = millis();
-  data.temperature = random(0, 100) / 10.0;     // Random float value between 0 and 10
-  data.humidity = random(0, 100) / 10.0;        // Random float value between 0 and 10
-  data.conductivity = random(0, 100) / 10.0;    // Random float value between 0 and 10
-  data.battery_level = random(501);    // Random value between 0 and 500
+  data.temperature = 0.0;
+  data.humidity = 0.0;
+  data.conductivity = readMoistureSensorVoltage();
+  data.battery_level = 0.0;
   data.packetNumber = iteration;
 
   Serial.println();
@@ -88,6 +93,18 @@ void loop() {
   iteration++;
   delay(1000);
 }
+
+
+float readMoistureSensorVoltage() {
+  // uses 3300 and 1000 for 3 decimal pt percision...
+  //  use 33000 and 10000 for 4 pt, and so on
+  float sensorDigi = analogRead(moistureSensorPin);
+  sensorDigi = map(sensorDigi, 0, 1023, 0, 3300);
+  sensorDigi = sensorDigi / 1000;
+  
+  return sensorDigi;
+}
+
 
 void writeHeaderToFile() {
   dataFile.println("Time, Temperature, Humidity, Conductivity, Battery Level, Packet Number");
