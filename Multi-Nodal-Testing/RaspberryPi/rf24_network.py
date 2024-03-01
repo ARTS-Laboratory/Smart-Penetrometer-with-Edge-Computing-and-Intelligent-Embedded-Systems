@@ -17,10 +17,13 @@ network = RF24Network(radio)
 THIS_NODE = 0o0
 
 # Address of the other node
-OTHER_NODES = [0o1, 0o2, 0o3]
+OTHER_NODES = [0o1, 0o2, 0o3, 0o4, 0o5]
 
 # milliseconds - How long to wait before sending the next message
-INTERVAL = 0
+INTERVAL = 1000
+
+# milliseconds - How long to wait before skipping connection
+SKIP_INTERVAL = 5000
 
 # initialize the nRF24L01 on the spi bus
 if not radio.begin():
@@ -42,60 +45,58 @@ column_labels = ['Payload Length', 'From', 'To', 'ID', 'Time', 'Temperature', 'H
 
 
 try:
-    while True:
-        for NODE in OTHER_NODES:
-            network.update()
-            now = int(time.monotonic_ns() / 1000000)
+	while True:
+		for NODE in OTHER_NODES:
+			#time.sleep(0.5)
+			await_flag = True
+			START_TIME = int(time.monotonic_ns() / 1000000)
 
-            if now - LAST_SENT >= INTERVAL:     # Sending a payload to a node when its time
+			while (await_flag):
+				network.update()
+				# Receiving the payload from the node
+				while network.available():
+					#sitt += 1
+					header, payload = network.read()
+				    
+					if (header.from_node == NODE):
+						print("================================================")
+						print("payload length:", len(payload))
 
-                LAST_SENT = now
-                payload = struct.pack("<I", COMMAND)
-                ok = network.write(RF24NetworkHeader(NODE), payload)
-                print(f"Sending to {NODE} ...", ("ok" if ok else "failed"))
-
-                time.sleep(1)
-                radio.startListening()
-
-                                                # Receiving the payload from the node
-                while network.available():
-                    header, payload = network.read()
-                    print("================================================")
-                    print("payload length:", len(payload))
-
-                    from_node, to_node, id = header.from_node, header.to_node, header.id
-                    print('From:', from_node)
-                    print('To:', to_node)
-                    print("Id:", id)
+						from_node, to_node, id = header.from_node, header.to_node, header.id
+						print('From:', from_node)
+						print('To:', to_node)
+						print("Id:", id)
 
 
-                    recv_time, temperature, humidity, conductivity, battery_level, packetNumber = struct.unpack("<LfffHL", payload[:EXPECTED_SIZE])
-                    print("Time:", recv_time)
-                    print("Temperature:", temperature)
-                    print("Humidity:", humidity)
-                    print("Conductivity:", conductivity)
-                    print("Battery Level:", battery_level)
-                    print("Packet Number:", packetNumber)
+						recv_time, temperature, humidity, conductivity, battery_level, packetNumber = struct.unpack("<LfffHL", payload[:EXPECTED_SIZE])
+						print("Time:", recv_time)
+						print("Temperature:", temperature)
+						print("Humidity:", humidity)
+						print("Conductivity:", conductivity)
+						print("Battery Level:", battery_level)
+						print("Packet Number:", packetNumber)
+						
+						filename = f"data/data_{NODE}.csv"
+						current_time = time.strftime("%Y-%m-%d %H:%M:%S")
+						print("Current Time:", current_time)
 
-                    if(from_node == NODE):
-                        filename = f"data/data_{NODE}.csv"
-                        current_time = time.strftime("%Y-%m-%d %H:%M:%S")
-                        print("Current Time:", current_time)
+						# Open the file in 'append' mode and create a CSV writer
+						with open(filename, 'a', newline='') as file:
+						    writer = csv.writer(file)
+						    # writer.writerow(column_labels)
 
-                        # Open the file in 'append' mode and create a CSV writer
-                        with open(filename, 'a', newline='') as file:
-                            writer = csv.writer(file)
-                            # writer.writerow(column_labels)
-
-                            # Write the data to the CSV file
-                            writer.writerow([len(payload), from_node, to_node, id, recv_time, temperature, humidity, conductivity, battery_level, packetNumber,current_time])
-
-                        radio.stopListening()
-                        break
-
-        
-        
-
+						    # Write the data to the CSV file
+						    writer.writerow([len(payload), from_node, to_node, id, recv_time, temperature, humidity, conductivity, battery_level, packetNumber,current_time])
+						
+						await_flag = False
+					else:
+						print(f"AWAITING DATA FROM {NODE}...")
+						
+						now = int(time.monotonic_ns() / 1000000)
+						if (now - START_TIME >= SKIP_INTERVAL):
+							print(f"Node {NODE} is unreachable...")
+							await_flag = False
+	
 
 
 except KeyboardInterrupt:
