@@ -312,8 +312,9 @@ void collect() {
   while (!bmx280.hasValue())
     ;
   unsigned long time = millis();
+  temperature = bmx280.getTemperature();
   combData[0] = float(time) / 1000000000;
-  combData[1] = bmx280.getTemperature();
+  combData[1] = temperature;
   gTemp(Temp);
   combData[2] = Temp;
   combData[3] = bmx280.getHumidity();
