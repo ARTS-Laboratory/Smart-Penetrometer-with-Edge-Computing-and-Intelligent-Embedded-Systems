@@ -1,5 +1,5 @@
 # Smart Penetrometer with Edge Computing and Intelligent Embedded Systems (SPECIES) 
-### Design and develop UAV-deployabe smart sensor nodes in a network with edge computing and solar-charging capabilities for soil classification and fault detection.
+### Design and develop UAV-deployable smart sensor nodes in a network with edge computing and solar-charging capabilities for soil classification and fault detection.
 
             
 ```angular2html      
