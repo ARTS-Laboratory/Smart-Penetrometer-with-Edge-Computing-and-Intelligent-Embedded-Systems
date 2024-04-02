@@ -30,6 +30,7 @@ void setup() {
   Wire.begin();
   pinMode(A0, INPUT);
   pinMode(A1, INPUT);
+  analogReference(EXTERNAL);
   if (!rtc.begin()) { // Initalize RTC
     Serial.println("RTC failed.");
     while (1)
