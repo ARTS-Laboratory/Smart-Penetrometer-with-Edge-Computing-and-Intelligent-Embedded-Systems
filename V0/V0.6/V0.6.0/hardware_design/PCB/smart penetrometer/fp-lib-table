@@ -1,5 +1,0 @@
-(fp_lib_table
-  (version 7)
-  (lib (name "QFN")(type "KiCad")(uri "${KICAD7_FOOTPRINT_DIR}/QFN.pretty")(options "")(descr ""))
-  (lib (name "kitest")(type "KiCad")(uri "C:/kitest/kitest.pretty")(options "")(descr ""))
-)
