@@ -24,4 +24,10 @@
 3. Adds RTD sensor.
 ## [V0.5.1](https://github.com/ARTS-Laboratory/Smart-Penetrometer-with-Edge-Computing-and-Intelligent-Embedded-Systems/tree/main/V0/V0.5/V0.5.1)
 1. Fixes wireless communication and RTD issues.
+## [V0.6.0](https://github.com/ARTS-Laboratory/Smart-Penetrometer-with-Edge-Computing-and-Intelligent-Embedded-Systems/tree/main/V0/V0.6/V0.6.0)
+1. Corrected 3V3 voltage regulator.
+2. Added Op-Amp and clippear circuit for geophone.
+3. Added jumpers for switching between USB and battery power.
+4. Doubled amount of solar cells to six.
+5. Updated housing to include geophone and and ease wiring and assembly process.
 ## [Return to Main ReadMe](https://github.com/ARTS-Laboratory/Smart-Penetrometers-with-Edge-Computing-and-Intelligent-Embedded-Systems/blob/main/README.md)
