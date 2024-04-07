@@ -1,11 +1,11 @@
 # Smart Penetrometer with Edge Computing and Intelligent Embedded Systems (SPECIES) - Systems Development
+The SPECIES sensor package can be constructed in several versions, each named after a river with significant levee systems.
 
 
 
 
 
-
-## Version 0.1 - Mississippi
+## Version - Mississippi
 * A full-scale development system that uses full-size amplifiers, filters, and switches. 
 
 
@@ -17,7 +17,7 @@ The compact NMR system.
 </p>
 
 
-## Version 0.2 - Missouri
+## Version - Missouri
 * A full-scale development system that uses full-size amplifiers, filters, and switches. 
 
 <p align="center">
@@ -28,7 +28,7 @@ The compact NMR system.
 </p>
 
 
-## Version 0.3 - Ganges
+## Version - Ganges
 * A full-scale development system that uses full-size amplifiers, filters, and switches. 
 
 <p align="center">
@@ -39,7 +39,7 @@ The compact NMR system.
 </p>
 
 
-## Version 0.4 - Mekong
+## Version - Mekong
 * A full-scale development system that uses full-size amplifiers, filters, and switches. 
 
 <p align="center">
@@ -50,7 +50,7 @@ The compact NMR system.
 </p>
 
 
-## Version 0.5 - Po
+## Version - Po
 * A full-scale development system that uses full-size amplifiers, filters, and switches. 
 
 <p align="center">
