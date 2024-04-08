@@ -1,0 +1,4 @@
+(fp_lib_table
+  (version 7)
+  (lib (name "spike_PCB")(type "KiCad")(uri "${KIPRJMOD}/spike_PCB.pretty")(options "")(descr ""))
+)
