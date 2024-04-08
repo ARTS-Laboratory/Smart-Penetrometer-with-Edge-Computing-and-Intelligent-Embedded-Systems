@@ -3,6 +3,15 @@ The SPECIES sensor package can be constructed in several versions, each named af
 
 
 
+## Version - Columbia
+* A full-scale development system that uses full-size amplifiers, filters, and switches. 
+
+<p align="center">
+<img src="../media/NMR_system_v0.1.png" alt="drawing" width="400"/>
+</p>
+<p align="center">
+The compact NMR system.
+</p>
 
 
 ## Version - Mississippi
@@ -18,39 +27,6 @@ The compact NMR system.
 
 
 ## Version - Missouri
-* A full-scale development system that uses full-size amplifiers, filters, and switches. 
-
-<p align="center">
-<img src="../media/NMR_system_v0.1.png" alt="drawing" width="400"/>
-</p>
-<p align="center">
-The compact NMR system.
-</p>
-
-
-## Version - Ganges
-* A full-scale development system that uses full-size amplifiers, filters, and switches. 
-
-<p align="center">
-<img src="../media/NMR_system_v0.1.png" alt="drawing" width="400"/>
-</p>
-<p align="center">
-The compact NMR system.
-</p>
-
-
-## Version - Mekong
-* A full-scale development system that uses full-size amplifiers, filters, and switches. 
-
-<p align="center">
-<img src="../media/NMR_system_v0.1.png" alt="drawing" width="400"/>
-</p>
-<p align="center">
-The compact NMR system.
-</p>
-
-
-## Version - Po
 * A full-scale development system that uses full-size amplifiers, filters, and switches. 
 
 <p align="center">
