@@ -27,7 +27,7 @@ The SPECIES sensor package can be constructed in several versions, each named af
 * A geophone sensor with GPS that saves data directly to an SD card. 
 
 <p align="center">
-<img src="../media/Missouri.jpg" alt="drawing" width="400"/>
+<img src="../media/Missouri.jpg" alt="drawing" width="350"/>
 </p>
 <p align="center">
 </p>
