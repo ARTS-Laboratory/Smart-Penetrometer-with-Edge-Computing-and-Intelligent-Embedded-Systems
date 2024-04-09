@@ -3,7 +3,7 @@ Sensor node
 1. A sensor node that collects data, saves it to local memory, and sends it wirelessly to gateway station.
 1. Utilizes solar recharging..
 1. 4-layer PCB
-2. Incorporates goephone
+2. Incorporates geophone
 3. Six solar cells
 4. Improve waterproof seals
 
