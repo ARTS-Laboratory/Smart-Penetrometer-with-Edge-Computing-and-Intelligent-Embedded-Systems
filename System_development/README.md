@@ -13,7 +13,7 @@ The SPECIES sensor package can be constructed in several versions, each named af
 
 
 ## Version - Mississippi
-* A wireless version of the Columbia system with only the soil mositure sensing spiek.
+* A wireless version of the Columbia system with only the soil moisture sensing spiek.
 
 
 <p align="center">
