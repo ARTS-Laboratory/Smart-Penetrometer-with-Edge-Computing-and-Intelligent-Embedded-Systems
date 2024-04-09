@@ -2,37 +2,33 @@
 The SPECIES sensor package can be constructed in several versions, each named after a river with significant levee systems.
 
 
-
 ## Version - Columbia
 * A full-scale development system that uses full-size amplifiers, filters, and switches. 
 
 <p align="center">
-<img src="../media/NMR_system_v0.1.png" alt="drawing" width="400"/>
+<img src="./media/Columbia.jpg" alt="drawing" width="400"/>
 </p>
 <p align="center">
-The compact NMR system.
 </p>
 
 
 ## Version - Mississippi
-* A full-scale development system that uses full-size amplifiers, filters, and switches. 
+* A wireless version of the Columbia system with only the soil mositure sensing spiek.
 
 
 <p align="center">
-<img src="../media/NMR_system_v0.1.png" alt="drawing" width="400"/>
+<img src="./Mississippi.jpg" alt="drawing" width="400"/>
 </p>
 <p align="center">
-The compact NMR system.
 </p>
 
 
 ## Version - Missouri
-* A full-scale development system that uses full-size amplifiers, filters, and switches. 
+* A geophone sensor with GPS that saves data directly to an SD card. 
 
 <p align="center">
-<img src="../media/NMR_system_v0.1.png" alt="drawing" width="400"/>
+<img src="../media/missouri.JPG" alt="drawing" width="400"/>
 </p>
 <p align="center">
-The compact NMR system.
 </p>
 
