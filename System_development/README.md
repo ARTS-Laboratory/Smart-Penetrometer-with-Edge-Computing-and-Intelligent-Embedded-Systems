@@ -6,7 +6,7 @@ The SPECIES sensor package can be constructed in several versions, each named af
 * A full-scale development system that uses full-size amplifiers, filters, and switches. 
 
 <p align="center">
-<img src="./media/Columbia.jpg" alt="drawing" width="400"/>
+<img src="../media/Columbia.jpg" alt="drawing" width="400"/>
 </p>
 <p align="center">
 </p>
@@ -17,7 +17,7 @@ The SPECIES sensor package can be constructed in several versions, each named af
 
 
 <p align="center">
-<img src="./Mississippi.jpg" alt="drawing" width="400"/>
+<img src="../media/Mississippi.jpg" alt="drawing" width="400"/>
 </p>
 <p align="center">
 </p>
