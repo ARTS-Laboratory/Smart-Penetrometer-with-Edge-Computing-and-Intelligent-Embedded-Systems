@@ -2,7 +2,7 @@
 The SPECIES sensor package can be constructed in several versions, each named after a river with significant levee systems.
 
 
-## Version - Columbia
+## Columbia
 * The fully featured smart penetrometer with soil conductivity and temperature sensing in an intergraded spike, geophones for sensing ground movement, and  environmental condition monitoring. 
 
 <p align="center">
@@ -12,7 +12,7 @@ The SPECIES sensor package can be constructed in several versions, each named af
 </p>
 
 
-## Version - Mississippi
+## Mississippi
 * A wireless version of the Columbia system with only the soil moisture sensing spike.
 
 
@@ -23,7 +23,7 @@ The SPECIES sensor package can be constructed in several versions, each named af
 </p>
 
 
-## Version - Missouri
+## Missouri
 * A geophone sensor with GPS that saves data directly to an SD card. 
 
 <p align="center">
