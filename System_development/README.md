@@ -3,7 +3,7 @@ The SPECIES sensor package can be constructed in several versions, each named af
 
 
 ## Version - Columbia
-* A full-scale development system that uses full-size amplifiers, filters, and switches. 
+* The fully featured smart penetrometer with soil conductivity and temperature sensing in an intergraded spike, geophones for sensing ground movement, and  environmental condition monitoring. 
 
 <p align="center">
 <img src="../media/Columbia.jpg" alt="drawing" width="400"/>
