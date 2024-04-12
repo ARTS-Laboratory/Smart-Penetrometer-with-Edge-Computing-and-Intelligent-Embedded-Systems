@@ -25,7 +25,6 @@ Cite as:
 @Misc{FlemmingSmartPenetrometerEdge,  
   author       = {Malichi Flemming and Austin Downey},  
   howpublished = {GitHub},  
-  month        = apr,  
   title        = {Smart Penetrometer with Edge Computing and Intelligent Embedded Systems},  
   groups       = {ARTS-Lab},  
   url          = {https://github.com/ARTS-Laboratory/Smart-Penetrometers-with-Edge-Computing-and-Intelligent-Embedded-Systems},  
