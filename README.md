@@ -22,7 +22,7 @@ This work is licensed under a
 
 Cite as:
 
-@Misc{FlemmingSmartPenetrometerEdge,  
+@Misc{ARTSLabSmartPenetrometerEdge,  
   author       = {ARTS-Lab},  
   howpublished = {GitHub},  
   title        = {Smart Penetrometer with Edge Computing and Intelligent Embedded Systems},  
