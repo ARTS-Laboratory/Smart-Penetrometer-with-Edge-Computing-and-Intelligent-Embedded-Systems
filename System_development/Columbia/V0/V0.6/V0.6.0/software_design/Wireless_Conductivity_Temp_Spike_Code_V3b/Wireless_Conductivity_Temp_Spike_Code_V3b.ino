@@ -1,5 +1,7 @@
 /* Smart penetrometer code that collects data from a BME280 environmental sensor, a TDS sensor module, and a RTD sensor 
-and transmits the data wirelessly via a nrf24L01 module to a base station*/
+and transmits the data wirelessly via a nrf24L01 module to a base station
+Author: Malichi Flemming II
+*/
 
 // Libraries
 #include <Wire.h>

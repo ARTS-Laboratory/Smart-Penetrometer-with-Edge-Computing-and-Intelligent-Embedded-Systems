@@ -1,4 +1,5 @@
-// SimpleRx - the receiver
+//Receiver - Smart Penetrometer receiver
+//Author: Malichi Flemming II
 
 #include <SPI.h>
 #include <nRF24L01.h>
