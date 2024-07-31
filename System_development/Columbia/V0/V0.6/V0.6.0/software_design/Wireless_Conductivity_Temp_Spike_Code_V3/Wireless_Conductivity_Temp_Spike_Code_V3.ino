@@ -7,6 +7,7 @@ and transmits the data wirelessly via a nrf24L01 module to a base station*/
 #include <nRF24L01.h>
 #include <RF24.h>
 #include <BMx280I2C.h>
+#include "printf.h"
 
 // Instantiated objects
 RTC_DS3231 rtc;          // Create RTC object named rtc
@@ -23,8 +24,12 @@ float combData[7];
 float dataToSend;
 float averageVoltage = 0, temperature = 25;
 bool dataCollected = false;
-const byte Address[][6] = { "node01", "node09", "node03", "node04", "node05", "node07"};
-
+uint64_t Address[6] = { 0x7878787878LL,
+                        0xB3B4B5B6F1LL,
+                        0xB3B4B5B6CDLL,
+                        0xB3B4B5B6A3LL,
+                        0xB3B4B5B60FLL,
+                        0xB3B4B5B605LL };
 void setup() {
   // CLKPR = (1 << CLKPCE);
   // CLKPR = (1 << CLKPS0);
@@ -55,8 +60,11 @@ void setup() {
   }
   radio.setDataRate(RF24_250KBPS);
   radio.setPALevel(RF24_PA_MIN);
+  radio.setChannel(90);
   radio.setRetries(3, 5);  // delay, count
-  radio.openWritingPipe(Address[5]); //choose address from 0 to 6
+  radio.openWritingPipe(Address[5]); //choose address from 0 to 5
+  printf_begin(); 
+  radio.printPrettyDetails();   
 }
 
 void loop() {  // if the data Collected variable is false, the collect() function is called. When dataCollected is true, data is sent until the updateMessage() function sets dataCollected back to false
@@ -92,7 +100,8 @@ void tdsFunc(float& condValue) {  // reads TDS sensor module data, stores 30 sam
   int analogBuffer[SCOUNT];
   int analogBufferTemp[SCOUNT];
   float tdsValue;
-  averageVoltage = analogRead(A0) * 3.287 / 1024.0;  // read the analog value more stable by the median filtering algorithm, and convert to voltage value
+  // averageVoltage = analogRead(A0) * 3.287 / 1024.0;  // read the analog value more stable by the median filtering algorithm, and convert to voltage value
+  averageVoltage = analogRead(A0) * 3.6 / 1024.0;  // read the analog value more stable by the median filtering algorithm, and convert to voltage value
   // Serial.println(averageVoltage);
   float compensationCoefficient = 1.0 + 0.02 * (temperature - 25.0);                                                                                                                //temperature compensation formula: fFinalResult(25^C) = fFinalResult(current)/(1.0+0.02*(fTP-25.0));
   float compensationVoltage = averageVoltage / compensationCoefficient;                                                                                                             //temperature compensation
@@ -102,7 +111,7 @@ void tdsFunc(float& condValue) {  // reads TDS sensor module data, stores 30 sam
 
 void collect() {  // collects final data values and stores data in array
   Serial.print("  ");
-  Serial.print(combData[0] = 7); // choose node from 1,3,4,5,7,9
+  Serial.print(combData[0] = 6); // choose node from 1,2,3,4,5,6
   Serial.print("  ");
   float condValue;
   bmx280.measure();

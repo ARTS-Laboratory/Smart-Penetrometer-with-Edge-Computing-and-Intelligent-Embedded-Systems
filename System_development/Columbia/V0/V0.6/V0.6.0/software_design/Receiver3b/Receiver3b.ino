@@ -3,17 +3,21 @@
 #include <SPI.h>
 #include <nRF24L01.h>
 #include <RF24.h>
+#include "printf.h"
 
 #define CE_PIN 6
 #define CSN_PIN 7
 
-const byte thisAddress[][6] = { "node02", "node04", "node06", "node08", "node10", "node12"};
+const byte thisAddress[4][6] = { "7node", "8node", "9node", "Tnode" };
 RF24 radio(CE_PIN, CSN_PIN);
 
 int i = 0;
 float dataReceived;  // this must match dataToSend in the TX
 bool newData = false;
 float combData[7];
+uint8_t pipeNum;      
+uint8_t oldPipeNum;
+
 //===========
 
 void setup() {
@@ -27,13 +31,16 @@ void setup() {
     while (1) {}
   }
   radio.setDataRate(RF24_250KBPS);
+  radio.setChannel(110);
   radio.openReadingPipe(0, thisAddress[0]);
   radio.openReadingPipe(1, thisAddress[1]);
   radio.openReadingPipe(2, thisAddress[2]); 
   radio.openReadingPipe(3, thisAddress[3]);
-  radio.openReadingPipe(4, thisAddress[4]);
-  radio.openReadingPipe(5, thisAddress[5]);    
+  // radio.openReadingPipe(4, thisAddress[4]);
+  // radio.openReadingPipe(5, thisAddress[5]);    
   radio.startListening();
+  // printf_begin(); 
+  // radio.printPrettyDetails();
 }
 
 //=============
@@ -45,11 +52,15 @@ void loop() {
 
 //==============
 
-void getData() {
-  if (radio.available()) {
+void getData() {      
+  if (radio.available(&pipeNum)) {
     radio.read(&dataReceived, sizeof(dataReceived));
+    if (pipeNum != oldPipeNum) {
+      i = 0;
+    }
     newData = true;
   }
+  oldPipeNum = pipeNum;
 }
 
 void showData() {

@@ -23,7 +23,7 @@ float combData[7];
 float dataToSend;
 float averageVoltage = 0, temperature = 25;
 bool dataCollected = false;
-const byte Address[][6] =  
+const byte Address[4][6] = { "7node", "8node", "9node","Tnode" }; 
 void setup() {
   // CLKPR = (1 << CLKPCE);
   // CLKPR = (1 << CLKPS0);
@@ -54,8 +54,9 @@ void setup() {
   }
   radio.setDataRate(RF24_250KBPS);
   radio.setPALevel(RF24_PA_MIN);
+  radio.setChannel(110);
   radio.setRetries(3, 5);  // delay, count
-  radio.openWritingPipe(Address[5]); // chooes address from 0 to 6
+  radio.openWritingPipe(Address[2]); // chooes address from 0 to 5
   }
 
 void loop() {  // if the data Collected variable is false, the collect() function is called. When dataCollected is true, data is sent until the updateMessage() function sets dataCollected back to false
@@ -91,7 +92,8 @@ void tdsFunc(float& condValue) {  // reads TDS sensor module data, stores 30 sam
   int analogBuffer[SCOUNT];
   int analogBufferTemp[SCOUNT];
   float tdsValue;
-  averageVoltage = analogRead(A0) * 3.287 / 1024.0;  // read the analog value more stable by the median filtering algorithm, and convert to voltage value
+  averageVoltage = analogRead(A0) * 3.657 / 1024.0;  // read the analog value more stable by the median filtering algorithm, and convert to voltage value
+  // averageVoltage = analogRead(A0) * 3.287 / 1024.0;  // read the analog value more stable by the median filtering algorithm, and convert to voltage value
   // Serial.println(averageVoltage);
   float compensationCoefficient = 1.0 + 0.02 * (temperature - 25.0);                                                                                                                //temperature compensation formula: fFinalResult(25^C) = fFinalResult(current)/(1.0+0.02*(fTP-25.0));
   float compensationVoltage = averageVoltage / compensationCoefficient;                                                                                                             //temperature compensation
@@ -100,7 +102,7 @@ void tdsFunc(float& condValue) {  // reads TDS sensor module data, stores 30 sam
 }
 
 void collect() {  // collects final data values and stores data in array
-  combData[0] = 10; // choose from node 2,4,6,8,10
+  combData[0] = 9; // choose from node 7,8,9
   Serial.print("  ");
   float condValue;
   bmx280.measure();
