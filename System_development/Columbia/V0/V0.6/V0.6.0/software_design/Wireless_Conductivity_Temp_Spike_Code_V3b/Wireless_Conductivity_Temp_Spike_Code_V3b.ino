@@ -94,13 +94,13 @@ void tdsFunc(float& condValue) {  // reads TDS sensor module data, stores 30 sam
   int analogBuffer[SCOUNT];
   int analogBufferTemp[SCOUNT];
   float tdsValue;
-  averageVoltage = analogRead(A0) * 3.657 / 1024.0;  // read the analog value more stable by the median filtering algorithm, and convert to voltage value
-  // averageVoltage = analogRead(A0) * 3.287 / 1024.0;  // read the analog value more stable by the median filtering algorithm, and convert to voltage value
+  // averageVoltage = analogRead(A0) * 3.657 / 1024.0;  // read the analog value more stable by the median filtering algorithm, and convert to voltage value
+  averageVoltage = analogRead(A0) * 3.287 / 1024.0;  // read the analog value more stable by the median filtering algorithm, and convert to voltage value
   // Serial.println(averageVoltage);
   float compensationCoefficient = 1.0 + 0.02 * (temperature - 25.0);                                                                                                                //temperature compensation formula: fFinalResult(25^C) = fFinalResult(current)/(1.0+0.02*(fTP-25.0));
   float compensationVoltage = averageVoltage / compensationCoefficient;                                                                                                             //temperature compensation
   tdsValue = (133.42 * compensationVoltage * compensationVoltage * compensationVoltage - 255.86 * compensationVoltage * compensationVoltage + 857.39 * compensationVoltage) * 0.5;  //convert voltage value to tds value
-  condValue = tdsValue;
+  condValue = averageVoltage;
 }
 
 void collect() {  // collects final data values and stores data in array

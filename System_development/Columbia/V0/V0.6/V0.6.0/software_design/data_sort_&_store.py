@@ -24,7 +24,7 @@ def read_data(x):
     return data
 
 def store_data(node, value):
-    if (node >= 1 or node <= 9): 
+    if (node >= 1 and node <= 9): 
         chunks = value.split(',')
         print(chunks) # printing the value
         with open('SensorData/' + datestring + f'/node{node}.csv', 'a', newline='') as file:

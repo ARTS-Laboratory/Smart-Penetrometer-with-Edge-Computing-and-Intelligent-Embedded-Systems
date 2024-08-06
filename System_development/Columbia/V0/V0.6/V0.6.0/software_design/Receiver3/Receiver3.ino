@@ -90,7 +90,7 @@ void showData() {
       Serial.print(",  ");
       Serial.print(combData[5]);
       Serial.print(",   ");
-      Serial.println(combData[6]);
+      Serial.println(combData[6], 4);
       i = 0;
     }
   }
