@@ -1,21 +1,18 @@
 # Columbia 
 
-
+<!-- This is a single-line comment and won't appear in the rendered README 
 ```angular2html      
 📄 README.md
-
 📄 image.PNG
-```
-<p align="center">
-<img src="image.PNG" alt="drawing" width="910"/>
-</p>
+```-->
+
 <p align="center">
 </p>
 <p align="center">
-<img src="https://user-images.githubusercontent.com/87868879/166610946-1d7f9edc-2c42-431b-8995-1c52ac2c5b0f.png"/>
+<img src="https://user-images.githubusercontent.com/87868879/166610946-1d7f9edc-2c42-431b-8995-1c52ac2c5b0f.png" alt="image" width="500"/>
 </p>
 <p align="center">
-<img src="https://github.com/ARTS-Laboratory/Smart-Penetrometer-with-Edge-Computing-and-Intelligent-Embedded-Systems/assets/87868879/c0358ba6-607f-4f89-94c0-40613c4a618a" alt="drawing" width="910"/>
+<img src="https://github.com/ARTS-Laboratory/Smart-Penetrometer-with-Edge-Computing-and-Intelligent-Embedded-Systems/assets/87868879/c0358ba6-607f-4f89-94c0-40613c4a618a" alt="image" width="500"/>
 </p>
 
 ## [V0](V0)
