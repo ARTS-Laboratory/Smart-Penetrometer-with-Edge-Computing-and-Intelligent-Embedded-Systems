@@ -8,7 +8,7 @@ Sensor node
 4. Improve waterproof seals
 
 <p align="center">
-<img src="https://github.com/user-attachments/assets/f60e092a-56cc-4d42-abb4-71a7e73cc723" alt="drawing" width="400"/>
+<img src="https://github.com/user-attachments/assets/f60e092a-56cc-4d42-abb4-71a7e73cc723" alt="image" width="300"/>
 </p>
 
 ## [Return to V0.6](https://github.com/ARTS-Laboratory/Smart-Penetrometer-with-Edge-Computing-and-Intelligent-Embedded-Systems/blob/main/V0/V0.6)
