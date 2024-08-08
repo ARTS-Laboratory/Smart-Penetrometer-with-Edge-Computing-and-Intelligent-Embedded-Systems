@@ -7,13 +7,13 @@
 
 ### 1. Solar Cap
 <p align="center">
-<img src="https://github.com/user-attachments/assets/4c7e8d71-9169-4499-b002-ac03acf8a672" alt="drawing" width="450"/>
+<img src="https://github.com/user-attachments/assets/4c7e8d71-9169-4499-b002-ac03acf8a672" alt="image" width="400"/>
 </p>
 
 ### 2. Housing1
 <p align="center">
-<img src="https://github.com/user-attachments/assets/8a64f9e2-980d-4cba-bc0a-49cdd6cb79da" width="300"/>
-</p>
+<img src="https://github.com/user-attachments/assets/8a64f9e2-980d-4cba-bc0a-49cdd6cb79da" alt="image" width="1000"/>
+</p> 
 
 ### 3. Housing2
 <p align="center">
