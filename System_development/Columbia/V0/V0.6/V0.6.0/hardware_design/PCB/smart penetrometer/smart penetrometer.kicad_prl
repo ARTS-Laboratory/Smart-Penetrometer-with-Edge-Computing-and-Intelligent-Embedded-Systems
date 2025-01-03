@@ -64,8 +64,14 @@
       35,
       36
     ],
-    "visible_layers": "ffcff30_ffffffff",
+    "visible_layers": "ffcff20_fffffffd",
     "zone_display_mode": 1
+  },
+  "git": {
+    "repo_password": "",
+    "repo_type": "",
+    "repo_username": "",
+    "ssh_key": ""
   },
   "meta": {
     "filename": "smart penetrometer.kicad_prl",
