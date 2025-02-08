@@ -1,4 +1,5 @@
-// SimpleRx - the receiver
+//Created on Sat Feb 8 01:15:07 2025
+//@author: Malichi Flemming II 
 
 #include <SPI.h>
 #include <nRF24L01.h>

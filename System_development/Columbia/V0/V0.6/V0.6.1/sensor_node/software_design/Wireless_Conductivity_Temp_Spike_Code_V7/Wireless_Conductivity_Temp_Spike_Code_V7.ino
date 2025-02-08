@@ -1,3 +1,6 @@
+//Created on Sat Feb 8 01:15:07 2025
+//@author: Malichi Flemming II 
+
 // Libraries
 #include <Wire.h>
 #include "RTClib.h"
