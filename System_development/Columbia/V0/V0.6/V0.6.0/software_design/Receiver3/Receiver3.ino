@@ -23,6 +23,9 @@ bool newData = false;
 float combData[7];
 uint8_t pipeNum;      
 uint8_t oldPipeNum;
+long start = 0;
+long finish = 0;
+
 
 //===========
 
@@ -37,6 +40,7 @@ void setup() {
     while (1) {}
   }
   radio.setDataRate(RF24_250KBPS);
+  radio.setPALevel(RF24_PA_MIN);
   radio.setChannel(90);
   radio.openReadingPipe(0, thisAddress[0]);
   radio.openReadingPipe(1, thisAddress[1]);
@@ -71,12 +75,19 @@ void getData() {
 
 void showData() {
   if (newData == true) {
+    if (i == 1) {
+      start = millis();
+    }
+    if (i == 7) {
+      finish = millis();
+    }    
     combData[i] = dataReceived;
     // Serial.print("Data received ");
     // Serial.println(dataReceived, 9);
     newData = false;
     i += 1;
-    if (i == 7) {
+    if (i == 7 && finish - start < 1000) {
+      // Serial.println(finish - start);
       Serial.print("  ");      
       Serial.print(int(combData[0]));
       Serial.print(",  ");
@@ -93,5 +104,17 @@ void showData() {
       Serial.println(combData[6], 4);
       i = 0;
     }
-  }
+    if (i == 7 && finish - start > 1000) {
+      autocorrect();
+    }
+  }  
+}
+
+void autocorrect() {
+  for (int j=0; j=5; j++) {
+    if (radio.available(&pipeNum)) {
+      radio.read(&dataReceived, sizeof(dataReceived));
+    }
+  }  
+  Serial.println("autocorrecting");
 }

@@ -21,7 +21,7 @@ RF24 radio(6, 7);        // Create nRF24L01 object named radio
 int count = 0;
 int Temp = 0;
 int dcount = 0;
-int analogBufferIndex = 0, copyIndex = 0;
+// int analogBufferIndex = 0, copyIndex = 0;
 float buffer = 0;
 float combData[7];
 float dataToSend;
@@ -65,7 +65,7 @@ void setup() {
   radio.setPALevel(RF24_PA_MIN);
   radio.setChannel(90);
   radio.setRetries(3, 5);  // delay, count
-  radio.openWritingPipe(Address[5]); //choose address from 0 to 5
+  radio.openWritingPipe(Address[0]); //choose address from 0 to 5
   printf_begin(); 
   radio.printPrettyDetails();   
 }
@@ -88,7 +88,7 @@ void gTemp(int& Temp) {  // reads RTD sensor data, converts to voltage, stores 1
   float neW = (sensorValue * 4.72 / 1024) + 0.02;
   float r1 = (10000 * (4.72 - neW)) / neW;
   buffer = buffer + r1;
-  if (count == 10) {
+  if (count == 1) {
     buffer = buffer / count;
     buffer = round(buffer * 100);
     int buff = buffer;
@@ -99,22 +99,22 @@ void gTemp(int& Temp) {  // reads RTD sensor data, converts to voltage, stores 1
 }
 
 void tdsFunc(float& condValue) {  // reads TDS sensor module data, stores 30 samples in a buffer, sends samples to getMedianNum() to calculate medium, converts to TDS value, and converts to approximate EC value
-  const int SCOUNT = 30;
-  int analogBuffer[SCOUNT];
-  int analogBufferTemp[SCOUNT];
-  float tdsValue;
+  // const int SCOUNT = 30;
+  // int analogBuffer[SCOUNT];
+  // int analogBufferTemp[SCOUNT];
+  // float tdsValue;
   averageVoltage = analogRead(A0) * 3.287 / 1024.0;  // read the analog value more stable by the median filtering algorithm, and convert to voltage value
   // averageVoltage = analogRead(A0) * 3.6 / 1024.0;  // read the analog value more stable by the median filtering algorithm, and convert to voltage value
   // Serial.println(averageVoltage);
-  float compensationCoefficient = 1.0 + 0.02 * (temperature - 25.0);                                                                                                                //temperature compensation formula: fFinalResult(25^C) = fFinalResult(current)/(1.0+0.02*(fTP-25.0));
-  float compensationVoltage = averageVoltage / compensationCoefficient;                                                                                                             //temperature compensation
-  tdsValue = (133.42 * compensationVoltage * compensationVoltage * compensationVoltage - 255.86 * compensationVoltage * compensationVoltage + 857.39 * compensationVoltage) * 0.5;  //convert voltage value to tds value
+  // float compensationCoefficient = 1.0 + 0.02 * (temperature - 25.0);                                                                                                                //temperature compensation formula: fFinalResult(25^C) = fFinalResult(current)/(1.0+0.02*(fTP-25.0));
+  // float compensationVoltage = averageVoltage / compensationCoefficient;                                                                                                             //temperature compensation
+  // tdsValue = (133.42 * compensationVoltage * compensationVoltage * compensationVoltage - 255.86 * compensationVoltage * compensationVoltage + 857.39 * compensationVoltage) * 0.5;  //convert voltage value to tds value
   condValue = averageVoltage;
 }
 
 void collect() {  // collects final data values and stores data in array
   Serial.print("  ");
-  Serial.print(combData[0] = 6); // choose node from 1,2,3,4,5,6
+  Serial.print(combData[0] = 1); // choose node from 1,2,3,4,5,6
   Serial.print("  ");
   float condValue;
   bmx280.measure();
