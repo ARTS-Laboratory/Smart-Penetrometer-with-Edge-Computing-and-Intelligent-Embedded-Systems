@@ -1,5 +1,5 @@
 //Created on Sat Feb 8 01:15:07 2025
-//@author: Malichi Flemming II 
+//@author: Malichi Flemming II
 
 // Libraries
 #include <Wire.h>
@@ -18,8 +18,7 @@ RF24 radio(6, 7);        // Create nRF24L01 object named radio
 Adafruit_ADS1115 ads;    //Creating an ADS1115 object named ADS1118
 bool stat = true;
 bool role = false;  // true = TX role, false = RX role
-floa
-t volt = 3.3;
+float volt = 3.3;
 float buffer = 0;
 int count = 0;
 float Temp = 0;
@@ -68,7 +67,7 @@ void setup() {
   radio.enableAckPayload();
   radio.enableDynamicPayloads();
   radio.stopListening();              // delay, count
-  radio.openWritingPipe(Address[5]);  //choose address from 0 to 5
+  radio.openWritingPipe(Address[3]);  //choose address from 0 to 5
   radio.setRetries(15, 15);
   // printf_begin();
   // radio.printPrettyDetails();
@@ -77,7 +76,7 @@ void setup() {
 void loop() {
   if (currTime - prevTime >= 10000) {
     volt = ads.computeVolts(ads.readADC_SingleEnded(2));
-    combData[0] = 6;  // choose node from 1,2,3,4,5,6
+    combData[0] = 4;  // choose node from 1,2,3,4,5,6
     float condValue;
     bmx280.measure();
     while (!bmx280.hasValue())
@@ -101,14 +100,16 @@ void loop() {
         radio.read(rec, sizeof(int));
         Serial.print("received ack payload is : ");
         Serial.println(rec[0]);
-      } else {
-        while (radio.isAckPayloadAvailable()) {
-          radio.write(&combData[i], sizeof(combData[i]));
-          Serial.println(combData[i], 9);
-          Serial.println("...tx success");
-        }
-        radio.read(rec, sizeof(int));
-      }
+      } //else {
+      //   while (!radio.isAckPayloadAvailable()) {
+      //     radio.write(&combData[i], sizeof(combData[i]));
+      //     Serial.println(combData[i], 9);
+      //     // Serial.println("...tx success");
+      //   }
+      //   radio.read(rec, sizeof(int));
+      //   Serial.print("received ack payload is : ");
+      //   Serial.println(rec[0]);
+      // }
     }
     Serial.println("Data Sent!");
     prevTime = millis();
@@ -162,7 +163,7 @@ float rtdTemp(float buff) {  // LUT that converts RTD resistance values to tempe
           break;
       }
       break;
-    case 100001 ... 103902:      
+    case 100001 ... 103902:
       switch (int(buff)) {
         case 100001 ... 100390:
           Temp = interpolate(buff, 100001, 0.01, 100390, 1);
@@ -187,7 +188,7 @@ float rtdTemp(float buff) {  // LUT that converts RTD resistance values to tempe
           break;
         case 102733 ... 103122:
           Temp = interpolate(buff, 102733, 7.01, 103122, 8);
-          break; 
+          break;
         case 103123 ... 103512:
           Temp = interpolate(buff, 103123, 8.01, 103512, 9);
           break;
