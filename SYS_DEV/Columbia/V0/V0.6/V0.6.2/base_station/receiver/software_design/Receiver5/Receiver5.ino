@@ -1,5 +1,4 @@
-//Created on Sat Feb 8 01:15:07 2025
-//@author: Malichi Flemming II 
+// SimpleRx - the receiver
 
 #include <SPI.h>
 #include <nRF24L01.h>
@@ -9,10 +8,10 @@
 #define CE_PIN 6
 #define CSN_PIN 7
 
-const byte thisAddress[6][6] = { "1node", "2node", "3node","4node", "5node", "6node" };
+const byte thisAddress[6][6] = { "1node", "1node", "3node","4node", "5node", "6node" };
 
 RF24 radio(CE_PIN, CSN_PIN);
-
+int Reset = 4;
 int rec[1] = { 2 };
 int i = 0;
 float dataReceived;  // this must match dataToSend in the TX
@@ -24,7 +23,9 @@ float combData[7];
 void setup() {
 
   Serial.begin(115200);
-  delay(100);
+  digitalWrite(Reset, HIGH);
+  delay(200); 
+  pinMode(Reset, OUTPUT);
   // Serial.println("Node |      Time    | aTemp | gTemp |  Hum  |  Press  |  Cond  |");
   radio.begin();
   if (!radio.isChipConnected()) {
@@ -32,7 +33,7 @@ void setup() {
     while (1) {}
   }
   radio.setDataRate(RF24_250KBPS);
-  radio.setPALevel(RF24_PA_MIN);
+  radio.setPALevel(RF24_PA_MAX);
   radio.setChannel(90);
   radio.setAutoAck(true);  
   radio.enableAckPayload();  
@@ -73,6 +74,9 @@ void showData() {
     newData = false;
     i += 1;
     if (i == 7) {
+      if (combData[0] != 1.0 and combData[0] != 2.0 and combData[0] != 3.0 and combData[0] != 4.0 and combData[0] != 5.0) {
+        resetReceiver();
+      }
       Serial.print("  ");      
       Serial.print(int(combData[0]));
       Serial.print(",  ");
@@ -86,8 +90,14 @@ void showData() {
       Serial.print(",  ");
       Serial.print(combData[5]);
       Serial.print(",   ");
-      Serial.println(combData[6],7);
+      Serial.println(combData[6]);
       i = 0;
     }
   }
+}
+
+void resetReceiver() {
+  Serial.println("Reset");
+  delay(100);
+  digitalWrite(Reset, LOW);
 }
