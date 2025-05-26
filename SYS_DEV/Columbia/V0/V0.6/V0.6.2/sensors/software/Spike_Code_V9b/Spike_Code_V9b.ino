@@ -1,10 +1,11 @@
 //Created on Sat Feb 8 01:15:07 2025
-//@author: Malichi Flemming II 
+//@author: Malichi Flemming II
 
 // Libraries
 #include <Wire.h>
 #include "RTClib.h"
 #include <SPI.h>
+#include <SD.h>
 #include <nRF24L01.h>
 #include <RF24.h>
 #include <BMx280I2C.h>
@@ -12,20 +13,22 @@
 #include <Adafruit_ADS1X15.h>
 
 // Instantiated objects
+// SdFat SD;
+RTC_DS3231 rtc;
 BMx280I2C bmx280(0x76);  // Create BME280 object named bmx280
 RF24 radio(6, 7);        // Create nRF24L01 object named radio
 Adafruit_ADS1115 ads;    //Creating an ADS1115 object named ADS1118
-bool stat = true;
-bool role = false;  // true = TX role, false = RX role
+
+// Variables
+String file = "";
+const char* name = "";
 float volt = 3.3;
-float buffer = 0;
-int count = 0;
 float Temp = 0;
 long currTime = 10001;
 long prevTime = 0;
 float combData[7] = { 0 };
 int rec[1] = { 5 };
-const byte Address[6][6] = { "7node", "8node", "9node", "10node", "11node", "12node" };
+const byte Address[6][6] = { "7node", "8node", "9node", "Anode", "Bnode", "Cnode" };
 float interpolate(float x, float x0, float y0, float x1, float y1) {
   return y0 + (y1 - y0) * ((x - x0) / (x1 - x0));
 }
@@ -33,10 +36,15 @@ float interpolate(float x, float x0, float y0, float x1, float y1) {
 void setup() {
   Serial.begin(115200);
   Wire.begin();
-  pinMode(A0, INPUT);
-  pinMode(A1, INPUT);
-  analogReference(EXTERNAL);
-  // Serial.println("radio ");
+  // analogReference(EXTERNAL);
+
+  if (!rtc.begin()) {
+    Serial.println("RTC failed.");
+    while (1)
+      ;
+  }
+  rtc.adjust(DateTime(F(__DATE__), F(__TIME__)));  //uncomment line, upload sketch, and run sketch to adjust time then comment line and upload sketch to set time.
+
   if (!ads.begin()) {  // Initalize ADS1115
     Serial.println("Failed to initialize ADS.");
     while (1)
@@ -53,6 +61,11 @@ void setup() {
   bmx280.writeOversamplingTemperature(BMx280MI::OSRS_T_x16);
   bmx280.writeOversamplingHumidity(BMx280MI::OSRS_H_x16);
 
+  if (!SD.begin(10)) {
+    Serial.println("Card failed, or not present");
+    while (1);
+  }  
+
   radio.begin();  // Initalize nrf24L01
   while (!radio.isChipConnected()) {
     Serial.println("radio hardware is not responding!!");
@@ -66,7 +79,7 @@ void setup() {
   radio.enableAckPayload();
   radio.enableDynamicPayloads();
   radio.stopListening();              // delay, count
-  radio.openWritingPipe(Address[0]);  //choose address from 0 to 5
+  radio.openWritingPipe(Address[4]);  //choose address from 0 to 5
   radio.setRetries(15, 15);
   // printf_begin();
   // radio.printPrettyDetails();
@@ -75,7 +88,7 @@ void setup() {
 void loop() {
   if (currTime - prevTime >= 10000) {
     volt = ads.computeVolts(ads.readADC_SingleEnded(2));
-    combData[0] = 7;  // choose node from 1,2,3,4,5,6
+    combData[0] = 5;  // choose node from 1,2,3,4,5,6
     float condValue;
     bmx280.measure();
     while (!bmx280.hasValue())
@@ -99,19 +112,45 @@ void loop() {
         radio.read(rec, sizeof(int));
         Serial.print("received ack payload is : ");
         Serial.println(rec[0]);
-      } else {
-        while (radio.isAckPayloadAvailable()) {
-          radio.write(&combData[i], sizeof(combData[i]));
-          Serial.println(combData[i], 9);
-          Serial.println("...tx success");
-        }
-        radio.read(rec, sizeof(int));
       }
     }
     Serial.println("Data Sent!");
+    File dataFile = SD.open(name, FILE_WRITE);
+    if (dataFile) {
+      dataFile.print(combData[0]);
+      dataFile.print(" ");
+      dataFile.print(combData[1]);
+      dataFile.print(" ");
+      dataFile.print(combData[2]);
+      dataFile.print(" ");
+      dataFile.print(combData[3]);
+      dataFile.print(" ");
+      dataFile.print(combData[4]);
+      dataFile.print(" ");
+      dataFile.println(combData[5]);
+      dataFile.print(" ");
+      dataFile.println(combData[6]);
+      dataFile.close();
+    } else {
+      Serial.println("error opening .txt file");
+    }
     prevTime = millis();
   }
+  float geo = ads.computeVolts(ads.readADC_SingleEnded(1));
   currTime = millis();
+}
+
+void nameFileByTime(String& file) {
+  char daysOfTheWeek[7][12] = { "Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday" };
+  DateTime now = rtc.now();
+  int year = now.year();
+  int month = now.month();
+  int day = now.day();
+  String dow = daysOfTheWeek[now.dayOfTheWeek()];
+  int hour = now.hour();
+  int min = now.minute();
+  int sec = now.second();
+  file = (String(year) + String(month) + String(day) + dow + String(hour) + String(min) + String(sec) + ".txt");
 }
 
 void gTemp(float& Temp) {                                    // reads RTD sensor data, converts to voltage, stores 10 samples in a buffer, sends average of 10 samples to rtdTemp() to convert to temperature
@@ -124,7 +163,7 @@ void gTemp(float& Temp) {                                    // reads RTD sensor
 float rtdTemp(float buff) {  // LUT that converts RTD resistance values to temperature values in Celcius
 
   switch (int(buff)) {
-    case 96090 ... 103902:
+    case 96090 ... 100000:
       switch (int(buff)) {
         case 96090 ... 96480:
           Temp = interpolate(buff, 96090, -10, 96480, -9);
@@ -159,6 +198,8 @@ float rtdTemp(float buff) {  // LUT that converts RTD resistance values to tempe
         default:
           break;
       }
+      break;
+    case 100001 ... 103902:
       switch (int(buff)) {
         case 100001 ... 100390:
           Temp = interpolate(buff, 100001, 0.01, 100390, 1);
