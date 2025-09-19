@@ -30,4 +30,7 @@
 3. Added jumpers for switching between USB and battery power.
 4. Doubled amount of solar cells to six.
 5. Updated housing to include geophone and and ease wiring and assembly process.
+## [V0.7.0](V0.7)
+1. More robust spike head
+2. Upgrade considerations for assembly
 ## [Return to Main ReadMe](https://github.com/ARTS-Laboratory/Smart-Penetrometers-with-Edge-Computing-and-Intelligent-Embedded-Systems/blob/main/README.md)
