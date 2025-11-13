@@ -1,0 +1,27 @@
+Item #,Reference,Qty,Manufacturer,Product #,Description / Value,Package,Footprint,Unit Price,Cost,Links
+1,A1,1,Arduino,A000005,ARDUINO NANO ATMEGA328 EVAL BRD,,, $24.90 , $24.90 ,link
+2,A2,1,,,SD_Card_Module,,kitest:SD Module,, $-   ,link
+3,BT1,1,MPD,BK-870,BATTERY RETAINER COIN 10MM SMD,,, $0.58 , $0.58 ,link
+4,,1,Renata Batteries,CR1025,BATTERY LITHIUM 3V COIN 10MM,,, $1.40 , $1.40 ,link
+5,"C2,C6",2,KEMET,C1206C104J5RACTU,C_1uF,1206 (3216 Metric),, $0.24 , $0.48 ,link
+6,"C5,C7",2,KEMET,C1206C104J5RACTU,C_0.1uF,,Capacitor_SMD:C_1206_3216Metric,, $-   ,link
+7,D1,1,,,SMZ1_770mV,,Diode_SMD:D_MELF,, $-   ,link
+8,J1,1,,,RTD,,custom:JST_PH_B2B-PH-K_1x02_P2.00mm_Vertical,, $-   ,link
+9,"J2,J3",2,,,Conn_01x02,,custom:JST_PH_B2B-PH-K_1x02_P2.00mm_Vertical,, $-   ,link
+10,J4,1,,,GEO,,custom:JST_PH_B2B-PH-K_1x02_P2.00mm_Vertical,, $-   ,link
+11,J5,1,,,Conn_02x04,,Connector_PinSocket_2.54mm:PinSocket_2x04_P2.54mm_Vertical,, $-   ,link
+12,J6,1,,,EC,,custom:JST_PH_B3B-PH-K_1x03_P2.00mm_Vertical,, $-   ,link
+13,JP1,1,,,Jumper_2,,Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical,, $-   ,link
+14,JP2,1,,,Jumper_3,,Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical,, $-   ,link
+15,R1,1,,,R_32K,,Resistor_SMD:R_1206_3216Metric,, $-   ,link
+16,R2,1,,,R_7.5K,,Resistor_SMD:R_1206_3216Metric,, $-   ,link
+17,R3,1,,,R_100,,Resistor_SMD:R_1206_3216Metric,, $-   ,link
+18,"R5,R6,R11",3,,,R_10K,,Resistor_SMD:R_1206_3216Metric,, $-   ,link
+19,"R9,R10",2,,,R_1kOhm,,Resistor_SMD:R_1206_3216Metric,, $-   ,link
+20,U1,1,,,LM321,,Package_TO_SOT_SMD:SOT-23-5,, $-   ,link
+21,U2,1,,,ADP124ARHZ-3.3-R7,,footprint:RH_8_1_ADI,, $-   ,link
+22,U4,1,,,DS3231M,,Package_SO:SOIC-16W_7.5x10.3mm_P1.27mm,, $-   ,link
+23,U5,1,,,BME260,,kitest:BME260,, $-   ,link
+24,U7,1,,,ADS1115IDGS,,Package_SO:TSSOP-10_3x3mm_P0.5mm,, $-   ,link
+,,,,,,,,,,
+,,,,,,,,Total Cost, $27.36 ,
