@@ -8,7 +8,7 @@
 #define CE_PIN 6
 #define CSN_PIN 7
 
-const byte thisAddress[6][6] = { "1node", "1node", "3node","4node", "5node", "6node" };
+const byte thisAddress[6][6] = { "1node", "2node", "3node","4node", "5node", "6node" };
 
 RF24 radio(CE_PIN, CSN_PIN);
 int Reset = 4;

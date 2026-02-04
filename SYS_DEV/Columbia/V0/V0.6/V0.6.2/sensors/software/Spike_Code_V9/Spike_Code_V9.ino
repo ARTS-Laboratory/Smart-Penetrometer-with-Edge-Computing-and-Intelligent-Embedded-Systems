@@ -38,6 +38,7 @@ void setup() {
   Wire.begin();
   // analogReference(EXTERNAL);
 
+
   if (!rtc.begin()) {
     Serial.println("RTC failed.");
     while (1)
@@ -79,7 +80,7 @@ void setup() {
   radio.enableAckPayload();
   radio.enableDynamicPayloads();
   radio.stopListening();              // delay, count
-  radio.openWritingPipe(Address[4]);  //choose address from 0 to 5
+  radio.openWritingPipe(Address[2]);  //choose address from 0 to 5
   radio.setRetries(15, 15);
   // printf_begin();
   // radio.printPrettyDetails();
@@ -88,13 +89,14 @@ void setup() {
 void loop() {
   if (currTime - prevTime >= 10000) {
     volt = ads.computeVolts(ads.readADC_SingleEnded(2));
-    combData[0] = 5;  // choose node from 1,2,3,4,5,6
+    combData[0] = 3;  // choose node from 1,2,3,4,5,6
     float condValue;
     bmx280.measure();
     while (!bmx280.hasValue())
       ;
     unsigned long time = millis();
     condValue = ads.computeVolts(ads.readADC_SingleEnded(3));
+    condValue = (2.6671*condValue+0.0535);
     if (condValue < 0) {
       condValue = 0;
     }
@@ -115,7 +117,10 @@ void loop() {
       }
     }
     Serial.println("Data Sent!");
+    nameFileByTime(file);
+    name =file.c_str();
     File dataFile = SD.open(name, FILE_WRITE);
+    Serial.println(name);
     if (dataFile) {
       dataFile.print(combData[0]);
       dataFile.print(" ");
