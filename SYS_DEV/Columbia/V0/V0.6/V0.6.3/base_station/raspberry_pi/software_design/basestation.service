@@ -1,0 +1,13 @@
+[Unit]
+Description="Basestation service"
+After=network.target
+
+[Service]
+Type=simple
+Restart=always
+RestartSec=3
+User=root
+ExecStart=/usr/bin/python3 "/home/species/Documents/basestation.py"
+
+[Install]
+WantedBy=multi-user.target
