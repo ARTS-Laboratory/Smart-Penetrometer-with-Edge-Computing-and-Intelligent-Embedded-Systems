@@ -1,16 +1,18 @@
 # V0.6.3 Software Design
 
-⏱️1. DS3231 Alarm‑Based Hourly Wake‑Up
-🌙 3. Ultra‑Low‑Power Sleep Mode
-🛡️ 4. Added Watchdog Failsafe
-📡 5. Radio Reliability Enhancements
+## ⏱️1. DS3231 Alarm‑Based Hourly Wake‑Up
+## 🌙 3. Ultra‑Low‑Power Sleep Mode
+## 🛡️ 4. Added Watchdog Failsafe
+## 📡 5. Radio Reliability Enhancements
+
 Added
 - Hardware CRC
 - Retry wrapper with up to 5 retries
-💾 6. SD Write‑Fail Recovery
-🔋 7. Added Battery Voltage Measurement
-🔄 8. I²C Bus Lockup Recovery
-📁 9. File Logging Improvements
+## 💾 6. SD Write‑Fail Recovery
+## 🔋 7. Added Battery Voltage Measurement
+## 🔄 8. I²C Bus Lockup Recovery
+## 📁 9. File Logging Improvements
+
 Added
 - Battery voltage included
 - Backup file fallback
