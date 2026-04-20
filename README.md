@@ -28,6 +28,7 @@ Cite as:
   title        = {Smart Penetrometer with Edge Computing and Intelligent Embedded Systems},  
   groups       = {ARTS-Lab},  
   url          = {https://github.com/ARTS-Laboratory/Smart-Penetrometers-with-Edge-Computing-and-Intelligent-Embedded-Systems},  
+  note = {Accessed: Month dd, yyyy},   
 }
 
 <p align="center">
