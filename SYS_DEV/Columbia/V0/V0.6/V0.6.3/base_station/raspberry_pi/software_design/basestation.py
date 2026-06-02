@@ -93,7 +93,7 @@ def main():
             print("Connection to Arduino Nano lost. Searching again...")
             arduino.close()
             return False
-        except TypeError as  te:
+        except TypeError as te:
             print("Connection to Arduino Nano lost. Searching again...")
             arduino.close()
             return False

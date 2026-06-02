@@ -5871,7 +5871,7 @@
 		(uuid "3232f8e9-1202-4756-afd8-8d1bfdd2d154")
 	)
 	(no_connect
-		(at 165.1 109.22)
+		(at 165.1 116.84)
 		(uuid "3ba44e0f-ad9b-4dca-a716-88937a3dedf9")
 	)
 	(no_connect
@@ -5905,6 +5905,10 @@
 	(no_connect
 		(at 101.6 67.818)
 		(uuid "85ccd5f1-96bd-4dca-8104-2c6d07a1b752")
+	)
+	(no_connect
+		(at 175.26 88.9)
+		(uuid "9a44b98d-c2a4-4b84-920b-e6b978c0d7ea")
 	)
 	(no_connect
 		(at 95.123 175.006)
@@ -6714,7 +6718,7 @@
 	)
 	(global_label "NCSN"
 		(shape output)
-		(at 165.1 116.84 180)
+		(at 165.1 124.46 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -6724,7 +6728,7 @@
 		)
 		(uuid "14bf086b-afa8-4d07-a050-c025d907406d")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 156.9743 116.84 0)
+			(at 156.9743 124.46 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7396,7 +7400,7 @@
 	)
 	(global_label "NSD_CS"
 		(shape output)
-		(at 165.1 124.46 180)
+		(at 165.1 109.22 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -7406,7 +7410,7 @@
 		)
 		(uuid "85a6d37c-d0bd-45dd-912a-594d8ed58c0f")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 154.8577 124.46 0)
+			(at 154.8577 109.22 0)
 			(effects
 				(font
 					(size 1.27 1.27)
