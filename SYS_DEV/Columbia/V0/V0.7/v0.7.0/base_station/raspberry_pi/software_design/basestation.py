@@ -89,7 +89,7 @@ def store_data(parsed, datestring):
 
         print("ROW:", row)
 
-        outpath = f"/home/species/notes/notes/{datestring}/node{node}.csv"
+        outpath = f"/home/artslab/notes/notes/{datestring}/node{node}.csv"
         with open(outpath, "a", newline="") as f:
             writer = csv.writer(f)
             writer.writerow(row)
@@ -97,7 +97,7 @@ def store_data(parsed, datestring):
         # Dropbox upload
         remote_path = f"bs03/{datestring}/node{node}.csv"
         dropbox_cmd = [
-            "/home/species/Dropbox-Uploader/dropbox_uploader.sh",
+            "/Dropbox-Uploader/dropbox_uploader.sh",
             "upload",
             outpath,
             remote_path
@@ -151,7 +151,7 @@ def main():
     while True:
         try:
             datestring = datetime.now().strftime("%Y%m%d")
-            Path(f"/home/species/notes/notes/{datestring}").mkdir(parents=True, exist_ok=True)
+            Path(f"/home/artslab/notes/notes/{datestring}").mkdir(parents=True, exist_ok=True)
             data_collect(arduino, datestring)
 
         except (serial.SerialException, serial.serialutil.SerialException, OSError, TypeError):
