@@ -130,15 +130,18 @@ void wakeFromSleep() {
 
   // Radio in fixed 32-byte mode, no dynamic/ACK
   radio.begin();
+  delay(100);
   radio.setDataRate(RF24_250KBPS);
-  radio.setPALevel(RF24_PA_MAX);
-  radio.setChannel(90);
-  radio.setAutoAck(false);
+  radio.setPALevel(RF24_PA_LOW);
+  radio.setChannel(108);
+  radio.setAutoAck(true);
+  radio.setRetries(5, 15);
+  radio.enableDynamicPayloads();
+  radio.enableAckPayload();
   radio.setPayloadSize(32);
   radio.setCRCLength(RF24_CRC_16);
   radio.stopListening();
   radio.openWritingPipe(Address[NODE_ID - 1]);
-  radio.setRetries(0, 0);
 
   SD.begin(10);
   delay(10);
@@ -305,15 +308,16 @@ void setup() {
   SD.begin(10);
 
   radio.begin();
+  delay(100);
   radio.setDataRate(RF24_250KBPS);
   radio.setPALevel(RF24_PA_MAX);
   radio.setChannel(90);
-  radio.setAutoAck(false);
+  radio.setAutoAck(true);
   radio.setPayloadSize(32);
   radio.setCRCLength(RF24_CRC_16);
   radio.stopListening();
   radio.openWritingPipe(Address[NODE_ID - 1]);
-  radio.setRetries(0, 0);
+  radio.setRetries(5,15);
 
   loadWakeInterval();
   DateTime now = rtc.now();

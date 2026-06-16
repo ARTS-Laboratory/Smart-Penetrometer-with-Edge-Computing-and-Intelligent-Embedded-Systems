@@ -109,19 +109,21 @@ void handlePacket(const DataPacket& p, uint8_t pipeNum) {
 // -------------------- SETUP / LOOP -----------
 void setup() {
   Serial.begin(115200);
-  Serial.print("RX DataPacket size = ");
-  Serial.println(sizeof(DataPacket));
+  // Serial.print("RX DataPacket size = ");
+  // Serial.println(sizeof(DataPacket));
 
   SD.begin(10);
 
   radio.begin();
   radio.setDataRate(RF24_250KBPS);
-  radio.setPALevel(RF24_PA_MAX);
-  radio.setChannel(90);
-  radio.setAutoAck(false);
+  radio.setPALevel(RF24_PA_LOW);
+  radio.setChannel(108);
+  radio.setAutoAck(true);
+  radio.enableDynamicPayloads();
+  radio.enableAckPayload();  
   radio.setPayloadSize(32);
   radio.setCRCLength(RF24_CRC_16);
-
+  radio.setRetries(5, 15);
   for (int i = 0; i < 6; i++) {
     radio.openReadingPipe(i + 1, pipes[i]); // pipes 1..6
   }

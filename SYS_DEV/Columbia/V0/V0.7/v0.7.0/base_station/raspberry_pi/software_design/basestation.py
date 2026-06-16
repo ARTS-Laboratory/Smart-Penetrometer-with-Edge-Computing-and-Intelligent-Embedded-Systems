@@ -3,6 +3,7 @@ Created on Sat Feb 8 01:15:07 2025
 
 @author: Malichi Flemming II
 """
+
 import serial
 import time
 import csv
@@ -14,7 +15,8 @@ import subprocess as sp
 import sys
 
 count = 0
-# Function to find Arduino Nano from available ports
+
+# -------------------- FIND ARDUINO --------------------
 def find_arduino_nano():
     ports = serial.tools.list_ports.comports()
     for port in ports:
@@ -22,80 +24,133 @@ def find_arduino_nano():
             return port.device
     return None
 
-# Function to read data from the Arduino
+# -------------------- READ LINE ------------------------
 def read_data(arduino):
-    time.sleep(0.05)
-    data = arduino.readline().decode().replace("\r\n", "")
-    return data
+    time.sleep(0.02)
+    try:
+        return arduino.readline().decode(errors="ignore").strip()
+    except:
+        return ""
 
-# Function to store data in a CSV file
-def store_data(node, value, datestring):
+# -------------------- PARSE RF24 RECEIVER LINE ---------
+rf24_regex = re.compile(
+    r"Node\s+(\d+)\s+cnt=(\d+)\s+t\(ms\)=(\d+)\s+RTD=([-0-9.]+)\s+T=([-0-9.]+)\s+RH=([-0-9.]+)\s+P=([-0-9.]+)\s+C=([-0-9.]+)\s+Vbat=([-0-9.]+)"
+)
+
+def parse_rf24_line(line):
+    m = rf24_regex.search(line)
+    if not m:
+        return None
+
+    return {
+        "node": int(m.group(1)),
+        "counter": int(m.group(2)),
+        "time_ms": int(m.group(3)),
+        "rtdTemp": float(m.group(4)),
+        "bmeTemp": float(m.group(5)),
+        "humidity": float(m.group(6)),
+        "pressure": float(m.group(7)),
+        "conductivity": float(m.group(8)),
+        "battery": float(m.group(9)),
+    }
+
+# -------------------- STORE DATA -----------------------
+def store_data(parsed, datestring):
     global count
+    node = parsed["node"]
+
     if 1 <= node <= 9:
-        chunks = value.split(',')
-        print(chunks)  # printing the value
-        with open(f'/home/species/notes/notes/{datestring}/node{node}.csv', 'a', newline='') as file:
-            writer = csv.writer(file)
-            writer.writerows([chunks])
-        command = ["rclone", "copy", "/home/species/notes", "Species:"]
-        command.extend(["--config", "/home/species/.config/rclone/rclone.conf"])
-        process = sp.Popen(command, stdout=sp.PIPE, stderr=sp.PIPE)
+        row = [
+            parsed["node"],
+            parsed["counter"],
+            parsed["time_ms"],
+            parsed["rtdTemp"],
+            parsed["bmeTemp"],
+            parsed["humidity"],
+            parsed["pressure"],
+            parsed["conductivity"],
+            parsed["battery"],
+            datetime.now().strftime("%d%H%M%S")
+        ]
+
+        print(row)
+
+        # Local CSV path
+        outpath = f"/home/artslab/notes/notes/{datestring}/node{node}.csv"
+
+        # Write row to CSV
+        with open(outpath, "a", newline="") as f:
+            writer = csv.writer(f)
+            writer.writerow(row)
+
+        # -----------------------------
+        # Dropbox-Uploader upload
+        # -----------------------------
+        # Remote Dropbox path (inside App Folder)
+        remote_path = f"bs03/{datestring}/node{node}.csv"
+
+        dropbox_cmd = [
+            "/Dropbox-Uploader/dropbox_uploader.sh",
+            "upload",
+            outpath,
+            remote_path
+        ]
+
+        process = sp.Popen(dropbox_cmd, stdout=sp.PIPE, stderr=sp.PIPE)
         stdout, stderr = process.communicate()
 
         if process.returncode == 0:
-            print("Upload successful")
+            print("Dropbox upload successful")
             return True
         else:
-            print(f"Upload failed with error: {stderr.decode()}")
+            print(f"Dropbox upload failed: {stderr.decode()}")
             return False
 
     else:
         if count < 6:
-            print("no packet or packet corrupt")
+            print("Invalid node or corrupt packet")
             count += 1
         else:
             sys.exit()
 
-# Function to collect data from the Arduino
-def data_collect(arduino, datestring):
-#    time.sleep(2)
-    if arduino.in_waiting:
-        value = read_data(arduino)
-        value = value + ', ' + datetime.now().strftime("%d%H%M%S")
-        node = re.search(r'\d+', value)
-        print(value)
-        store_data(int(node.group()), value, datestring)
 
+# -------------------- COLLECT DATA ---------------------
+def data_collect(arduino, datestring):
+    if arduino.in_waiting:
+        line = read_data(arduino)
+        if not line:
+            return
+
+        print("RAW:", line)
+
+        parsed = parse_rf24_line(line)
+        if parsed:
+            store_data(parsed, datestring)
+        else:
+            print("Ignored non‑data line")
+
+# -------------------- MAIN LOOP ------------------------
 def main():
     arduino_port = find_arduino_nano()
     if arduino_port is None:
-        print("No Arduino Nano found. Searching again...")
-        time.sleep(2)  # Wait for 2 seconds before retrying
+        print("No Arduino Nano found. Retrying...")
+        time.sleep(2)
         return
 
     arduino = serial.Serial(port=arduino_port, baudrate=115200, timeout=0.1)
-#    print(f"Connected to Arduino Nano on port {arduino_port}")
 
     while True:
         try:
             datestring = datetime.now().strftime("%Y%m%d")
-            Path(f'/home/species/notes/notes/{datestring}').mkdir(parents=True, exist_ok=True)  # Create folder
+            Path(f"/home/artslab/notes/notes/{datestring}").mkdir(parents=True, exist_ok=True)
             data_collect(arduino, datestring)
-        except serial.SerialException:
-            print("Connection to Arduino Nano lost. Searching again...")
-            arduino.close()
-            return False
-        except OSError:
-            print("Connection to Arduino Nano lost. Searching again...")
-            arduino.close()
-            return False
-        except serial.serialutil.SerialException:
-            print("Connection to Arduino Nano lost. Searching again...")
-            arduino.close()
-            return False
-        except TypeError as te:
-            print("Connection to Arduino Nano lost. Searching again...")
-            arduino.close()
+
+        except (serial.SerialException, serial.serialutil.SerialException, OSError, TypeError):
+            print("Connection lost. Searching again...")
+            try:
+                arduino.close()
+            except:
+                pass
             return False
 
 if __name__ == "__main__":
