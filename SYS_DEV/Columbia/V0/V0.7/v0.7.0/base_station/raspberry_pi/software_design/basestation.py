@@ -24,37 +24,51 @@ def find_arduino_nano():
             return port.device
     return None
 
-# -------------------- READ LINE ------------------------
-def read_data(arduino):
-    time.sleep(0.02)
+# -------------------- BULLETPROOF SERIAL READER --------
+def read_serial_line(arduino):
+    """
+    Accumulates bytes until a full newline-terminated line is received.
+    Never returns partial lines.
+    """
+    buffer = getattr(read_serial_line, "buffer", "")
+
     try:
-        return arduino.readline().decode(errors="ignore").strip()
+        data = arduino.read(arduino.in_waiting or 1).decode("utf-8", errors="ignore")
     except:
-        return ""
+        return None
 
-# -------------------- PARSE RF24 RECEIVER LINE ---------
-rf24_regex = re.compile(
-    r"Node\s+(\d+)\s+cnt=(\d+)\s+t\(ms\)=(\d+)\s+RTD=([-0-9.]+)\s+T=([-0-9.]+)\s+RH=([-0-9.]+)\s+P=([-0-9.]+)\s+C=([-0-9.]+)\s+Vbat=([-0-9.]+)"
-)
+    buffer += data
 
-def parse_rf24_line(line):
-    m = rf24_regex.search(line)
-    if not m:
+    if "\n" in buffer:
+        line, buffer = buffer.split("\n", 1)
+        read_serial_line.buffer = buffer
+        return line.strip()
+
+    read_serial_line.buffer = buffer
+    return None
+
+# -------------------- UNIVERSAL VALUE EXTRACTOR --------
+def extract_values(line):
+    # Extract all numbers (ints or floats)
+    nums = re.findall(r"-?\d+(?:\.\d+)?", line)
+
+    # Expecting at least 9 values
+    if len(nums) < 9:
         return None
 
     return {
-        "node": int(m.group(1)),
-        "counter": int(m.group(2)),
-        "time_ms": int(m.group(3)),
-        "rtdTemp": float(m.group(4)),
-        "bmeTemp": float(m.group(5)),
-        "humidity": float(m.group(6)),
-        "pressure": float(m.group(7)),
-        "conductivity": float(m.group(8)),
-        "battery": float(m.group(9)),
+        "node": int(nums[0]),
+        "counter": int(nums[1]),
+        "time_ms": int(nums[2]),
+        "rtdTemp": float(nums[3]),
+        "bmeTemp": float(nums[4]),
+        "humidity": float(nums[5]),
+        "pressure": float(nums[6]),
+        "conductivity": float(nums[7]),
+        "battery": float(nums[8]),
     }
 
-# -------------------- STORE DATA -----------------------
+# -------------------- STORE DATA + DROPBOX UPLOAD ------
 def store_data(parsed, datestring):
     global count
     node = parsed["node"]
@@ -73,24 +87,17 @@ def store_data(parsed, datestring):
             datetime.now().strftime("%d%H%M%S")
         ]
 
-        print(row)
+        print("ROW:", row)
 
-        # Local CSV path
-        outpath = f"/home/artslab/notes/notes/{datestring}/node{node}.csv"
-
-        # Write row to CSV
+        outpath = f"/home/species/notes/notes/{datestring}/node{node}.csv"
         with open(outpath, "a", newline="") as f:
             writer = csv.writer(f)
             writer.writerow(row)
 
-        # -----------------------------
-        # Dropbox-Uploader upload
-        # -----------------------------
-        # Remote Dropbox path (inside App Folder)
+        # Dropbox upload
         remote_path = f"bs03/{datestring}/node{node}.csv"
-
         dropbox_cmd = [
-            "/Dropbox-Uploader/dropbox_uploader.sh",
+            "/home/species/Dropbox-Uploader/dropbox_uploader.sh",
             "upload",
             outpath,
             remote_path
@@ -113,21 +120,19 @@ def store_data(parsed, datestring):
         else:
             sys.exit()
 
-
 # -------------------- COLLECT DATA ---------------------
 def data_collect(arduino, datestring):
-    if arduino.in_waiting:
-        line = read_data(arduino)
-        if not line:
-            return
+    line = read_serial_line(arduino)
+    if not line:
+        return
 
-        print("RAW:", line)
+    print("RAW:", repr(line))
 
-        parsed = parse_rf24_line(line)
-        if parsed:
-            store_data(parsed, datestring)
-        else:
-            print("Ignored non‑data line")
+    parsed = extract_values(line)
+    if parsed:
+        store_data(parsed, datestring)
+    else:
+        print("Ignored non‑data line")
 
 # -------------------- MAIN LOOP ------------------------
 def main():
@@ -139,10 +144,14 @@ def main():
 
     arduino = serial.Serial(port=arduino_port, baudrate=115200, timeout=0.1)
 
+    # Allow Arduino reboot time
+    time.sleep(1)
+    arduino.reset_input_buffer()
+
     while True:
         try:
             datestring = datetime.now().strftime("%Y%m%d")
-            Path(f"/home/artslab/notes/notes/{datestring}").mkdir(parents=True, exist_ok=True)
+            Path(f"/home/species/notes/notes/{datestring}").mkdir(parents=True, exist_ok=True)
             data_collect(arduino, datestring)
 
         except (serial.SerialException, serial.serialutil.SerialException, OSError, TypeError):
