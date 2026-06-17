@@ -105,7 +105,9 @@ def store_data(parsed, datestring):
 
         process = sp.Popen(dropbox_cmd, stdout=sp.PIPE, stderr=sp.PIPE)
         stdout, stderr = process.communicate()
-
+        print(stdout.decode(errors="ignore"))
+        print(stderr.decode(errors="ignore"))
+        
         if process.returncode == 0:
             print("Dropbox upload successful")
             return True
