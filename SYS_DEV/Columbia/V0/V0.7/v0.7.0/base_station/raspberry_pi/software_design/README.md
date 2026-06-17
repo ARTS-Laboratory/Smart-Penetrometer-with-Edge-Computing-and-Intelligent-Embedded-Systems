@@ -69,8 +69,9 @@ cd /home/species
 git clone https://github.com/andreafabrizi/Dropbox-Uploader.git
 cd Dropbox-Uploader
 chmod +x dropbox_uploader.sh
-Run the setup:
 ```
+Run the setup:
+
 ```bash
 ./dropbox_uploader.sh
 ```
@@ -88,6 +89,7 @@ This creates the config file:
 Save script here:
 
 /home/species/basestaion.py
+
 Make it executable:
 
 ```bash
