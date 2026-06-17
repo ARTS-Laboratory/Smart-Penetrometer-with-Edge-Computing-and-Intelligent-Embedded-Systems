@@ -1,5 +1,4 @@
-// RECEIVER: multi-node RF24 + CRC + counters + missed packets + per-node SD
-// (no ACK payloads / OTA interval in this version)
+
 
 #include <SPI.h>
 #include <nRF24L01.h>
