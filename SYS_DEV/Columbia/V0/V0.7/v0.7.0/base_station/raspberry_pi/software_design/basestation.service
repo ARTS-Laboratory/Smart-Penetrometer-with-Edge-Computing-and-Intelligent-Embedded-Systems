@@ -6,8 +6,15 @@ After=network.target
 Type=simple
 Restart=always
 RestartSec=3
-User=root
-ExecStart=/usr/bin/python3 "/home/species/Documents/basestation.py"
+User=artslab
+Group=artslab
+WorkingDirectory=/home/species
+Environment=HOME=/home/species
+Environment=PATH=/usr/bin:/bin:/usr/local/bin
+Environment=PYTHONUNBUFFERED=1
+ExecStart=/usr/bin/python3 "/home/species/basestation.py"
+StandardOutput=journal
+StandardError=journal
 
 [Install]
 WantedBy=multi-user.target
