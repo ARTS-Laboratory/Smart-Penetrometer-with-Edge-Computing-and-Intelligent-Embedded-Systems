@@ -127,20 +127,8 @@ void wakeFromSleep() {
   SPI.begin();
   delay(5);
 
-  // Radio in fixed 32-byte mode, no dynamic/ACK
-  radio.begin();
-  delay(100);
-  radio.setDataRate(RF24_250KBPS);
-  radio.setPALevel(RF24_PA_LOW);
-  radio.setChannel(108);
-  radio.setAutoAck(true);
-  radio.setRetries(5, 15);
-  radio.enableDynamicPayloads();
-  radio.enableAckPayload();
-  radio.setPayloadSize(32);
-  radio.setCRCLength(RF24_CRC_16);
-  radio.stopListening();
-  radio.openWritingPipe(Address[NODE_ID - 1]);
+  radio.powerUp();
+  delay(5);
 
   SD.begin(10);
   delay(10);
@@ -159,7 +147,7 @@ void wakeFromSleep() {
     bmx280.writeOversamplingTemperature(BMx280MI::OSRS_T_x16);
     bmx280.writeOversamplingHumidity(BMx280MI::OSRS_H_x16);
     delay(10);
-  }
+  } 
 
   rtc.disableAlarm(1);
   rtc.disableAlarm(2);
@@ -235,6 +223,8 @@ void doMeasurementCycle() {
   Serial.println("SENDING NOW");
 
   bool ok = radio.write(&pkt, sizeof(pkt));
+  delay(5); 
+
   Serial.print("radio.write ok = ");
   Serial.println(ok ? "true" : "false");
 
@@ -309,8 +299,10 @@ void setup() {
   radio.begin();
   delay(100);
   radio.setDataRate(RF24_250KBPS);
-  radio.setPALevel(RF24_PA_MAX);
-  radio.setChannel(90);
+  radio.setPALevel(RF24_PA_LOW);
+  radio.setChannel(108);
+  radio.enableDynamicPayloads();
+  radio.enableAckPayload();
   radio.setAutoAck(true);
   radio.setPayloadSize(32);
   radio.setCRCLength(RF24_CRC_16);
@@ -335,8 +327,8 @@ void setup() {
 }
 
 void loop() {
-  Serial.print("INT pin = ");
-  Serial.println(digitalRead(RTC_INT_PIN));
+  // Serial.print("INT pin = ");
+  // Serial.println(digitalRead(RTC_INT_PIN));
   delay(200);
   if (rtcWake) {
     wakeFromSleep();
