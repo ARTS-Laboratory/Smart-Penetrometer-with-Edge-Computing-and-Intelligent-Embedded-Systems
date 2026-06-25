@@ -118,8 +118,8 @@ void setup() {
   radio.setPALevel(RF24_PA_LOW);
   radio.setChannel(108);
   radio.setAutoAck(true);
-  radio.enableDynamicPayloads();
-  radio.enableAckPayload();  
+  radio.disableDynamicPayloads();
+  radio.disableAckPayload();  
   radio.setPayloadSize(32);
   radio.setCRCLength(RF24_CRC_16);
   radio.setRetries(5, 15);
